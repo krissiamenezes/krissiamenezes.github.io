@@ -109,7 +109,13 @@
     <script src="assets/js/hover.zoom.js"></script>
     <script src="assets/js/hover.zoom.conf.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+	   (function(){
+	      emailjs.init("user_75pLZTyAGQ3CxKsEiXFfV");
+	   })();
+	    emailjs.send("default_service","<YOUR TEMPLATE ID>",{name: "James", notes: "Check this out!"});
+     </script>
     <!-- HTML5 shim e Respond.js para suporte ao HTML5 em navegadores antigos -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
