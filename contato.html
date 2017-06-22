@@ -121,7 +121,20 @@
 		    var email = $("#inputEmail").val();
 		    var assunto = $("#inputAssunto").val();
 		    var mensagem = $("#inputMensagem").val();
-		emailjs.send("<gmail>","<template_BF7VCgp7>",{name: nome, notes: mensagem});
+		emailjs.send("<gmail>","<template_BF7VCgp7>",{
+		  from_name: nome, 
+		  email: email,
+		  assunto: assunto,
+		  mensagem: mensagem
+		})
+		.then(
+		  function(response) {
+		    console.log("SUCCESS", response);
+		  }, 
+		  function(error) {
+		    console.log("FAILED", error);
+		  }
+		);
 	});
      </script>
     <!-- HTML5 shim e Respond.js para suporte ao HTML5 em navegadores antigos -->
