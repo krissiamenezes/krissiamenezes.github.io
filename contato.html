@@ -122,18 +122,22 @@
         var email = $("#inputEmail").val();
         var assunto = $("#inputAssunto").val();
         var mensagem = $("#inputMensagem").val();
-var service_id = 'gmail';
-var template_id = 'template_BF7VCgp7';
-var template_params = {
-    from_name: nome,
-    email: email,
-    assunto: assunto,
-    mensagem: mensagem
-};
+	var service_id = 'gmail';
+	var template_id = 'template_BF7VCgp7';
+	var template_params = {
+	    from_name: nome,
+	    email: email,
+	    assunto: assunto,
+	    mensagem: mensagem
+	};
 
-emailjs.send(service_id,template_id,template_params);
-
-    });
+	emailjs.send(service_id,template_id,template_params);
+	.then(function(response) {
+	   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+	}, function(err) {
+	   console.log("FAILED. error=", err);
+	});
+	    });
 
      </script>
     <!-- HTML5 shim e Respond.js para suporte ao HTML5 em navegadores antigos -->
