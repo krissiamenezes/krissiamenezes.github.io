@@ -48,7 +48,7 @@
 		</header>
 		<div class="row mt">	
 			<div class="col-lg-8 col-lg-offset-2">
-				<form role="form">
+				<form id ="enviar" role="form">
 				  <div class="form-group">
 				  	<label for="inputNome">Nome:</label>
 				    <input type="name" class="form-control" id="inputNome" placeholder="Insira seu nome">
@@ -111,10 +111,12 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
-	   (function(){
-	      emailjs.init("user_75pLZTyAGQ3CxKsEiXFfV");
+	    $( "#enviar" ).submit (function(){
+		    alert('oi');
+	     /* emailjs.init("user_75pLZTyAGQ3CxKsEiXFfV");
 	   })();
 	    emailjs.send("default_service","<YOUR TEMPLATE ID>",{name: "James", notes: "Check this out!"});
+		});*/
      </script>
     <!-- HTML5 shim e Respond.js para suporte ao HTML5 em navegadores antigos -->
     <!--[if lt IE 9]>
