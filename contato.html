@@ -116,26 +116,24 @@
     <script src="assets/js/hover.zoom.conf.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript">   
-	    $( "#enviar" ).submit (function(){ 
-		    var nome = $("#inputNome").val();
-		    var email = $("#inputEmail").val();
-		    var assunto = $("#inputAssunto").val();
-		    var mensagem = $("#inputMensagem").val();
-		emailjs.send("<gmail>","<template_BF7VCgp7>",{
-		  from_name: nome, 
-		  email: email,
-		  assunto: assunto,
-		  mensagem: mensagem
-		})
-		.then(
-		  function(response) {
-		    console.log("SUCCESS", response);
-		  }, 
-		  function(error) {
-		    console.log("FAILED", error);
-		  }
-		);
-	});
+	       $( "#enviar" ).submit (function(){
+        var nome = $("#inputNome").val();
+        var email = $("#inputEmail").val();
+        var assunto = $("#inputAssunto").val();
+        var mensagem = $("#inputMensagem").val();
+var service_id = 'gmail';
+var template_id = 'template_BF7VCgp7';
+var template_params = {
+    from_name: nome,
+    email: email,
+    assunto: assunto,
+    mensagem: mensagem
+};
+
+emailjs.send(service_id,template_id,template_params);
+
+    });
+
      </script>
     <!-- HTML5 shim e Respond.js para suporte ao HTML5 em navegadores antigos -->
     <!--[if lt IE 9]>
