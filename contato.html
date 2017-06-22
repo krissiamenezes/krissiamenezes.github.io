@@ -111,8 +111,12 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
+	    var nome = $("#inputNome").val();
+	    var email = $("#inputEmail").val();
+	    var assunto = $("#inputAssunto").val();
+	    var mensagem = $("#inputMensagem").val();
 	    $( "#enviar" ).submit (function(){
-		    alert('oi');
+		    alert(nome, email, assunto, mensagem);
 	     /* emailjs.init("user_75pLZTyAGQ3CxKsEiXFfV");
 	   })();
 	    emailjs.send("default_service","<YOUR TEMPLATE ID>",{name: "James", notes: "Check this out!"});
