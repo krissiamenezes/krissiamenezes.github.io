@@ -117,26 +117,13 @@
    })();
 	  </script>
     <script type="text/javascript">   
-	       $( "#enviar" ).submit (function(){
-			var nome = $("#inputNome").val();
-			var email = $("#inputEmail").val();
-			var assunto = $("#inputAssunto").val();
-			var mensagem = $("#inputMensagem").val();
-		        console.log(nome, email, assunto, mensagem);
-// 			emailjs.send("gmail","template_BF7VCgp7",{
-// 				"reply_to":"krissiamlm@gmail.com",
-// 				"email":email,
-// 				"from_name":nome,
-// 				"to_name":"Krissia",
-// 				"assunto":assunto,
-// 				"mensagem":mensagem
-// 			})
-// 			.then(function(response) {
-// 			   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-// 			}, function(err) {
-// 			   console.log("FAILED. error=", err);
-// 			});
-		});
+	$( "#enviar" ).submit(function(){
+        var nome = $("#inputNome").val();
+        var email = $("#inputEmail").val();
+        var assunto = $("#inputAssunto").val();
+        var mensagem = $("#inputMensagem").val();
+        alert(mensagem);
+    });
      </script>
     <!-- HTML5 shim e Respond.js para suporte ao HTML5 em navegadores antigos -->
     <!--[if lt IE 9]>
