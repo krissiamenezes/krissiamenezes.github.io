@@ -132,10 +132,12 @@
             "mensagem":mensagem
         })
 		 .then(function(response) {
-                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-            }, function(err) {
-                console.log("FAILED. error=", err);
-            });
+		    alert("Sua mensagem foi enviada com sucesso.\n Você será redirecionado para a página inicial do site!");
+		    window.location.href = "https://krissiam.github.io/";
+	}, function(err) {
+		alert("Ocorreu um erro no envio.\n Por favor, tente novamente!");
+		    window.location.href = "https://krissiam.github.io/contato.html";  
+	});
 
     }
      </script>
