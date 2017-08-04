@@ -122,17 +122,17 @@
         var email = $("#inputEmail").val();
         var assunto = $("#inputAssunto").val();
         var mensagem = $("#inputMensagem").val();
-        
-		emailjs.send("gmail","template_BF7VCgp7",{
+
+        emailjs.send("gmail","template_BF7VCgp7",{
             "reply_to":"krissiamlm@gmail.com",
             "email":email,
             "from_name":nome,
             "to_name":"Krissia",
             "assunto":assunto,
             "mensagem":mensagem
-        })
-        
-    });
+        });
+
+    }
      </script>
     <!-- HTML5 shim e Respond.js para suporte ao HTML5 em navegadores antigos -->
     <!--[if lt IE 9]>
