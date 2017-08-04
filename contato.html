@@ -122,6 +122,7 @@
 			var email = $("#inputEmail").val();
 			var assunto = $("#inputAssunto").val();
 			var mensagem = $("#inputMensagem").val();
+		        console.log(nome, email, assunto, mensagem);
 			emailjs.send("gmail","template_BF7VCgp7",{
 				"reply_to":"krissiamlm@gmail.com",
 				"email":email,
