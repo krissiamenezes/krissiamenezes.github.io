@@ -7,26 +7,21 @@
     <meta name="description" content="Portfólio da desenvolvedora front-end e Back-end Krissia Menezes.">
     <meta name="author" content="Krissia Menezes">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
-
-    <title>Krissia Menezes - Desenvolvedora Front-end e Back-end</title>
-
+    <title>Krissia Menezes - Desenvolvedora Web</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!-- CSS customizado deste site -->
     <link href="assets/css/main.css" rel="stylesheet">
-	  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-105756592-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+		  ga('create', 'UA-105756592-1', 'auto');
+		  ga('send', 'pageview');
+	</script>
   </head>
-
   <body>
-
     <!-- Barra de navegação -->
     <header role="banner" class="navbar navbar-inverse navbar-static-top">
       <div class="container">
@@ -47,39 +42,81 @@
         </nav>
       </div>
     </header>
-
 	<section id="ww" role="main">
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 centered">
 					<h1>Olá, eu sou Krissia Menezes!</h1>
-					<p>Olá, eu sou Krissia Menezes, tenho 23 anos e trabalho com desenvolvimento front-end e back-end há 2 anos. Atualmente faço especialização em Desenvolvimento de Sistemas Web.</p>
-					<p>Minhas especialidades incluem o desenvolvimento de websites e sistemas Web com PHP, SQL, HTML5, CSS3 e JavaScript, JQuery e construção de layouts responsivos e acessíveis. Você pode <a href="sobre.html">conhecer mais sobre as minhas qualificações</a>, <a href="portfolio.html">conferir os meus principais trabalhos em meu portfólio</a> ou <a href="contato.html">entrar em contato comigo</a> caso queira contratar meus serviços.</p>
-				
+					<p>Olá, eu sou Krissia Menezes, tenho 24 anos e trabalho com Desenvolvimento Web há 4 anos. Atualmente faço especialização em Desenvolvimento de Sistema Web.</p>
+					<p>Minhas especialidades incluem o desenvolvimento de websites e sistemas Web com PHP, SQL, HTML5, CSS3 e JavaScript, JQuery e construção de layouts responsivos e acessíveis. Também tenhos conhecimento de outras linguagens e frameworks, como Laravel e Zend Framework. Você pode <a href="sobre.html">conhecer mais sobre as minhas qualificações</a>, <a href="portfolio.html">conferir os meus principais trabalhos em meu portfólio</a>, baixando <a href="/assets/pdf/Currículo - Krissia Menezes 2018.pdf">meu currículo</a> ou <a href="contato.html">entrar em contato comigo</a> caso queira contratar meus serviços.</p>
 				</div>
 			</div>
 	    </div>
 	</section>
-	
 	<aside class="container pt" role="complementary">
-		
 		<div class="row mt centered">	
 			<div class="col-lg-4">
-				<a class="zoom blue" href="trabalho.html"><img class="img-responsive" src="assets/img/portfolio/siga-docente-uepa.JPG" width="400" height="300" alt="Ícone flat de uma tela do SIGA - Docente - UEPA, que mostra uma tela de login" /></a>
-			  <p>Sistema Institucional</p>
+				<a class="zoom blue" data-toggle="modal" data-target="#sigaDocenteModal" href="#"><img class="img-responsive"  src="assets/img/portfolio/siga-docente-uepa.JPG" alt="Ícone flat de uma tela do SIGA - Docente - UEPA, que mostra uma tela de login" /></a>
+			  <p class="title-trabalho">Sistema Integrado de Gestão Acadêmica UEPA/ Docente</p>
 		        </div>
 			<div class="col-lg-4">
-				<a class="zoom blue" href="trabalho.html"><img class="img-responsive" src="assets/img/portfolio/siga-aluno-uepa.JPG" width="400" height="300" alt="Ícone flat de uma tela do SIGA - Aluno - UEPA, que mostra uma tela de login" /></a>
-			  <p>Sistema Institucional</p>
+				<a class="zoom blue"  data-toggle="modal" data-target="#sigaAlunoModal" href="#"><img class="img-responsive" src="assets/img/portfolio/siga-aluno-uepa.JPG" alt="Ícone flat de uma tela do SIGA - Aluno - UEPA, que mostra uma tela de login" /></a>
+			  <p class="title-trabalho">Sistema Integrado de Gestão Acadêmica UEPA/ Aluno </p>
 		        </div>
 			<div class="col-lg-4">
-				<a class="zoom blue" href="trabalho.html"><img class="img-responsive" src="assets/img/portfolio/port03.jpg" width="400" height="300" alt="Ícone flat de uma tela de computador com um layout contendo cabeçalho, menu e três colunas, representadas por quadrados vermelhos" /></a>
-				<p>Seu projeto aqui</p>
+				<a class="zoom blue" href="teamufpa.html"><img class="img-responsive" src="assets/img/portfolio/teamufpa.jpg" width="400" height="300" alt="Imagem da página principal do site TEAM UFPA" /></a>
+				<p class="title-trabalho">Site e Painel Administrativo do projeto TEAM UFPA</p>
 			</div>
 		</div><!-- /row -->
-		</div>
 	</aside>
-	
+	<div class="modal fade" id="sigaAlunoModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="text-center modal-title">PROJETO: SIGA ALUNO UEPA</h4>
+				</div>
+				<div class="modal-body">
+					<p>Redesign do Sistema Integrado de Gestão Acadêmica da UEPA, com layout responsivo e implementação de padrões de acessibilidade de páginas Web. O que permitiu que pessoas com baixa ou nem uma visão acessem o sistema</p>
+					<article role="article" class="row centered">
+                        <img class="img-mobi img-modal" src="assets/img/portfolio/siga-aluno-uepa-mobi.jpeg" alt="">
+                        <img class="img-modal" src="assets/img/portfolio/siga-aluno-uepa.JPG" alt="">
+                        <p><bt>Cliente: <a href="http://www.uepa.br/">Universidade do Estado do Pará</a></bt> -
+                            <bt>Tipo: Desenvolvimento de sistema (front-end e back-end)
+						</bt> - <bt>Data: Agosto de 2016</bt>
+						</p>
+					</article>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="modal fade" id="sigaDocenteModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="text-center modal-title">PROJETO: SIGA DOCENTE UEPA</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Redesign do Sistema Integrado de Gestão Acadêmica da UEPA, com layout responsivo e implementação de padrões de acessibilidade de páginas Web. O que permitiu que pessoas com baixa ou nem uma visão acessem o sistema</p>
+                    <article role="article" class="row centered">
+                        <img class="img-mobi img-modal" src="assets/img/portfolio/siga-docente-uepa-mobi.jpeg" alt="">
+                        <img class="img-modal" src="assets/img/portfolio/siga-docente-uepa.JPG" alt="">
+                        <p><bt>Cliente: <a href="http://www.uepa.br/">Universidade do Estado do Pará</a></bt> -
+                            <bt>Tipo: Desenvolvimento de sistema (front-end e back-end)
+                            </bt> - <bt>Data: Agosto de 2016</bt>
+                        </p>
+                    </article>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 	<footer id="footer" role="contentinfo">
 		<div class="container">
 			<div class="row">
@@ -102,7 +139,7 @@
 				</div>
 				
 				<div class="col-lg-4">
-					<p> © Copyright 2017 - Krissia Menezes </p>
+					<p> © Copyright 2018 - Krissia Menezes </p>
 				</div>
 			
 			</div>

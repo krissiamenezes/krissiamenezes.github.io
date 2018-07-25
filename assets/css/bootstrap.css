@@ -3552,7 +3552,9 @@ input[type="button"].btn-block {
   clear: both;
   font-weight: normal;
   line-height: 1.428571429;
+  /*
   color: #333333;
+  */
   white-space: nowrap;
 }
 
@@ -4719,7 +4721,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333333;
   background-color: transparent;
 }
 
@@ -4768,7 +4769,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333333;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
@@ -4842,7 +4842,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
+  /*
   background-color: #333333;
+  */
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
@@ -6057,10 +6059,10 @@ button.close {
   margin-left: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 968px) {
   .modal-dialog {
-    width: 600px;
-    margin: 30px auto;
+    width: 80%;
+    margin: 20px auto;
   }
   .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
