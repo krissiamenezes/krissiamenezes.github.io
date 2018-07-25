@@ -265,8 +265,9 @@ bt {
 	max-width: 60%;
 	border-radius: 5px;
 	margin-bottom: 20px;
-	margin-right: 20px;
 }
 .img-mobi{
-	width: 25.4%!important;"
+	width: 25.4%!important;
+margin-right: 20px;
+
 }
