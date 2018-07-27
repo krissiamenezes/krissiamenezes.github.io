@@ -35,7 +35,7 @@
         </div>
         <nav role="navigation" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#portfolio">Portfólio</a></li>
+            <li id="goToPortfolio"><a href="#portfolio">Portfólio</a></li>
             <li><a href="#sobre">Sobre mim</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
@@ -319,6 +319,17 @@
                 });
 
         }
+	
+		
+	$( "#goToPortfolio" ).click(function() {
+	  $( "#portfolio" ).animate({
+	    opacity: 0.25,
+	    left: "+=50",
+	    height: "toggle"
+	  }, 5000, function() {
+	    // Animation complete.
+	  });
+	});
 	</script>
   </body>
 </html>
