@@ -90,8 +90,8 @@ a:after {
 }
 
 .navbar-inverse {
-	padding-bottom: 70px;
-	padding-top: 70px;
+	padding-bottom: 30px;
+	padding-top: 30px;
 }
 
 .navbar-inverse {
@@ -139,13 +139,17 @@ a:after {
 }
 
 .pt {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 80px;
+	padding-bottom: 20px;
 }
 
 
 /* +++++ WRAP SECTIONS +++++ */
 
+.ww {
+	padding-top: 100px;
+	padding-bottom: 70px;
+}
 #ww {
 	padding-top: 70px;
 	padding-bottom: 70px;
@@ -271,3 +275,15 @@ bt {
 margin-right: 20px;
 
 }
+/*
+body { padding-top: 13%!important; }
+*/
+/*
+#menu{
+	position: fixed;
+	top:0;
+	width: 100%;
+}
+.conteudo{
+	padding-top: 13%;
+}*/
