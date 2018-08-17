@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio da desenvolvedora front-end e Back-end Krissia Menezes.">
+    <meta name="description" content="Portfólio da Desenvolvedora Web Krissia Menezes.">
     <meta name="author" content="Krissia Menezes">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
     <title>Krissia Menezes - Desenvolvedora Web</title>
@@ -35,7 +35,7 @@
         </div>
         <nav role="navigation" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#portfolio">Portfólio</a></li>
+            <li id="goToPortfolio"><a href="#portfolio">Portfólio</a></li>
             <li><a href="#sobre">Sobre mim</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
@@ -285,12 +285,12 @@
     <!-- HTML5 shim e Respond.js para suporte ao HTML5 em navegadores antigos -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-	  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-	  <script src="assets/js/hover.zoom.js"></script>
-	  <script src="assets/js/hover.zoom.conf.js"></script>
-	  <script src="assets/js/bootstrap.min.js"></script>
 	<![endif]-->
+	 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	 <script src="assets/js/hover.zoom.js"></script>
+	 <script src="assets/js/hover.zoom.conf.js"></script>
+	 <script src="assets/js/bootstrap.min.js"></script>
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 	<script type="text/javascript">
         (function(){
             emailjs.init("user_75pLZTyAGQ3CxKsEiXFfV");
@@ -316,10 +316,21 @@
                     window.location.href = "https://krissiam.github.io/";
                 }, function(err) {
                     alert('Ocorreu um erro no envio.\n Por favor, verifique se marcou "Não sou um robô" e tente novamente!');
-                    window.location.href = "https://krissiam.github.io/contato.html";
+                    window.location.href = "https://krissiam.github.io/index.html#contato";
                 });
 
         }
+	
+		
+	/*$( "#goToPortfolio" ).click(function() {
+    $( "#sobre" ).animate({
+	    opacity: 0.25,
+	    left: "+=50",
+	    height: "toggle"
+	  }, 5000, function() {
+        // Animation complete.
+    });
+	});*/
 	</script>
   </body>
 </html>
