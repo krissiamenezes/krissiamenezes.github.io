@@ -28,31 +28,62 @@
         hr {
             margin-top: 0rem;
             margin-bottom: 2rem;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            border-radius: 10px;
+            border: 4px solid rgba(13, 10, 13, 0.72);
 
-            border: 4px solid rgba(0,0,0,.5);
-            -webkit-box-shadow: inset 0 0 20px #000;
-            -moz-box-shadow: inset 0 0 20px #000;
-            -ms-box-shadow: inset 0 0 20px #000;
-            box-shadow: inset 0 0 20px #000;
         }
-        .modal-xl {
-            max-width: 1020px;
+        .modal-dialog {
+            width: 100%;
+            height: 100%;
+            padding: 0;
         }
-        .modal-backdrop.show {
-            opacity: 0;
-        }/*
-        hr{
-            border-color:#aaa;
-            box-sizing:border-box;
-            width:100%;
-        }*/
+
+        .modal-content {
+            height: 100%;
+            border-radius: 0;
+            border: none;
+}
+/*.modal-xl {
+    max-width: 1020px;
+}
+.modal-backdrop.show {
+    opacity: 0;
+}/*
+hr{
+    border-color:#aaa;
+    box-sizing:border-box;
+    width:100%;
+}*/
     </style>
 </head>
 <body>
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10">
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <div style="text-align: center; background-color: darkred; color: white">
+                        <br>
+                        <h1>Não retire seu cartão.</h1>
+                        <br>
+                    </div>
+                    <br><br>
+                    <br><br>
+                    <br><br><br><br>
+                    <br><br>
+                    <br><br>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
@@ -64,7 +95,7 @@
             <div id="texto">
                 <button type="button" class="btn btn-lg btn-danger"><h2>Começar sem cartão <i class="fas fa-angle-double-right"></i></h2></button>
                 <br>
-                <button style="margin-top: 30px;" type="button" class="btn btn-lg btn-danger"><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saque digital&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i></h2></button>
+                <button style="margin-top: 30px;" type="button" data-toggle="modal" data-target=".bd-example-modal-xl" class="btn btn-lg btn-danger"><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saque digital&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i></h2></button>
                 <!-- <p>Bem vindo<br>Por favor, coloque e não retire o seu cartão.</p>
                  <img id="banco" src="banco24horas.png" alt="Minha Figura">-->
         </div>
@@ -100,33 +131,6 @@
 </div>
 <!-- Modal extra grande -->
 
-<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="row">
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-10">
-                    <br><br>
-                    <br><br>
-                    <br><br>
-                    <div style="text-align: center; background-color: darkred; color: white">
-                        <br>
-                        <h1>Não retire seu cartão.</h1>
-                        <br>
-                    </div>
-                    <br><br>
-                    <br><br>
-                    <br><br><br><br>
-                    <br><br>
-                    <br><br>
-                </div>
-                <div class="col-md-1">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 </body>
 </html>
