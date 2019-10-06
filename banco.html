@@ -28,26 +28,16 @@
         hr {
             margin-top: 0rem;
             margin-bottom: 4rem;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
             border-radius: 10px;
-
             border: 4px solid rgba(0,0,0,.5);
-            -webkit-box-shadow: inset 0 0 20px #000;
-            -moz-box-shadow: inset 0 0 20px #000;
-            -ms-box-shadow: inset 0 0 20px #000;
-            box-shadow: inset 0 0 20px #000;
-        }
-        .modal-backdrop.show {
-            opacity: 0;
+
         }
         .modal-lg, .modal-xl {
             max-width: 1024px;
         }
-      .modal-dialog {
-        margin: 0;
-      }
+        .modal-dialog {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -62,19 +52,14 @@
             <div id="texto">
                 <button type="button" class="btn btn-lg btn-danger"><h2>Começar sem cartão <i class="fas fa-angle-double-right"></i></h2></button>
                 <br>
-                <button style="margin-top: 30px;" type="button" class="btn btn-lg btn-danger"><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saque digital&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i></h2></button>
-                <!-- <p>Bem vindo<br>Por favor, coloque e não retire o seu cartão.</p>
+                <button style="margin-top: 30px;" type="button" data-toggle="modal" data-target=".bd-example-modal-xl" class="btn btn-lg btn-danger"><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saque digital&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i></h2></button>                <!-- <p>Bem vindo<br>Por favor, coloque e não retire o seu cartão.</p>
                  <img id="banco" src="banco24horas.png" alt="Minha Figura">-->
-        </div>
+            </div>
 
         </div>
-
         <div class="col-sm-12">
-        <hr>
-<!--
-            <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Modal extra grande</button>
--->
-
+            <hr>
+        </div>
         </div>
         <div class="col-md-3">
         </div>
@@ -95,19 +80,18 @@
         <div class="col-md-2">
         </div>
     </div>
-</div>
 <!-- Modal extra grande -->
 
 <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="row">
-              <div class="col-md-12">
-                  <div style="text-align: center; background-color: darkred; color: white; margin-top: 32%; margin-left: 20%;">
+                <div class="col-md-12">
+                    <div style="text-align: center; background-color: darkred; color: white; margin-top: 32%; margin-left: 20%;">
                         <br>
                         <h1 style="font-size: 4rem;">Não retire seu cartão.</h1>
                         <br>
-                  </div>
+                    </div>
                 </div>
             </div>
         </div>
