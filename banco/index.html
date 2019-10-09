@@ -42,6 +42,15 @@
             height: 100%;
         }
     </style>
+    <script type="text/javascript">
+
+
+        setTimeout(function(){
+            $(document).ready(function() {
+                $('.espere').modal('show');
+            })
+        }, 3000);
+    </script>
 </head>
 <body>
 <div class="container">
@@ -55,7 +64,7 @@
             <div id="texto">
                 <button type="button" class="btn btn-lg btn-danger"><h2>Começar sem cartão <i class="fas fa-angle-double-right"></i></h2></button>
                 <br>
-                <button style="margin-top: 30px;" type="button" data-toggle="modal" data-target=".bd-example-modal-xl" class="btn btn-lg btn-danger"><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saque digital&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i></h2></button>                <!-- <p>Bem vindo<br>Por favor, coloque e não retire o seu cartão.</p>
+                <button style="margin-top: 30px;" type="button" class="btn btn-lg btn-danger"><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saque digital&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i></h2></button>                <!-- <p>Bem vindo<br>Por favor, coloque e não retire o seu cartão.</p>
                  <img id="banco" src="banco24horas.png" alt="Minha Figura">-->
             </div>
 
@@ -85,7 +94,7 @@
 </div>
 <!-- Modal extra grande -->
 
-<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+<div class="modal fade espere" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="row">
