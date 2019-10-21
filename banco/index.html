@@ -41,6 +41,19 @@
         .modal-content {
             height: 100%;
         }
+        #container-img{
+            display: inline-block;
+            position: relative;
+        }
+
+        #container-img figcaption {
+            position: absolute;
+            top: 610px;
+            right: 20px;
+            font-size: 40px;
+            color: black;
+            text-shadow: 0 0 5px black;
+        }
     </style>
     <script type="text/javascript">
         setTimeout(function(){
@@ -48,6 +61,7 @@
                 $('.espere').modal('show');
             })
         }, 3000);
+
     </script>
 </head>
 <body>
@@ -130,12 +144,43 @@
                     </div>
                 </div>
                 <div class="col-md-6" style="background-color: darkred;">
-                    <img src="mao.jpg">
+                    <figure id="container-img">
+                        <img src="mao.jpg">
+                        <figcaption>
+                            <button type="button" class="btn btn-lg btn-success"><h2 style="text-align: left; font-size: 1.8rem;">Estou ciente.<br>Por favor, aperte a TECLA "ENTRA".</h2></button>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<div class="modal fade banco" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10">
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <div style="text-align: center; background-color: darkred; color: white">
+                        <br>
+                        <h1>Você está no Banco da EJA.</h1>
+                        <br>
+                    </div>
+                    <br><br>
+                    <br><br>
+                    <br><br><br><br>
+                    <br><br>
+                    <br><br>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
