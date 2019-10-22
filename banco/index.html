@@ -58,9 +58,19 @@
     <script type="text/javascript">
         setTimeout(function(){
             $(document).ready(function() {
-                $('.valor').modal('show');
+                $('.banco').modal('show');
             })
         }, 3000);
+        setTimeout(function(){
+            $(document).ready(function() {
+                $('.aguarde').modal('show');
+            })
+        }, 6000);
+        setTimeout(function(){
+            $(document).ready(function() {
+                $('.opcao').modal('show');
+            })
+        }, 9000)
 
     </script>
 </head>
@@ -200,7 +210,7 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
-                    <button style=" margin-top: 70px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Saque</h2></button>
+                    <button style=" margin-top: 70px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#saque"><h2 style="font-size: 2.5em">Saque</h2></button>
                 </div>
                 <div class="col-md-5">
                     <button style=" margin-top: 170px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Saldo</h2></button>
@@ -220,7 +230,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade saque" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+<div class="modal fade saque" tabindex="-1" id="saque" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="row">
@@ -231,17 +241,17 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
-                    <button style=" margin-top: 70px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Conta Corrente</h2></button>
+                    <button style=" margin-top: 70px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#valor"><h2 style="font-size: 2.5em">Conta Corrente</h2></button>
                 </div>
                 <div class="col-md-5">
-                    <button style=" margin-top: 170px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Poupança</h2></button>
+                    <button style=" margin-top: 170px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#valor"><h2 style="font-size: 2.5em">Poupança</h2></button>
                 </div>
                 <div class="col-md-1"></div>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade valor" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+<div class="modal fade valor" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" id="valor" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="row">
