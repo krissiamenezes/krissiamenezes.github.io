@@ -58,7 +58,7 @@
     <script type="text/javascript">
         setTimeout(function(){
             $(document).ready(function() {
-                $('.opcao').modal('show');
+                $('.valor').modal('show');
             })
         }, 3000);
 
@@ -194,8 +194,98 @@
         <div class="modal-content">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 style="font-size: 2.3rem; margin-top: 30px;">Selecione a opção desejada ou tecle <b style="color: darkred;">ANULA</b> para cancelar.</h1>
+                    <h1 style="font-size: 2.3rem; margin-top: 80px; text-align: center">Selecione a opção desejada ou tecle <b style="color: darkred;">ANULA</b> para cancelar.</h1>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 70px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Saque</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 170px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Saldo</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 70px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Extrato</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 170px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Pagamento</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade saque" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="font-size: 2.3rem; margin-top: 80px; text-align: center">Selecione a opção desejada ou tecle <b style="color: darkred;">ANULA</b> para cancelar.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 70px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Conta Corrente</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 170px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Poupança</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade valor" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-11">
+                    <h1 style="font-size: 2.3rem; margin-top: 80px; text-align: left">Selecione a opção desejada.</h1>
+                </div>
+            </div>
+            <div class="row" style=" margin-top: 70px;">
+                <div class="col-md-1"></div>
+                <div class="col-md-5" >
+                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 20,00</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 100,00</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row" style=" margin-top: 70px;">
+                <div class="col-md-1"></div>
+                <div class="col-md-5" >
+                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 40,00</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 150,00</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row" style=" margin-top: 70px;">
+                <div class="col-md-1"></div>
+                <div class="col-md-5" >
+                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 50,00</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 170,00</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row" style=" margin-top: 70px;">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" >
+                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Saque outro valor</h2></button>
+                </div>
+                <div class="col-md-1"></div>
             </div>
         </div>
     </div>
