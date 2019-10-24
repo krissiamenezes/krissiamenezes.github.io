@@ -75,7 +75,15 @@
             $(document).ready(function() {
                 $('.opcao').modal('show');
             })
-        }, 16000)
+        }, 16000);
+
+        $(document).ready(function() {
+            $('.retirecartao').click(function(){
+                setTimeout(function(){
+                    $('.dinheiro').modal('show');
+                }, 4000)
+            });
+        });
 
     </script>
 </head>
@@ -270,42 +278,258 @@
             <div class="row" style=" margin-top: 70px;">
                 <div class="col-md-1"></div>
                 <div class="col-md-5" >
-                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 20,00</h2></button>
+                    <button type="button" data-toggle="modal" data-target="#senha" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 20,00</h2></button>
                 </div>
                 <div class="col-md-5">
-                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 100,00</h2></button>
+                    <button type="button" data-toggle="modal" data-target="#senha" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 100,00</h2></button>
                 </div>
                 <div class="col-md-1"></div>
             </div>
             <div class="row" style=" margin-top: 70px;">
                 <div class="col-md-1"></div>
                 <div class="col-md-5" >
-                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 40,00</h2></button>
+                    <button type="button" data-toggle="modal" data-target="#senha" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 40,00</h2></button>
                 </div>
                 <div class="col-md-5">
-                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 150,00</h2></button>
+                    <button type="button" data-toggle="modal" data-target="#senha" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 150,00</h2></button>
                 </div>
                 <div class="col-md-1"></div>
             </div>
             <div class="row" style=" margin-top: 70px;">
                 <div class="col-md-1"></div>
                 <div class="col-md-5" >
-                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 50,00</h2></button>
+                    <button type="button" data-toggle="modal" data-target="#senha" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 50,00</h2></button>
                 </div>
                 <div class="col-md-5">
-                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 170,00</h2></button>
+                    <button type="button" data-toggle="modal" data-target="#senha" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">R$ 170,00</h2></button>
                 </div>
                 <div class="col-md-1"></div>
             </div>
             <div class="row" style=" margin-top: 70px;">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" >
-                    <button type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Saque outro valor</h2></button>
+                    <button type="button" data-toggle="modal" data-target="#senha" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Saque outro valor</h2></button>
                 </div>
                 <div class="col-md-1"></div>
             </div>
         </div>
     </div>
 </div>
+<div class="modal fade senha" tabindex="-1" id="senha" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="font-size: 2.3rem; margin-top: 80px; text-align: center">Aperte o botão que mostra a PRIMEIRA<br>SEQUENCIA do grupo de letras que<br> compoe o seu Codigo de Acesso</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#senha2"><h2 style="font-size: 2.5em">Fe - Ge - I - Li - Po</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#senha2"><h2 style="font-size: 2.5em">H - Jo - Lo - Ru - W</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row" style="margin-top: 12px">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <input  style="font-weight: 900;text-align: center;" type="text" class="form-control" id="campo-senha">
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 12px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#senha2"><h2 style="font-size: 2.5em">Ba - Ja - Lu - Pi - U</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 12px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#senha2"><h2 style="font-size: 2.5em">A - Ju - Mo - Na - P</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 40px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#senha2"><h2 style="font-size: 2.5em">He - K - M - P - Su</h2></button>
+                </div>
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Corrigir</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#valor"><h2 style="font-size: 2.5em">Cancela</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade senha2" tabindex="-1" id="senha2" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="font-size: 2.3rem; margin-top: 80px; text-align: center">Aperte o botão que mostra a SEGUNDA<br>SEQUENCIA do grupo de letras que<br> compoe o seu Codigo de Acesso</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#senha3"><h2 style="font-size: 2.5em">I - Ja - Ju - Li - W</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#senha3"><h2 style="font-size: 2.5em">Jo - M - Pe - Po - Su</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row" style="margin-top: 12px">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <input style="font-weight: 900;text-align: center;" type="text" class="form-control" id="campo-senha2" value="*">
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 12px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#senha3"><h2 style="font-size: 2.5em">Ba - Fe - G - K - Ru</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 12px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#senha3"><h2 style="font-size: 2.5em">A - Lo - Mo - Na - Pi</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 40px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#senha3"><h2 style="font-size: 2.5em">H - He - Lu - P - Su</h2></button>
+                </div>
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Corrigir</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#valor"><h2 style="font-size: 2.5em">Cancela</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade senha3" tabindex="-1" id="senha3" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="font-size: 2.3rem; margin-top: 80px; text-align: center">Aperte o botão que mostra a TERCEIRA<br>SEQUENCIA do grupo de letras que<br> compoe o seu Codigo de Acesso</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger retirecartao" id="retirecartao" data-toggle="modal" data-target="#retire"><h2 style="font-size: 2.5em">G - Lu - Pi - Ru - Su</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger retirecartao" data-toggle="modal" data-target="#retire"><h2 style="font-size: 2.5em">A - M - Fe - Po - Lo</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row" style="margin-top: 12px">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <input style="font-weight: 900; text-align: center;" type="text" class="form-control" id="campo-senha3" value="**">
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 12px;" type="button" class="btn btn-block btn-danger retirecartao" data-toggle="modal" data-target="#retire"><h2 style="font-size: 2.5em">Ja - Ju - Na - U - W</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 12px;" type="button" class="btn btn-block btn-danger retirecartao" data-toggle="modal" data-target="#retire"><h2 style="font-size: 2.5em">A - Lo - Mo - Na - Pi</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 40px;" type="button" class="btn btn-block btn-danger retirecartao" data-toggle="modal" data-target="#retire"><h2 style="font-size: 2.5em">H - He - Lu - P - Su</h2></button>
+                </div>
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger"><h2 style="font-size: 2.5em">Corrigir</h2></button>
+                </div>
+                <div class="col-md-5">
+                    <button style=" margin-top: 50px;" type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#valor"><h2 style="font-size: 2.5em">Cancela</h2></button>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade retire" id="retire" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-5" style="margin-top: 280px;">
+                    <img style="width: 374px; border-radius: 20px;" src="cartao.jpg">
+                </div>
+                <div class="col-md-5" style="margin-top: 284px;">
+                        <h1 style="font-size: 3.1em; text-align: center">Retire totalmente<br>o seu cartão.</h1><br>
+                        <p style="font-size: 1.8em;"><i>Remove your card<br>completely</i></p>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade dinheiro" id="dinheiro" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="row"  style="margin-top: 50px;">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10">
+                    <h1 style="text-align: center; font-size:3.1em">Saque realizado com sucessso</h1>
+                    <hr style="font-size: 4em; color: darkred;">
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+            <div class="row"  style="margin-top: 190px;">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10">
+                    <h1 style="text-align: center; font-size:2.7em">Por favor, retire seu dinheiro</h1>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
