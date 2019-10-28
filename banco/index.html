@@ -76,12 +76,14 @@
                 $('.opcao').modal('show');
             })
         }, 16000);
-
         $(document).ready(function() {
             $('.retirecartao').click(function(){
                 setTimeout(function(){
                     $('.dinheiro').modal('show');
-                }, 4000)
+                }, 4000);
+                setTimeout(function(){
+                    $('.fim').modal('show');
+                }, 8000)
             });
         });
 
@@ -530,6 +532,28 @@
         </div>
     </div>
 </div>
-
+<div class="modal fade fim" id="fim" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="row"  style="margin-top: 200px;">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h1 style="text-align: center; font-size:3.88em">Deseja realizar outra operação?</h1>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row"  style="margin-top: 100px;">
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                    <a style="font-size: 2.5em" class="btn btn-block btn-danger" href="https://krissiam.github.io/banco/">Sim</a>
+                </div>
+                <div class="col-md-4">
+                    <a style="font-size: 2.5em" class="btn btn-block btn-danger" href="https://krissiam.github.io/banco/">Não</a>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
