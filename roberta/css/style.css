@@ -1424,7 +1424,6 @@ h6 {
 .whatsapp{
   bottom: 10px;
   padding: 12px 6px;
-  height: 75px;
   right: 10px;
   text-align: center;
   position: fixed;
@@ -1435,5 +1434,5 @@ h6 {
   font-size: 0.9em;
   font-weight: 700;
   display: inline;
-  width: 115px;
+  width: 53px;
 }
