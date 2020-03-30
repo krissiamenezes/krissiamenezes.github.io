@@ -531,7 +531,7 @@ section {
 }
 .portfolio h3 {
   font-weight: 400;
-  font-size: 1em;
+  font-size: .9em;
 }
 .portfolio #portfolio-flters {
   padding: 0;
@@ -639,7 +639,6 @@ section {
 
 .faq .faq-list i {
   min-width: 10px;
-  padding: 2px 5px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
@@ -671,7 +670,6 @@ section {
 .faq .faq-list a.collapsed i::before {
   content: "\eab2" !important;
   min-width: 10px;
-  padding: 2px 5px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
@@ -923,47 +921,50 @@ section {
   border: 2px solid rgba(33, 150, 243, 0.1);
 }
 .normativa {
-  font-size: 1.2rem !important;
+  font-size: 1.15rem !important;
   font-style: italic;
   padding: .3em .3em .3em .3em;
   color: #3c5472;
   font-weight: 500;
 }
 .faq .faq-list li > .regra-desc{
-  padding: 11px 10px 2px 20px;
+  padding: 11px 11px 11px 11px;
   color: #42658a;
   margin-right: 0;
   font-size: 1rem !important;
   font-weight: 600;
+  background: rgba(5, 177, 255, 0.05);
 }
 .faq .faq-list li > ol{
   margin: 0px 25px 0px 25px;
 }
-.motivo{
+motivo{
+  color: #42658a;
+  font-weight: 400;
+  font-size: 1rem !important;
+}
+contexto{
+  color: #42658a;
+}
+como{
+  color: #42658a;
+  font-weight: 400;
+  font-size: 1rem !important;
+}
+resultados{
   color: #42658a;
   font-weight: 400;
   font-size: 1rem !important;
 }
 .contextos{
-  color: #42658a;
-}
-.como{
-  color: #42658a;
-  font-weight: 400;
-  font-size: 1rem !important;
-}
-.resultados{
-  color: #42658a;
-  font-weight: 400;
-  font-size: 1rem !important;
-}
-.contexto{
   margin-left: 35px;
 
 }
 .faq .faq-list li .regra{
-  border: solid rgba(33, 150, 243, 0.08) 1px;
+  border: solid rgba(33, 150, 243, 0.15) 1px;  /*
   background: rgba(3, 169, 244, 0.02);
+  */
   list-style:none !important;
-
+  margin-right: 40px;
+  margin-bottom: 10px;
 }
