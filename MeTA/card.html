@@ -2,248 +2,193 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Cartões</title>
-    <meta content="" name="descriptison">
-    <meta content="" name="keywords">
+  <title>Cartões</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-    <style>
-        .card-body {
-            padding: 0;
-        }
-        
-        .card-rule {
-            position: relative;
-            border-left: none;
-            border-right: none;
-            border-radius: 10px;
-        }
-        
-        .card-rule>h5 {
-            font-size: 1.2rem;
-            padding: 8px;
-            height: 6.5rem;
-            color: #fff;
-            font-weight: 600;
-            border: 1px;
-            margin-left: 42px;
-        }
-        
-        .card-rule-number-item {
-            position: absolute;
-            left: -3px;
-            top: -15px;
-            background-color: #fff;
-            font-weight: 600;
-            border-radius: 50%;
-            box-sizing: border-box;
-            padding: 14px 8px;
-            font-size: 15px;
-        }
-        
-        .card {
-            border-top: 10px solid;
-            border-bottom: 10px solid;
-            border-radius: 20px;
-            padding: .3rem;
-            background: #fff;
-            min-height: 24rem;
-            margin-top: 1.5rem;
-        }
-        
-        .principio {
-            font-weight: 600;
-            font-size: 1rem;
-            margin: 0 -.35rem;
-            padding-right: .5rem;
-        }
-        
-        .recomendacao {
-            font-size: .8rem!important;
-            margin: .3em 0 10px 0;
-            color: #333;
-            font-weight: 400;
-            min-height: 3.2em;
-        }
-        
-        .cards p {
-            color: #333;
-        }
-        
-        .descricao {
-            font-size: .8rem;
-            margin: 0 .3rem;
-        }
-        
-        .pt-2,
-        .py-2 {
-            padding-top: .5rem!important;
-        }
-        
-        .filter-app {
-            padding-right: 8px !important;
-            padding-left: 8px !important;
-        }
-    </style>
+  <style>
+    .card-body {
+      padding: 0;
+    }
+    .card-body > h5 {
+      font-size: 1.2rem;
+      padding: 8px;
+      height: 6.5rem;
+      color: #fff;
+      font-weight: 600;
+      border: 1px ;
+      border-left: none;
+      border-right: none;
+      border-radius: 10px;
+    }
+    .card{
+      border-top: 10px solid;
+      border-bottom: 10px solid;
+      border-radius: 20px;
+      padding: .3rem;
+      background: #fff;
+      min-height: 24rem;
+      margin-top: 1.5rem;
+    }
+    .principio {
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0 -.35rem;
+      padding-right: .5rem;
+    }
+    .recomendacao {
+      font-size: .8rem!important;
+      margin: .3em 0 10px 0;
+      color: #333;
+      font-weight: 400;
+      min-height: 3.2em;
+    }
+    .cards p {
+      color: #333;
+    }
+
+    .descricao {
+      font-size: .8rem;
+      margin: 0 .3rem;
+    }
+    .pt-2, .py-2 {
+      padding-top: .5rem!important;
+    }
+    .filter-app{
+      padding-right: 8px !important;
+      padding-left: 8px !important;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- ======= Our Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
+<!-- ======= Our Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
 
-            <div class="section-title">
-                <h2>Cartões</h2>
-            </div>
+    <div class="section-title">
+      <h2>Cartões</h2>
+    </div>
 
-            <div class="row ">
-                <div class="col-lg-4 col-md-6 filter-app">
-                    <div class="card border-primary">
-                        <div class="card-body">
-                            <p class="principio text-right text-primary">1. Uso Equitativo</p>
-                            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
-                            <div class="card-rule bg-primary">
-                                <span class="card-rule-number-item text-primary border border-primary"> 1.a.1 </span>
-                                <h5 class="card-title">
-                                    Apresentar Informações gráficas em formato alternativo de texto.
-                                </h5>
-                            </div>
-                            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira
-                                enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
-                            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
-                            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente
-                                equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 filter-app">
-                    <div class="card border-secondary">
-                        <div class="card-body">
-                            <p class="principio text-right text-secondary">2. Uso flexível</p>
-                            <p class="recomendacao text-right"><i>2a. Fornecer diferentes escolhas no método de uso.</i></p>
-                            <div class="card-rule bg-secondary">
-                                <span class="card-rule-number-item text-secondary border border-secondary"> 2.a.1 </span>
-                                <h5 class="card-title">
-                                    Fornecer acesso e operação por meio de comando de voz ou por direto ou redução da fonte do texto apresentado na interface.
-                                </h5>
-                            </div>
-                            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um professor cego, usando um Tablet Educacional para pesquisar poemas barrocos, localizado em uma sala de leitura. Um exemplo de barreira enfrentada é o Tablet não
-                                permitir a operação por voz e o professor não conseguir realizar a pesquisa utilizando o teclado virtual do dispositivo.</p>
-                            <p class="pt-2 descricao"><strong>Como?</strong> Verificar se a TE possibilita que a fonte do texto seja aumentada ou reduzida e/ou o acesso por comando de voz.</p>
-                            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve permitir o aumento ou redução da fonte do texto apresentado na interface, para tamanhos diversos, oferecendo possibilidade de adequar a informação visual à
-                                necessidade visual do usuário.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 filter-app">
-                    <div class="card border-success">
-                        <div class="card-body">
-                            <p class="principio text-right text-success">1. Uso Equitativo</p>
-                            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
-                            <div class="card-rule bg-success">
-                                <span class="card-rule-number-item text-success border border-success"> 1.a.1 </span>
-                                <h5 class="card-title">
-                                    Apresentar Informações gráficas em formato alternativo de texto.
-                                </h5>
-                            </div>
-                            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira
-                                enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
-                            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
-                            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente
-                                equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 filter-app">
-                    <div class="card border-danger">
-                        <div class="card-body">
-                            <p class="principio text-right text-danger">1. Uso Equitativo</p>
-                            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
-                            <h5 class="card-title bg-danger ">1.a.1 - Apresentar Informações gráficas em formato alternativo de texto. </h5>
-                            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira
-                                enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
-                            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
-                            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente
-                                equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 filter-app">
-                    <div class="card border-warning">
-                        <div class="card-body">
-                            <p class="principio text-right text-warning">1. Uso Equitativo</p>
-                            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
-                            <h5 class="card-title bg-warning ">1.a.1 - Apresentar Informações gráficas em formato alternativo de texto. </h5>
-                            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira
-                                enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
-                            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
-                            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente
-                                equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 filter-app">
-                    <div class="card border-info">
-                        <div class="card-body">
-                            <p class="principio text-right text-info">1. Uso Equitativo</p>
-                            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
-                            <h5 class="card-title bg-info">1.a.1 - Apresentar Informações gráficas em formato alternativo de texto. </h5>
-                            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira
-                                enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
-                            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
-                            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente
-                                equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 filter-app">
-                    <div class="card border-dark">
-                        <div class="card-body">
-                            <p class="principio text-right text-dark">1. Uso Equitativo</p>
-                            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
-                            <h5 class="card-title bg-dark ">1.a.1 - Apresentar Informações gráficas em formato alternativo de texto. </h5>
-                            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira
-                                enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
-                            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
-                            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente
-                                equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="row ">
+      <div class="col-lg-4 col-md-6 filter-app">
+        <div class="card border-primary" >
+          <div class="card-body">
+            <p class="principio text-right text-primary">1. Uso Equitativo</p>
+            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
+            <h5 class="card-title bg-primary">1.a.1 - Apresentar Informações gráficas em formato alternativo de texto. </h5>
+            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
+            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
+            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
+          </div>
         </div>
-    </section>
-    <!-- End Our Portfolio Section -->
+      </div>
+      <div class="col-lg-4 col-md-6 filter-app">
+        <div class="card border-secondary" >
+          <div class="card-body">
+            <p class="principio text-right text-secondary">2. Uso flexível</p>
+            <p class="recomendacao text-right"><i>2a. Fornecer diferentes escolhas no método de uso.</i></p>
+            <h5 class="card-title bg-secondary">2.a.1 - Fornecer acesso e operação por meio de comando de voz ou por direto ou redução da fonte do texto apresentado na interface. </h5>
+            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um professor cego, usando um Tablet Educacional para pesquisar poemas barrocos, localizado em uma sala de leitura. Um exemplo de barreira enfrentada é o Tablet não permitir a operação por voz e o professor não conseguir realizar a pesquisa utilizando o teclado virtual do dispositivo.</p>
+            <p class="pt-2 descricao"><strong>Como?</strong> Verificar se a TE possibilita que a fonte do texto seja aumentada ou reduzida e/ou o acesso por comando de voz.</p>
+            <p class="pt-2 descricao"><strong>Resultados esperados</strong>  A Tecnologia Educacional deve permitir o aumento ou redução da fonte do texto apresentado na interface, para tamanhos diversos, oferecendo possibilidade de adequar a informação visual à necessidade visual do usuário.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-app">
+        <div class="card border-success" >
+          <div class="card-body">
+            <p class="principio text-right text-success">1. Uso Equitativo</p>
+            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
+            <h5 class="card-title bg-success ">1.a.1 - Apresentar Informações gráficas em formato alternativo de texto. </h5>
+            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
+            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
+            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-app">
+        <div class="card border-danger" >
+          <div class="card-body">
+            <p class="principio text-right text-danger">1. Uso Equitativo</p>
+            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
+            <h5 class="card-title bg-danger ">1.a.1 - Apresentar Informações gráficas em formato alternativo de texto. </h5>
+            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
+            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
+            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-app">
+        <div class="card border-warning" >
+          <div class="card-body">
+            <p class="principio text-right text-warning">1. Uso Equitativo</p>
+            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
+            <h5 class="card-title bg-warning ">1.a.1 - Apresentar Informações gráficas em formato alternativo de texto. </h5>
+            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
+            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
+            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-app">
+        <div class="card border-info" >
+          <div class="card-body">
+            <p class="principio text-right text-info">1. Uso Equitativo</p>
+            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
+            <h5 class="card-title bg-info">1.a.1 - Apresentar Informações gráficas em formato alternativo de texto. </h5>
+            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
+            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
+            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-app">
+        <div class="card border-dark" >
+          <div class="card-body">
+            <p class="principio text-right text-dark">1. Uso Equitativo</p>
+            <p class="recomendacao text-right"><i>1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</i></p>
+            <h5 class="card-title bg-dark ">1.a.1 - Apresentar Informações gráficas em formato alternativo de texto. </h5>
+            <p class="pt-2 descricao"><strong>Por que?</strong> <br>Contexto de uso I: Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.</p>
+            <p class="pt-2 descricao"><strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
+            <p class="pt-2 descricao"><strong>Resultados esperados</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End Our Portfolio Section -->
 
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/venobox/venobox.min.js"></script>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/venobox/venobox.min.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
 
 </body>
 
