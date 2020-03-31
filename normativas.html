@@ -1,0 +1,2056 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//pt-br" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br">
+<head>
+    <title>Normativas para Desenvolvimento de TE Acessíveis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .navbar {
+            padding: 0!important;
+        }
+        .nav-link{
+            color: #000000;
+            font-size: 0.9em;
+        }
+        .dropdown-toggle{
+            font-size: 0.95em;
+        }
+        .dropdown-menu{
+            border: none;
+        }
+        .normativa{
+            font-size: 1.3rem;
+            font-style: italic;
+            background-color: #CFE8EF !important;
+            border: solid #666666 1px;
+            padding: .3em .3em .3em .3em; 
+        }
+        .regra{
+            font-size: 1.1rem;
+            
+        }
+        .fa-chevron-down{
+            font-size: 0.8em;
+        }
+        #conteudoprincipal{
+            font-size: 0.95em;
+        }
+        .bg-light{
+            height:30%;
+        }
+        h2{
+            border: solid #666666 1px;
+            padding: .5em .5em .5em .5em;
+        }
+        #principal p li:before {
+            content: "#";
+            font-weight: 400;
+            margin-left: -25px;
+            position: absolute;
+            font-size: 28px;
+            color: #ff2d20;
+            opacity: .6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+    <h1>Normativas para Desenvolvimento e Avaliação de Tecnologias Educacionais Acessíveis</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3  bg-light sticky-top">
+            <nav  class="navbar" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" id="conteudoprincipal" href="#principal">Ir para o Conteúdo Principal</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Princípio 1: Uso equitativo</a>
+                        <div class="dropdown-menu">
+                            <a class="nav-link" href="#principio-1a" >1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</a>
+                            <a class="nav-link" href="#principio-1b" >1b. Evitar segregar ou estigmatizar qualquer usuário.</a>
+                            <a class="nav-link" href="#principio-1c" >1c. Privacidade, segurança, inocuidade devem ser igualmente disponíveis para todos os usuários.</a>
+                            <a class="nav-link" href="#principio-1d" >1d. Tornar o design atraente para todos os usuários.</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Princípio 2: Uso flexível</a>
+                        <div class="dropdown-menu" >
+                            <a class="nav-link" href="#principio-2a">2a. Fornecer diferentes escolhas no método de uso.</a>
+                            <a class="nav-link" href="#principio-2b">2b. Acomodar acesso e uso por destros e canhotos.</a>
+                            <a class="nav-link" href="#principio-2c">2c. Favorecer acurácia e precisão do usuário.</a>
+                            <a class="nav-link" href="#principio-2d">2d. Fornecer adaptabilidade à velocidade do usuário.</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Princípio 3: Uso simples e intuitivo</a>
+                        <div class="dropdown-menu" >
+                            <a class="nav-link" href="#principio-3a">3a. Eliminar complexidade desnecessária.</a>
+                            <a class="nav-link" href="#principio-3b">3b. Ser consistente com expectativas e intuições do usuário.</a>
+                            <a class="nav-link" href="#principio-3c">3c. Acomodar uma ampla gama de habilidades de letramento e linguagem.</a>
+                            <a class="nav-link" href="#principio-3d">3d. Organizar informação de maneira consistente de acordo com sua importância.</a>
+                            <a class="nav-link" href="#principio-3e">3e. Fornecer auxílio e retorno durante tarefa e após conclusão de tarefa.</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Princípio 4: Informação perceptível</a>
+                        <div class="dropdown-menu" >
+                            <a class="nav-link" href="#principio-4a">4a. Utilizar diferentes modalidades (visuais, verbais, táteis) para apresentação redundante de informação.</a>
+                            <a class="nav-link" href="#principio-4b">4b. Fornecer contraste adequado entre informação essencial e seus arredores.</a>
+                            <a class="nav-link" href="#principio-4c">4c. Maximizar "legibilidade" de informação essencial.</a>
+                            <a class="nav-link" href="#principio-4d">4d. Diferenciar elementos de maneira que eles possam ser descritos (i.e., tornar fácil dar instruções ou direções).</a>
+                            <a class="nav-link" href="#principio-4e">4e. Fornecer compatibilidade com uma variedade de técnicas ou dispositivos usadas por pessoas com limitações sensoriais.</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Princípio 5: Tolerância a erros</a>
+                        <div class="dropdown-menu" >
+                            <a class="nav-link" href="#principio-5a">5a. Organizar elementos para minimizar riscos e erros: elementos mais utilizados, mais acessíveis; elementos que trazem risco devem ser removidos, isolados ou guardados.</a>
+                            <a class="nav-link" href="#principio-5b">5b. Fornecer avisos de riscos e erros.</a>
+                            <a class="nav-link" href="#principio-5c">5c. Fornecer recursos seguros contra falhas.</a>
+                            <a class="nav-link" href="#principio-5d">5d. Desencorajar ações inconscientes em tarefas que exigem vigilância.</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Princípio 6: Baixo esforço físico</a>
+                        <div class="dropdown-menu" >
+                            <a class="nav-link" href="#principio-6a">6a. Permitir que usuário mantenha uma posição corporal neutra.</a>
+                            <a class="nav-link" href="#principio-6b">6b. Usar forças de operação razoáveis.</a>
+                            <a class="nav-link" href="#principio-6c">6c. Minimizar ações repetitivas.</a>
+                            <a class="nav-link" href="#principio-6d">6d. Minimizar esforço físico continuado.</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Princípio 7: Dimensões e espaços<br> para aproximação e uso</a>
+                        <div class="dropdown-menu" >
+                            <a class="nav-link" href="#principio-7a">7a. Fornecer uma linha de visão direta a elementos importantes para qualquer usuário sentado ou em pé.</a>
+                            <a class="nav-link" href="#principio-7b">7b. Tornar ao alcance de todos componentes para usuário sentado, em pé ou deitado.</a>
+                            <a class="nav-link" href="#principio-7c">7c. Acomodar variações de formatos e tamanhos de mão.</a>
+                            <a class="nav-link" href="#principio-7d">7d. Fornecer espaço adequado para o uso de dispositivos assistivos ou auxílio pessoal.</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-9" id="principal">
+            <div id="principio-1"><!--Princípio 1-->
+                <h2>Princípio 1: Uso equitativo</h2>
+                <div id="principio-1a">
+                    <p class="normativa">1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a1">Apresentar Informações gráficas em formato alternativo de texto. <span class="fa fa-chevron-down" aria-hidden="true"></span></p>
+                            <ol type="a" id="p1a1" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.
+                                            </p>
+                                        </li>
+
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a2">Apresentar audiodescrição e/ou descrição textual para vídeos, animações e outros recursos multimídias. <span class="fa fa-chevron-down" aria-hidden="true"></span></p>
+                            <ol type="a" id="p1a2" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno cego na Educação Infantil usando aplicativo no Tablet Educacional para o desenvolvimento de habilidade linguística em uma roda de conversa com seu pares em sala de aula. Um exemplo de barreira enfrentada é o acesso às informações visuais veiculadas nos vídeos exibidos pelo aplicativo serem baseados, em sua maior parte, em recursos de animação, sem fala.
+                                            </p>
+                                        </li>
+
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se os vídeos com as animações apresentam recurso de audiodescrição adequado para o tipo de estímulo.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar audiodescrição ou descrição textual prévia para recursos multimídias em que o conteúdo visual seja relevante ou que não possuam falas. Para vídeos ou animações que contenham falas ou narrativas, a audiodescrição ou descrição textual prévia são exigidas quando existem informações visuais essenciais à percepção e compreensão do conteúdo. A audiodescrição ou descrição textual devem ser equivalentes ao conteúdo visual do recurso multimídia.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a3">Apresentar conversão automática para formato de áudio do que está sendo acionado, pelo usuário, por teclas e/ou botões periféricos. <span class="fa fa-chevron-down" aria-hidden="true"></span></p>
+                            <ol type="a" id="p1a3" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol >
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um estudante cego usando um computador com leitor de telas  para pesquisar sobre o Queimadas na Amazônia, localizado em um Laboratório de Informática. Um exemplo de barreira enfrentada é quando ele acaba de ler o conteúdo da página, pressiona a tecla tab e encontra um botão, que não possui descrição.
+                                            </p>
+                                        </li>
+
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Usando um Leitor de Telas, verificar se os elementos da página acionados pelo usuário são sintetizados pelo Leitor de Telas.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A TE deve apresentar conversão automática para o formato de áudio de todo conteúdo acionado pelo usuário.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a4">Garantir a linearidade no fluxo da informação na alternativa sonora ou tátil, mantendo a mesma estrutura e conteúdo do que é percebido visualmente na interface. <span class="fa fa-chevron-down" aria-hidden="true"></span></p>
+                            <ol type="a" id="p1a4" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong>  Considere um aluno surdo cego usando computador para ter acesso ao material virtual da aula sobre figuras de linguagem, localizado em um laboratório de informática. Um exemplo de barreira enfrentada é quando o aluno, que utiliza leitor de telas e teclado para navegação no material, pressiona a tecla tab é direcionado para o rodapé da página e quando pressiona novamente é direcionado para o cabeçalho, não conseguindo ter acesso ao conteúdo principal de forma clara.</p>
+                                        </li>
+
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Utilizando um leitor de telas ou somente um teclado, navegar na página verificando se a navegação segue a ordem de apresentação dos conteúdos na interface.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar, via alternativas sonora ou display tátil, as informações na mesma estrutura e conteúdo do que é percebido visualmente, percorrendo toda a interface em uma ordem lógica, como: cabeçalho, menu esquerdo, conteúdo principal. A apresentação alternativa deve seguir a ordem de apresentação dos conteúdos na interface do superior ao inferior, da esquerda para direita.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a5">Tornar o acesso ao conteúdo e à funcionalidade operável via teclado. <span class="fa fa-chevron-down" aria-hidden="true"></span> </p>
+                            <ol type="a" id="p1a5" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno do ensino médio com baixa visão usando um computador do laboratório de informática para realizar uma pesquisa sobre o Ciclo da Borracha. Um exemplo de barreira enfrentada é o aluno precisar modificar o contraste da página e não haver atalho para isto.
+                                            </p>
+                                        </li>
+
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional possui os atalhos de acessibilidade (Alto contraste, Página de acessibilidade, Mapa do site, ir ao conteúdo, ir ao menu principal, ir à caixa de pesquisa) e, se quando a combinação das teclas é utilizada, realmente executa a função esperada.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve proporcionar navegação por teclado físico que seja funcional e equivalente ao que é exposto visualmente na tela e passível de ser acessada por mouse. As teclas ou combinações destas devem executar as mesmas funções que o mouse físico, garantindo a usabilidade.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a6">Ao apresentar links/redirecionamentos inserir descrição do conteúdo a ser direcionado. <span class="fa fa-chevron-down" aria-hidden="true"></span></p>
+                            <ol type="a" id="p1a6" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com baixa visão usando um computador com leitor de telas para ler um arquivo sobre as Revoltas do Período Colonial Brasileiro. Um exemplo de barreira enfrentada é ao encontrar um link para ler mais sobre uma revolta ele não apresentar descrição e o aluno não saber sobre qual revolta ele vai ler.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong>  Verificar se os links apresentados na Tecnologia Educacional possuem descrição de para onde o usuário será direcionado.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar links com títulos referentes aos conteúdos ao qual o usuário será direcionado ou breve descrição do mesmo. Um exemplo: em um link que levará a um conteúdo sobre a Independência da Bahia, ao invés de “Leia Mais..”, deve-se colocar  a informação contextualizada: “Leia mais sobre a Independência da Bahia”.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a7">Apresentar formato alternativo de áudio ou tátil para feedback visual das operações do usuário na interface. <span class="fa fa-chevron-down" aria-hidden="true"></span></p>
+                            <ol type="a" id="p1a7" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno cego usando um computador do laboratório de informática para preencher o formulário de inscrição do time de futebol da escola. Um exemplo de barreira enfrentada é ao enviar o formulário ele não salvar por ter um erro de preenchimento e a TE não informar em qual campo do formulário ocorreu o erro, apenas marcar os campos em vermelho.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional oferece feedback em formato alternativo sonoro ou tátil perceptível ao usuário.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional, quando contém feedback visual resultante de operações realizadas na interface, apresenta essa função em formato alternativo sonoro ou tátil perceptível ao usuário. O feedback deve conter uma descrição textual do seu conteúdo ou sinais sonoros/táteis diferentes para cada tipo de retorno da operação do usuário. Exemplo: um sinal sonoro para acerto e dois seguidos para erro.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a8">Apresentar informações gerais da Tecnologia Educacional por vídeo em Libras. <span class="fa fa-chevron-down" aria-hidden="true"></span></p>
+                            <ol type="a" id="p1a8" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere uma turma da educação infantil usando uma televisão para assistir a um filme sobre o tráfico de animais silvestres, localizado em uma videoteca. Um exemplo de barreira enfrentada é quando o filme possui legenda em português e um aluno surdo da turma possuir dificuldade na leitura do português.
+                                            </p>
+                                        </li>
+
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional possui janela de Libras com tradução-interpretação humana gravada como alternativa aos textos escritos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar uma janela de Libras com tradução-interpretação humana gravada como alternativa aos textos escritos.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a9">Exibir indicação clara sobre a disponibilidade de informações por vídeo em Libras como alternativa ao português oral ou escrito. <span class="fa fa-chevron-down" aria-hidden="true"></span></p>
+                            <ol type="a" id="p1a9" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um professor da educação infantil usando um computador do laboratório de informática para pesquisar vídeos sobre hábitos alimentares saudáveis. Um exemplo de barreira enfrentada é ao olhar as capas e/ou descrições dos vídeos ele não encontrar um ícone que indique facilmente a disponibilidade do recurso em Libras.
+                                            </p>
+                                        </li>
+
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong>  Verificar se a Tecnologia Educacional apresenta um ícone que indique a disponibilidade do recurso de Libras.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar um ícone que indique a disponibilidade do recurso em Libras em todos os lugares onde ocorre.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a10">Substituir o uso de sinais visuais por sinais sonoros claros.  <span class="fa fa-chevron-down" aria-hidden="true"></span></p>
+                            <ol type="a" id="p1a10" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong>  Considere um estudante cego usando um Tablet Educacional para resolver uma atividade sobre Conjuntos Matemáticos, localizado em uma aula de Matemática. Um exemplo de barreira enfrentada ocorre ao submeter o formulário com a atividade e o aplicativo somente apresenta um sombreamento verde nas questões corretas e vermelho nas questões incorretas, impossibilitando que o aluno saiba se e onde ocorreu um erro ou acerto.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional emite sinais sonoros que possibilitam que o estudante saiba se suas respostas estão corretas ou incorretas.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar sinais sonoros como alternativa ao uso de sinais visuais e as instruções relativas aos sinais sonoros apresentados (e substituídos por alternativas visuais) devem ser explicadas com o uso de Libras.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a11">Disponibilizar as informações veiculadas em Libras, com exposição em vídeo observando as normas NBR 15290 e NBR 15599 da ABNT (2005, 2008). <span class="fa fa-chevron-down" aria-hidden="true"></span></p>
+                            <ol type="a" id="p1a11" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno surdo usando um vídeo para se informar sobre a proliferação do mosquito da dengue, localizado em uma sala de multimídia. Um exemplo de barreira enfrentada é o vídeo não possuir exibição alternativa em Libras.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional fornece exibição alternativa em vídeo na Língua Brasileira de Sinais.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve fornecer exibição alternativa em vídeo na Língua Brasileira de Sinais e as informações apresentadas nesses vídeos devem possuir conteúdo idêntico ao original.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a12">Disponibilizar alternativas à operação por voz, de forma que não exista dependência da produção oral no padrão dos indivíduos ouvintes sem queixas de linguagem. <span class="fa fa-chevron-down"></span> </p>
+                            <ol type="a" id="p1a12" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno surdo da educação infantil, pouco alfabetizado, usando um tablet educacional para responder um questionário sobre sua árvore genealógica, localizado em uma aula de ciências. Um exemplo de barreira enfrentada é o questionário ser apresentado somente em português escrito, não haver a opção de tradução do conteúdo ou resposta em Libras.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE fornece formas de operação alternativas, baseadas na Libras.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve oferecer alternativas de estimulação baseadas na Libras, com a possibilidade de observar os estímulos em vídeo com tradução-interpretação humana gravada e de responder um questionário de múltipla escolha baseada também na Libras.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a13">Oferecer versão de acesso via tela touch como forma alternativa de acesso. <span class="fa fa-chevron-down"></span> </p>
+                            <ol type="a" id="p1a13" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno do ensino médio usando um site educacional para resolver um exercício online durante uma aula de Língua Portuguesa. Um exemplo de barreira enfrentada é que, quando acessado no tablet, os ítens do exercício ficam muito pequenos, exigindo redimensionamento da página a cada interação, tornando a navegação extremamente cansativa.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional apresenta as informações de forma sucinta e exige pouco esforço de interação.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar as informações de forma sucinta e exigir pouco esforço de interação.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a14">Sugerir materiais e métodos alternativos para apoiar a consolidação da aprendizagem através de meios mais concretos. <span class="fa fa-chevron-down"></span> </p>
+                            <ol type="a"  id="p1a14" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um professor de ciências usando o livro didático para uma aula sobre o Sistema Solar, localizado em uma sala de aula. Um exemplo de barreira enfrentada é os alunos cegos da turma não conseguirem ter noção do tamanho proporcional e distância entre os planetas e astros.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE oferece exemplos concretos (ex: pesos, formas, maquetes) nos quais o aluno possa perceber tamanhos, formas, texturas e pesos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar exemplos em forma de experiências práticas a serem realizadas com objetos concretos, além de vídeos e sugestões de materiais diversos nos quais o aluno possa perceber diferentes tamanhos, formas, texturas e pesos.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1a15">Oferecer exercícios em formatos variados para a consolidação de conteúdos a curto e longo prazo. <span class="fa fa-chevron-down"></span> </p>
+                            <ol type="a"  id="p1a15" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um professor usando um livro didático para ensinar as Leis de Mendel, localizado em uma aula de Biologia. Um exemplo de barreira enfrentada é a única atividade de consolidação do conteúdo ser um exercício objetivo, de múltipla escolha, no qual os alunos somente precisam marcar a alternativa correta.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE oferece formas variadas para consolidação dos conteúdos ministrados, a curto e longo prazo, sejam elas jogos de tabuleiro, jogos eletrônicos,, experiências ou aulas passeio.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong>  Tecnologia Educacional deve oferecer formas variadas para consolidação dos conteúdos ministrados, a curto e longo prazo, sejam elas jogos de tabuleiro, jogos eletrônicos, experiências ou aulas passeio.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-1b">
+                    <p class="normativa">1b. Evitar segregar ou estigmatizar qualquer usuário.</p>
+                    <ol type="1" >
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1b1">Fornecer as informações em Língua Brasileira de Sinais <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p1b1" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com surdez profunda bilateral,  que tem a Libras como língua de acesso à informação,  usando um software para ensino de história,  localizado em um computador na sala de informática. Um exemplo de barreira enfrentada é o acesso aos conteúdos escritos em Língua Portuguesa e falados pelos professores nos vídeo que compõem a TE.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se há janela de interpretação ou se há indicação de link de acesso para vídeo de interpretação dos conteúdos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve oferecer acesso pleno aos conteúdos veiculados na primeira  língua (língua de sinais).</p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-1c">
+                    <p class="normativa">1c. Privacidade, segurança, inocuidade devem ser igualmente disponíveis para todos os usuários.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1c1">Permitir exibir/ocultar informações confidenciais. <span class="fa fa-chevron-down"></span> </p>
+                            <ol type="a" id="p1c1" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com baixa visão usando uma plataforma EAD com leitor de telas, para ter acesso ao conteúdo da disciplina, localizado em um Laboratório de Informática. Um exemplo de barreira enfrentada é ao digitar a senha, no campo de senha do login para entrar na plataforma, o leitor de telas ler os caracteres digitados.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Utilizando o leitor de telas, verificar se as informações confidenciais são lidas sem aviso prévio.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve informar previamente a pessoa quando uma informação confidencial será exibida, para que ele possa optar se a informação será lida ou ocultada.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1c2">Fornecer informações que possibilitem que pessoa saiba quais dados estão sendo armazenados, editados ou disponibilizados para uso por outras  partes. <span class="fa fa-chevron-down"></span> </p>
+                            <ol type="a" id="p1c2" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno usando uma plataforma EAD com leitor de telas, para pesquisar sobre o trabalho escravo,, localizado em um Laboratório de Informática. Um exemplo de barreira enfrentada é a plataforma não informar ao aluno que seu histórico de pesquisa está sendo armazenado.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE informa a pessoa quais dados são armazenados, editados ou disponibilizados.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve informar previamente a pessoa quais informações são armazenadas, editadas ou disponibilizadas. Por exemplo, uma plataforma de ensino aprendizagem deve informar ao aluno que guarda um histórico dos conteúdos mais procurados por ele para oferecer conteúdos semelhantes no próximo uso.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1c3">Fornecer Termos de Uso claros e diretos. <span class="fa fa-chevron-down"></span> </p>
+                            <ol type="a" id="p1c3" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com baixa visão, usando um jogo educacional online para consolidar o conteúdo da aula de matemática financeira, localizado em um Laboratório de Informática. Um exemplo de barreira enfrentada é a TE  não apresentar uma versão resumida dos termos de uso, que informa, de forma breve, quais informações são armazenadas e sim  um documento muito grande, com muitos termos técnicos e fonte pequena, tornando a leitura difícil e cansativa.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE informa os termos de uso de forma clara e objetiva.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve disponibilizar os documentos de Termo de Uso de forma clara e objetiva, apresentando apenas as informações necessárias e, se possível, apresentar uma opção alternativa de visualização  resumida na qual existe um link para a pessoa ler a versão completa do documento.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-1d">
+                    <p class="normativa">1d. Tornar o design atraente para todos os usuários.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p1d1">Apresentar design atraente para todos.  <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p1d1" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um grupo de alunos usando um jogo de tabuleiro para uma atividade de interação, localizado em uma sala de aula. Um exemplo de barreira enfrentada é as cartas possuírem as informações em braile mas não apresentarem diferenciação, utilizando cores e formas e os alunos que enxergam terem dificuldades em diferenciá-las.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE se apresenta de forma que todos possam perceber as informações com facilidade.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar as informações em formato alternativo (braile ou libras), mas também deve utilizar cores, formas e relevos para que possa ser melhor percebida por todos.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div id="principio-2"><!--Princípio 2-->
+                <hr>
+                <div id="principio-2a">
+                    <h2>Princípio 2: Uso flexível</h2>
+                    <p class="normativa">2a. Fornecer diferentes escolhas no método de uso.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a1">Fornecer acesso e operação por meio de comando de voz ou por  direto ou redução da fonte do texto apresentado na interface. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a1" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um professor cego, usando um Tablet Educacional para pesquisar poemas barrocos, localizado em uma sala de leitura. Um exemplo de barreira enfrentada é o Tablet não permitir a operação por voz e o professor não conseguir realizar a pesquisa utilizando o teclado virtual do dispositivo.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE possibilita que a fonte do texto seja aumentada ou reduzida e/ou o acesso por comando de voz.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong>: A Tecnologia Educacional deve permitir o aumento ou redução da fonte do texto apresentado na interface, para tamanhos diversos, oferecendo possibilidade de adequar a informação visual à necessidade visual do usuário.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a2">Permitir ampliação total ou parcial do que está sendo exposto na interface. <span class="fa fa-chevron-down"></span> </p>
+                            <ol type="a" id="p2a2" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com baixa visão  utilizando um aplicativo para realizar uma leitura sobre o impressionismo no Brasil, localizado em uma aula de Literatura. Um exemplo de barreira enfrentada é o aplicativo não permitir a ampliação do texto, tornando a leitura impossível para o estudante.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE permite a ampliação total ou parcial do conteúdo exibido na interface.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve permitir ampliação total ou parcial do que está sendo exibido na interface, em porcentagens diversas, mantendo a qualidade da informação visual, oferecendo a possibilidade de adequar o conteúdo à necessidade do usuário.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a3">Permitir o aumento do espaçamento entre as linhas do texto apresentado na interface. <span class="fa fa-chevron-down"></span> </p>
+                            <ol type="a" id="p2a3" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong>: Considere um professor usando uma apostila digital para mostrar um trecho do poema Soneto da Fidelidade (Vinícius de Moraes) localizado em uma aula de Literatura. Um exemplo de barreira enfrentada é no momento em que o professor usa a opção de aumentar a fonte do texto para dar ênfase a uma estrofe o espaçamento entre a as linhas também é aumentado, tornando a leitura dificultosa.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Usando uma ferramenta de zoom ou de ou aumento na fonte, verificar se o espaçamento entre as linhas se mantém no padrão de 1,0 cm (espaçamento simples).
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional não deve permitir a ampliação do espaçamento entre as linhas do texto, apresentando um espaçamento simples.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a4">Permitir alteração no contraste, entre claro e escuro, do que está exposto na interface. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a4" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um estudante idoso, com baixa visão, usando um site para realizar uma pesquisa sobre os benefícios da prática de Atividades Físicas,  localizado em uma aula de educação física. Um exemplo de barreira enfrentada é o site não permitir alteração no contraste da tela, tornando a leitura cansativa e dificultosa para  o aluno.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se, usando atalhos ou botões, o site permite que o contraste da página seja alterado entre o claro e o escuro.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar níveis de contraste adequados às recomendações e permitir variações no nível do contraste, entre claro e escuro, chegando ao alto contraste do que é exposto na interface.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a5">Correlacionar a saída alternativa de áudio ao que está exposto visualmente na interface. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a5" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um professor com baixa visão usando um computador com leitor de telas para ler uma pesquisa, realizada pelos alunos, sobre os benefícios da prática de atividades físicas, localizado no Laboratório de Informática Um exemplo de barreira enfrentada é a ferramenta não marcar em qual parte do texto está sendo feita a leitura e o professor precisar fazer uma pausa para anotações e ao retornar não saber onde a leitura parou.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Utilizando um Leitor de Telas, verificar se a TE exibe alguma marcação que permite o acompanhamento visual do que está sendo lido.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar correlação visual entre a saída alternativa de áudio e o que está sendo interpretado pelo leitor de tela. Por exemplo, quando o leitor está lendo uma palavra, esta deve apresentar algum tipo de destaque ou realce. Essa correlação é funcional para pessoas com visão limitada, que também utilizam recursos de usuários sem visão. A pessoa deve poder ver e ouvir o texto simultaneamente.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a6">Apresentar as informações gerais da Tecnologia Educacional em formatos alternativos ao português escrito. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a6" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um grupo de alunos usando um jogo de tabuleiro sobre DNA, durante a aula de biologia. Um exemplo de barreira enfrentada é as instruções do jogo serem somente em português escrito, impossibilitando que alunos cegos tenham autonomia para jogar.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional oferece formatos alternativos ao português escrito e se estas alternativas funcionam.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve oferecer formatos alternativos ao português escrito (ex: braile, gravação de vídeo, audiodescrição).
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a7">Apresentar indicação clara sobre a disponibilidade do português escrito como alternativa ao português oral. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a7" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um um professor de Química usando um Tablet Educacional para pesquisar vídeos sobre o Aquecimento Global, localizado em uma aula de Química. Um exemplo de barreira enfrentada é ele precisar abrir cada vídeo encontrado para saber se existe legenda em língua portuguesa neles.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE apresenta um ícone que indique, de forma clara, a disponibilidade do português escrito como alternativa ao português oral.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar um ícone que indique, de forma cara, disponibilidade do recurso em português escrito com alternativa ao português oral. Essa disponibilidade deve ser  indicada em todos os lugares onde ocorre.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a8">Apresentar a substituição de sinais sonoros por sinais visuais claros. As instruções relativas aos sinais sonoros apresentados (e substituídas por alternativas visuais) devem ser explicadas com uso do português escrito. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a8" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno surdo usando um aplicativo para responder a um quiz sobre os elementos da tabela periódica, localizado em uma aula de química. Um exemplo de barreira enfrentada é ao aluno submeter a resposta o aplicativo apenas emitir sinais sonoros, que representam erro ou acerto, e o aluno não ter como saber se errou ou acertou a questão.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE apresenta texto português escrito ou figura que indica a realização correta  do exercício como alternativas ou uso de sinais sonoros.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar texto em português escrito ou figura como alternativa ao sinal sonoro no momento em que ele é disparado.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a9">Apresentar legendas com conteúdos fidedignos às informações veiculadas na modalidade oral, quando for o caso.  No caso de explicações veiculadas em áudio ou em vídeo com áudio, o material deverá vir com legendas, de acordo com as  normas NBR 15290 da ABNT (2005). <span class="fa fa-chevron-down"></span> </p>
+                            <ol type="a" id="p2a9" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno surdo usando uma televisão para assistir um vídeo sobre fontes de energia renováveis, localizado em uma sala de vídeo. Um exemplo de barreira enfrentada é a incompatibilidade da legenda com o que está sendo exibido no vídeo, nele estão aparecendo informações sobre Energia Hídrica e a legenda é sobre Energia Eólica.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se o apresentado no vídeo e/ou áudio é o mesmo exibido simultaneamente nas legendas.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar legendas com conteúdo idêntico as  informações veiculadas nos vídeos.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a10">Permitir ajuste no brilho e/ou iluminação do que está exposto na interface. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a10" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno do ensino médio usando um tablet educacional para fazer uma pesquisa de campo sobre os hábitos alimentares da comunidade escolar, localizado em uma sala de aula. Um exemplo de barreira enfrentada é ao sair da sala, para realizar a pesquisa com os membros da comunidade escolar haver um maior índice de luminosidade no ambiente e o aluno não conseguir aumentar o brilho da tela do tablet e ver as anotações contidas nele, não sendo possível realizar a coleta de dados.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Mudando a luminosidade do ambiente, verificar se a Tecnologia Educacional permite ajustes no nível de brilho e/ou luminosidade.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve permitir variações, em gradações diversas, nos níveis de brilho e/ou iluminação do que está sendo exposto na interface.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a11">Apresentar alternativa para uso de cores como meio para transmitir informações, indicar uma ação, pedir uma resposta ao usuário ou distinguir um elemento visual. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a"  id="p2a11" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um estudante daltônico da educação infantil usando lápis de cor para uma atividade de pintura, onde a figura que ele deve pintar apresenta marcações de onde devem ser usadas as cores, localizado em uma aula de artes. Um exemplo de barreira enfrentada é ele precisar usar as cores vermelho e verde em locais específicos e não conseguir distingui-las.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a descrição textual está sendo usada como alternativa as cores.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve utilizar meios alternativos, como descrição textual, para transmitir informações, indicar ações, pedir resposta do usuário ou distinguir um elemento visual. Se na interface há um botão verde que indique prosseguimento de uma atividade e outro vermelho para interrupção da mesma, estes códigos deverão vir acompanhados de uma descrição textual ou substituídos por meio alternativo que indique a mesma função.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a12">Garantir a mesma configuração e estrutura do que é exposto na interface quando ocorre a ampliação dos conteúdos. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a12" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um estudante usando um site educacional para acessar um infográfico sobre tipos sanguíneos, localizado em uma aula de biologia. Um exemplo de barreira enfrentada é o aluno precisar dar um zoom no conteúdo e ele ser cortado e não se ajustar à tela do dispositivo.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se quando ocorre ampliação a Tecnologia Educacional mantém a mesma estrutura,  sem apresentar barra de rolagem vertical ou corte do conteúdo.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve manter a mesma estrutura de layout e conteúdo quando ocorre ampliação do que é exposto na interface. Quando há ampliação o conteúdo deve se ajustar, mantendo a mesma estrutura, não podendo surgir barras de rolagens na horizontal.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a13">Disponibilizar alternativas à operação por voz, de forma que não exista dependência da produção oral no padrão dos indivíduos ouvintes sem queixas de linguagem. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a13" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno surdo usando um jogo de perguntas e respostas para assimilação do conteúdo da aula de geografia, localizado em uma brinquedoteca. Um exemplo de barreira enfrentada é o jogo só possuir a opção de resposta por voz.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional oferece formas alternativas de uso, como cartões para escrita das respostas ou possibilidade de selecionar a resposta em uma tela touch.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve possibilitar a adequação necessária ao estímulo dado (que deverá ser substituído por um estímulo escrito), além de aceitar a interação do usuário com toque ou com português escrito.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a14">Possibilitar substituir o uso do mouse por vias alternativas como teclado, sopros, pequenos ruídos ou movimentos voluntários mínimos. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a14" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno tetraplégico usando um computador para realizar uma pesquisa sobre a vegetação de cada região brasileira, localizado em um Laboratório de Informática. Um exemplo de barreira enfrentada é o computador não possuir a opção de configuração para  utilização de mouse por sopro para navegação.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE possibilita substituir o uso do mouse por vias alternativas como teclado, sopros, pequenos ru´dos ou movimentos voluntários mínimos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve oferecer a opção de configuração para que o teclado numérico permita a movimentação do cursor na tela em substituição ao  mouse.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a15">Possibilitar o uso de Simuladores de Teclado. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" id="p2a15" class="collapse">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno usando um computador sem teclado para responder um exercício sobre a Ditadura Militar no Brasil, localizado em um Laboratório de Informática. Um exemplo de barreira enfrentada é o computador não permitir a emulação de teclado virtual e não ser possível o aluno responder ao exercício.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional permite a emulação de teclado virtual sem perda de funcionalidade.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve permitir a configuração para que apareça na tela uma emulação do teclado que funcione com um acionador que controla a varredura das opções disponíveis.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2a16">Possibilitar configuração para operação apenas com uma das mãos. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p2a16">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com um braço quebrado usando um jogo matemático, para realizar um trabalho da disciplina de Matemática, localizado em um laboratório de informática. Um exemplo de barreira enfrentada é o aluno precisar pressionar simultaneamente as teclas de espaço e seta esquerda para movimentar as peças do jogo.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional pode ser configurada para operação apenas com uma das mãos, sem que haja necessidade de pressionar mais de uma tecla simultaneamente.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve possibilitar configuração para operação apenas com uma das mãos, sem que haja necessidade de pressionar mais de uma tecla simultaneamente.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-2b">
+                    <p class="normativa">2b. Acomodar acesso e uso por destros e canhotos.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2b1">Possibilitar uso por pessoas destras e canhotas (permanentes ou temporárias). <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p2b1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno canhoto usando um software para selecionar figuras geométricas e emparelhar a utensílios que possuam forma correspondente, localizado em uma sala de recursos multifuncionais. Um exemplo de barreira enfrentada é quando o software não é compatível a alteração da configuração do mouse para uso por pessoa destra ou canhota.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Utilizando um mouse convencional ou acionador especial, verificar se o software permite configurar seu uso por pessoa destra ou canhota.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve ser compatível ao uso direto ou com recurso de Tecnologia Assistiva por pessoas destras ou canhotas.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-2c">
+                    <p class="normativa">2c. Favorecer acurácia e precisão do usuário.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2c1">Possibilitar que a  repetição da ação de teclar seja acionada por pressão contínua e essa funcionalidade deve ser ajustável até pelo menos 0,5 segundos. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p2c1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com deficiência motora usando computador para digitar um trabalho sobre o Mito da Caverna,  localizado em um Laboratório de Informática. Um exemplo de barreira enfrentada é ele pressionar uma tecla e não conseguir movimentar os dedos com agilidade,  pressionando-a repetidas vezes para conseguir digitar e o sistema não permitir ajustar a latência entre o pressionamento de teclas iguais consecutivas.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE permite configuração para que o pressionamento de teclas iguais consecutivas, pelo menos até 0,5 segundos, não seja considerada.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong>A Tecnologia Educacional deve permitir ajustar a latência entre o pressionamento de teclas iguais consecutivas para delimitar a repetição da ação da tecla ou botão em no mínimo 0,5 segundos e deve ser possível configurar o sistema para desligar.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-2d">
+                    <p class="normativa">2d. Fornecer adaptabilidade à velocidade do usuário.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2d1">Possibilitar o controle da velocidade do que é apresentado em formato sonoro, por leitor de tela ou recurso multimídia, com possibilidade de acionar diversas funções como retroceder, avançar, pausar e retomar o conteúdo. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p2d1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno cego usando site com audiodescrição para fazer uma pesquisa sobre o Barroco, localizado em um Laboratório de Informática. Um exemplo de barreira enfrentada é ele não conseguir acelerar o aúdio e sua reprodução se tornar lenta e cansativa.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional possibilita que os recursos sonoros tenham a velocidade de reprodução controlada pelo usuário.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve permitir que a pessoa controle a velocidade do que é apresentado em formato alternativo de áudio ou em recurso multimídia, além de poder acionar diversas funções como pausar, retroceder, avançar, retomar o conteúdo que está sendo exposto na interface e silenciar o áudio. A pessoa deve ter controle dos recursos sonoros, sendo executados somente quando ela permitir.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2d2">Possibilitar opções de ajuste de temporização no caso de exigência de tempo na operação do conteúdo, funcionalidades ou navegação relevantes aos objetivos pedagógicos ou de gestão. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a"  class="collapse" id="p2d2">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com dislexia usando um Tablet Educacional para responder um quiz sobre Direitos Humanos, localizado em uma aula de Sociologia. Um exemplo de barreira enfrentada é o quiz ser configurado para exibir cada pergunta por um tempo máximo de 15 segundos e o aluno não conseguir ler a tempo.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional permite que a exigência de tempo para ação seja ajustada ou removida.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve permitir que a exigência de tempo para ação seja ajustada ou removida.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2d3">Possibilitar o livre retorno a conteúdos anteriores para revisão e conferência. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p2d3">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um professor usando um aplicativo de vídeo para a exibição de um vídeo sobre o Sistema Digestivo Humano, localizado em uma sala de aula. Um exemplo de barreira enfrentada é ao final da exibição um aluno fazer uma pergunta sobre o estômago, o professor não lembrar em qual momento exato ocorreu a exibição e ter como voltar parte por parte do vídeo para encontrar.
+                                            </p>
+                                        </li>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso II:</strong> Considere um aluno usando um computador do laboratório de informática para preencher um formulário de inscrição no vestibular, onde existem três telas: duas para preenchimento de informações pessoais e outra com informações sobre o local de realização da prova. Um exemplo de barreira enfrentada é, ao preencher todo o formulário, a pessoa desejar voltar à primeira tela para confirmar informações e a TE não exibir links ou menus que possibilitem esta ação.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE apresenta um pequeno menu em todas as telas que permite que a pessoa retorne à um determinado ponto do conteúdo ou vídeo.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar um pequeno menu em todas as telas que permite que a pessoa retorne, a qualquer momento, a um determinado ponto.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p2d4">Possibilitar a realização livre de pausas para intervalos durante o uso. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p2d4">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno usando um um aplicativo em um  Tablet Educacional para assistir uma aula ao vivo sobre as Leis de Newton, localizado em um sala de vídeo. Um exemplo de barreira enfrentada é o aluno precisar pausar o vídeo para fazer uma anotação e o aplicativo não exibir botão de pausa ou permitir que o vídeo seja pausado.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE exibe de forma clara e constante o botão de pausa ou para configuração de pausas periódicas.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve exibir de forma clara e constante um botão para pausa ou para a configuração de pausas periódicas por parte do usuário.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div id="principio-3"><!--Princípio 3-->
+                <hr>
+                <h2>Princípio 3: Uso simples e intuitivo</h2>
+                <div id="principio-3a">
+                    <p class="normativa">3a. Eliminar complexidade desnecessária.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p3a1">Usar português no material escrito para veicular as informações e o conteúdo da Tecnologia Educacional, observando a faixa etária alvo do produto. Os enunciados deverão ser organizados de modo a facilitar a compreensão, evitando-se períodos longos, sentenças em ordem inversa e palavras de baixa frequência, com o objetivo de facilitar a compreensão dos enunciados. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p3a1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno das séries iniciais, utilizando um livro para uma atividade de leitura, localizado na biblioteca escolar. Um exemplo de barreira enfrentada é o livro possuir uma leitura difícil, com períodos longos e sentenças de ordem inversa e ele não conseguir compreender o que está lendo.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional apresenta seu conteúdo em português, de fácil compreensão e leva em conta a faixa etária do seu público alvo.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar texto e legendas com uma estrutura clara e organizada, que leve em conta a faixa etária das pessoas que irão utilizá-la, evitando-se períodos longos, sentenças em ordem inversa e palavras de baixa frequência, de forma a facilitar a compreensão do leitor, independente da organização do texto fonte.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p3a2">Possuir organização das informações visuais, linguísticas ou não, clara e intuitiva, com uso de recursos icônicos visuais, preferencialmente aproximados da Libras. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p3a2">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno surdo usando um jogo de tabuleiro para uma atividade de interação com a turma, localizado em uma sala de jogos. Um exemplo de barreira enfrentada é o aluno precisar ler as instruções do jogo e elas possuírem muitos conectivos e frases longas.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE apresenta uma linguagem simples e objetiva, de preferência em narrativa e primeira pessoa.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar  suas informações com uma linguagem simples e objetiva, com frases curtas e diretas, de preferência em narrativa e primeira pessoa.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-3b">
+                    <p class="normativa">3b. Ser consistente com expectativas e intuições do usuário.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p3b1">Alcançar os objetivos a que se propõe para cada nível de escolaridade e conhecimentos específicos esperados. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p3b1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno usando uma aplicação para estudar um tópico, na sala de aula.  Um exemplo de barreira enfrentada é o não conseguir utilizar a aplicação por não lhe ser familiar nem sugestiva ao ponto de corresponder às suas intuições.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se os elementos da interface estão de acordo com o nível de escolaridade e conhecimentos dos alunos a que se destina a aplicação da Tecnologia Educacional.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar seus elementos de modo intuitivo ou complementar  por meio de um tutorial, de acordo com o nível de escolaridade e conhecimentos dos alunos a que se destina.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-3c">
+                    <p class="normativa">3c. Acomodar uma ampla gama de habilidades de letramento e linguagem.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p3c1">Promover sinalização em Libras nos vídeos de forma clara e condizente com a faixa etária alvo do produto. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p3c1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno surdo da educação infantil usando um computador do Laboratório de Informática para assistir um vídeo sobre o reino animal. Um exemplo de barreira enfrentada é o vídeo possuir a janela do intérprete de Libras, mas os sinais usados por ele serem muito complexos e o aluno não conseguir compreender com clareza.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Envolver um especialista ou professor para verificar se a sinalização da em Libras provida nos vídeos está de acordo com a faixa etária do público alvo da TE.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar a sinalização em Libras nos vídeos de acordo com a faixa etária do seu público alvo.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p3c2">Apresentar explicações adicionais para sinais específicos da libras que forem usados, assim como os sinais dos dispositivos técnicos referentes ao produto. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p3c2">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno surdo usando uma televisão para assistir uma vídeo aula de Biologia localizado em uma sala de vídeo. Um exemplo de barreira enfrentada é o intérprete do vídeo usar o sinal de mitocôndria e, por se tratar de um sinal específico,o aluno não conhecer e não compreender do que trata.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Envolver um especialista ou professor para verificar se é oferecido um glossário com tradução-interpretação humana gravada em Libras para explicar sinais específicos, técnicos ou científicos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar um glossário com tradução-interpretação humana gravada em Libras para explicar sinais específicos, técnicos ou científicos.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-3d">
+                    <p class="normativa">3d. Organizar informação de maneira consistente de acordo com sua importância.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p3d1" >Possibilitar que o primeiro atalho da TE leve à página de informações sobre acessibilidade. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p3d1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno cego usando um computador com leitor de telas para acessar uma página com informações sobre o fenômeno da pororoca, localizado em um laboratório de informática. Um exemplo de barreira enfrentada é ao entrar na página e apertar a tecla tab, o primeiro link encontrando não ser o de informações de acessibilidade e a pessoa não saber como navegar.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Utilizando a tecla tab ao entrar na página, verificar se o primeiro link acionado é o de informações sobre acessibilidade.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve possuir um primeiro link da que leve à página de informações sobre acessibilidade.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-3e">
+                    <p class="normativa">3e. Fornecer auxílio e retorno durante tarefa e após conclusão de tarefa.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p3e1">Oferecer constante feedback sobre o aprendizado ao usuário. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p3e1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno do ensino fundamental usando um computador para responder um quiz sobre fotossíntese, localizado em um Laboratório de Informática. Um exemplo de barreira enfrentada é o aluno ter dúvidas quanto a resposta, errar um ítem e o software não apresentar dicas ou permitir que a questão seja refeita.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE fornece feedback a pessoa, como dicas e novas chances, caso haja erro, e mensagens de sucesso e estímulo a cada acerto.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve oferecer feedback a pessoa, como dicas e novas chances, caso haja erro, e mensagens de sucesso e estímulo a cada acerto. Cada acerto ou evolução recebe, como efeito, um reforço prazeroso. Novas chances são oferecidas com novas explicações em caso de erro sem sinalização direta ou específica do erro.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p3e2">Concretizar o conteúdo através de exemplos. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p3e2">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um professor usando um livro didático para uma aula sobre animais vertebrados, localizado em uma sala de aula. Um exemplo de barreira enfrentada é o livro não apresentar exemplos de experiências, passeios ou desafios, que possam ser realizados para concretizar o aprendizado do conteúdo visto em aula.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE apresenta formas de concretizar o aprendizado do conteúdo, através de exemplos,  experiências, passeios ou desafios, que possam ser realizados.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar formas de concretizar o aprendizado do conteúdo, através de exemplos,  experiências, passeios ou desafios, como um passeio a um zoológico e o registro dos animais observados e suas categorias.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div id="principio-4"><!--Princípio 4-->
+                <hr>
+                <h2>Princípio 4: Informação perceptível</h2>
+                <div id="principio-4a">
+                    <p class="normativa">4a. Utilizar diferentes modalidades (visuais, verbais, táteis) para apresentação redundante de informação.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p4a1">Apresentar saída redundante que descreva as informações visuais essenciais expostas na interface, possibilitando a percepção e interpretação do todo pelo usuário. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a"class="collapse" id="p4a1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno/professor  cego acessando um sistema de frequência escolar utilizando um computador por meio de TA, como um leitor de tela, ou por meio de um Display Braille. Um exemplo de barreira a ser enfrentada é o aluno/professor não conseguir identificar onde deve indicar presença, caso a lista de presença esteja em formato não passível de interpretação por leitor de tela que emita som. Um outro exemplo de barreira é no caso de o aluno/professor não conseguir obter acesso ao sistema, se ele não estiver passível para apresentação em um display Braille.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio todo o conteúdo visual mostrado no sistema de frequência.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve possibilitar o acesso via áudio de todo o conteúdo visual mostrado nela, incluindo imagens, tabelas, botões e paginação.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p class="regra"  data-toggle="collapse" data-target="#p4a2">Apresentar a informação de modo que o maior número de pessoas possa compreender. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p4a2">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno cego usando o quadro de avisos para ter informações sobre o horário de provas, localizado em uma sala de aula. Um exemplo de barreira enfrentada é a informação ser apresentada somente em texto escrito e a pessoa não conseguir compreender.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE apresenta diferentes formatos de exibir a informação (ex: braile, libras, relevo).
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong>A Tecnologia Educacional deve apresentar diferentes formatos de exibir a informação (ex: braile, libras, relevo), de modo que possa ser compreendida pelo maior número de pessoas.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-4b">
+                    <p class="normativa">4b. Fornecer contraste adequado entre informação essencial e seus arredores.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p4b1">Destacar a informação mais importante. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p4b1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um professor de Geografia usando um mapa do mundo para uma aula sobre estados e capitais brasileiras, localizado em uma sala de aula. Um exemplo de barreira enfrentada é ele não conseguir destacar ou dar zoom no Brasil, de modo que ele apresente algum destaque em relação aos demais países.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se TE destaca de alguma forma ou possibilita que as informações mais importantes sejam destacadas.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar a informação mais importante com algum tipo de destaque,  usando relevos, cores, tamanhos, formas e/ou ordem de apresentação.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-4c">
+                    <p class="normativa">4c. Maximizar "legibilidade" de informação essencial.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p4c1">Usar tamanhos de fonte, cores, negrito, itálico ou níveis de cabeçalho para tornar a informação essencial mais legível e/ou identificável. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p4c1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um professor de Geografia usando um mapa do Brasil para uma aula sobre estados e capitais, localizado em uma sala de aula. Um exemplo de barreira enfrentada é as capitais serem apresentadas da mesma forma de que as outras cidades e a pessoa não conseguir diferenciá-las.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a informação principal da TE é apresentada de maneira diferenciada em relação às demais, seja usando formas, tamanho de fonte ou cor.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar a informação mais importante de maneira diferenciada em relação às demais, seja usando formas, tamanho de fonte ou cor, de modo que é possível diferenciar as informações principais/essências das demais informações.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-4d">
+                    <p class="normativa">4d. Diferenciar elementos de maneira que eles possam ser descritos (i.e., tornar fácil dar instruções ou direções).</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p4d1">Usar formas, direções, relevos ou outros elementos que possam ser descritos. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p4d1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um professor de Geografia usando um mapa do Brasil para uma aula sobre estados e capitais, localizado em uma sala de aula. Um exemplo de barreira enfrentada é as capitais serem marcadas por uma forma abstrata e o professor não conseguir descrevê-la para um aluno cego.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional usa formas, direções, relevos ou outros elementos que possam ser descritos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve apresentar formas geométricas, direções, relevos ou outros elementos que possam ser descritos.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-4e">
+                    <p class="normativa">4e. Fornecer compatibilidade com uma variedade de técnicas ou dispositivos usadas por pessoas com limitações sensoriais.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p4e1">Possibilitar o uso de periféricos de tecnologia assistiva. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p4e1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com  usando um aplicativo de computador para realizar uma atividade extraclasse, localizado em um laboratório de informática. Um exemplo de barreira enfrentada é não ser possível utilizar o aplicativo com mouse adaptado.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE possibilita o uso de periféricos de tecnologia assistiva (eg mouses, teclados, lupas).
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve possibilitar o uso de periféricos de tecnologia assistiva (eg mouses, teclados, lupas).
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div id="principio-5"><!--Princípio 5-->
+                <hr>
+                <h2>Princípio 5: Tolerância a erros</h2>
+                <div id="principio-5a">
+                    <p class="normativa">5a. Organizar elementos para minimizar riscos e erros: elementos mais utilizados, mais acessíveis; elementos que trazem risco devem ser removidos, isolados ou guardados.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p5a1">Possibilitar que informações sejam ocultadas. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p5a1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um usuário com hemiplegia do lado direito do corpo usando um jogo para completar frases de um texto, localizado no ambiente virtual de aprendizagem- AVA . Um exemplo de barreira enfrentada é o recurso “completar”  não poder ser acionado por ambos lados do mouse, o aluno acionar a tecla incorreta e direcionado para outra tela.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Utilizando um leitor de telas (e.g., NVDA, VoiceOver), teclas de sugestões, teclado virtual ou teclas de funcionalidade da própria tecnologia educacional. Verificar se é possível acessar via áudio/Voz todo o conteúdo, mostrado no sistema de frequência e corrigir quando necessário.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve possibilitar ocultar teclas desnecessárias, acessar e/ou corrigir todas as atividades tendo todas informações, incluindo palavras, áudio, botões ou teclados virtuais.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-5b">
+                    <p class="normativa">5b. Fornecer avisos de riscos e erros.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p5b1">Exibir avisos e alertas sonoros para sinalizar erros, acertos ou finalização de tarefas. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p5b1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com baixa visão usando um recurso de múltipla escolha em uma atividade de geografia sobre nome das capitais dos países pulsando cores correspondentes ao nome das capitais em um ambiente virtual. Um exemplo de barreira enfrentada é o aluno pulsar teclas/funções indevidamente tendo dificuldades de resolver a atividade.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se o sistema emite aviso sonoro indicando erro e possibilitando correções.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve emitir aviso sonoro indicando erro e oferecer possibilidades de correções.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-5c">
+                    <p class="normativa">5c. Fornecer recursos seguros contra falhas.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p5c1">Possibilitar que uma ação seja revertida. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p5c1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno do quinto ano com baixo controle motor, usando um recurso de completar em uma atividade de matemática para resolver equações de primeiro grau, localizado em um ambiente virtual. Um exemplo de barreira enfrentada é o aluno ter hipotonia, pulsar teclas/funções indevidamente e não haver a possibilidade de voltar ou corrigir.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia  Educacional possibilita retornar após uma tecla e/ou função ser pulsada.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve oferecer a função voltar ou corrigir para a pessoa corrigir quando pulsar errado a função/tecla.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-5d">
+                    <p class="normativa">5d. Desencorajar ações inconscientes em tarefas que exigem vigilância.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p5d1">Fornecer alertas ou barreiras antes de situações que não podem ser revertidas. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p5d1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno da educação infantil usando um livro didático para uma tarefa de cortar e colar os planetas, localizado em uma aula de geografia. Um exemplo de barreira enfrentada é no lugar onde os planetas são colados não haver uma marcação de onde deve ser colado cada planeta, o aluno errar a posição de um e não poder corrigir.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional fornece marcações ou alertas, de modo que o aluno possa agir de forma consciente.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve fornecer marcações ou alertas, de modo que o aluno possa agir de forma consciente.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div id="principio-6"><!--Princípio 6-->
+                <hr>
+                <h2>Princípio 6: Baixo esforço físico</h2>
+                <div id="principio-6a">
+                    <p class="normativa">6a. Permitir que usuário mantenha uma posição corporal neutra.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p6a1">Permitir que a pessoa permaneça sentada ou em pé de forma alinhada durante todo o tempo. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p6a1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno cadeirante usando o computador do Laboratório de Informática para fazer uma pesquisa sobre Conflitos Árabes. Um exemplo de barreira enfrentada é  a bancada dos computadores ser muito alta, impossibilitando que ele possa estudar de maneira confortável.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE possui uma altura adequada para ser usada por cadeirantes e alunos sem deficiências.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve ser projetada e desenvolvida para que o maior número e diversidade de alunos possa utilizá-la com o mesmo conforto e baixo esforço físico.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-6b">
+                    <p class="normativa">6b. Usar forças de operação razoáveis.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p6b1">Possibilitar utilização com baixo esforço físico e sem a necessidade do uso das mãos. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p6b1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno com uma mão quebrada usando a biblioteca da escola para ler sobre o Romantismo no Brasil. Um exemplo de barreira enfrentada é o aluno precisar sair levando um copo para beber água, usar o cotovelo para abrir a porta e não conseguir, pois a maçaneta é redonda.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE possibilita operação com baixo esforço físico, usando os cotovelos, boca ou outros membros.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional não deve exigir o uso de mãos, possibilitando operação com baixo esforço físico, usando os cotovelos, boca ou outros membros.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-6c">
+                    <p class="normativa">6c. Minimizar ações repetitivas.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p6c1">Permitir a criação de atalhos ou criar automaticamente atalhos para os links mais acessados. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p6c1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno do ensino médio usando uma plataforma de Educação a distância  para fazer um curso de Inglês, localizado em um laboratório de informática. Um exemplo de barreira enfrentada é a cada vez que o aluno entrar no curso precisar procurar em um submenu a aula onde ele parou.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional fornece atalhos para os itens acessados com maior frequência ou possibilita que a pessoa crie e armazene os seus próprios atalhos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve fornecer atalhos para os itens acessados com maior frequência e exibir um atalho para retomar a atividade do último acesso.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-6d">
+                    <p class="normativa">6d. Minimizar esforço físico continuado.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra"  data-toggle="collapse" data-target="#p6d1">Exigir o mínimo de esforço perceptual. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p6d1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um grupo de alunos da educação infantil usando um jogo da memória para auxiliar no desenvolvimento da leitura, localizado em uma sala de leitura. Um exemplo de barreira enfrentada é o jogo possuir muitas peças e os alunos precisarem de muito tempo para encontrar os pares.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar  se a TE exige um tempo razoável de atenção de acordo com a faixa etária das pessoas.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong>  A Tecnologia Educacional deve poder ser dividida em etapas ou fases, de modo que possa ser pausada ou feita em etapas para que exija um gasto razoável de tempo e atenção.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p6d2">Exigir baixo esforço cognitivo. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p6d2">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong>  Considere um aluno do ensino fundamental usando um aplicativo de quiz para fixação do conteúdo de Potências Matemáticas, localizado em uma aula de matemática. Um exemplo de barreira enfrentada é o quiz possuir 50 questões e não poder ser pausado sem perder o progresso.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se as atividades fornecidas pela TE exigem um gasto razoável de tempo e raciocínio.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve fornecer atividades separadas em etapas ou fases, de modo que possam haver pausas e que haja um gasto razoável de tempo e raciocínio.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p6d3">Exigir baixo esforço motor. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p6d3">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong>Considere um aluno da EJA, que possui pouca coordenação motora, usando bagos de feijão para completar uma atividade de bingo com palavras, localizado em uma aula de língua portuguesa. Um exemplo de barreira enfrentada é ele precisar utilizar os bagos de feijão na letra chamada e ter dificuldade para pegar o feijão  e até mesmo colocar no local correspondente, pois, além do feijão, os espaços das letras também são pequenos.
+                                            </p>
+                                        </li>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso II:</strong> Considere um aluno da educação infantil usando um Tablet Educacional para realizar uma atividade de pintura, localizado em uma aula de Educação Artística. Um exemplo de barreira enfrentada é  as formas que precisam ser pintadas estarem muito próximas e ao pintar uma o aluno acabar pintando outra por acidente.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a Tecnologia Educacional oferece tamanhos e espaçamentos  razoáveis, de modo que possam ser manipulados com maior precisão, sem a necessidade de esforço motor e uso da motricidade fina.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve possuir formas, tamanhos e espaçamentos  adequados, de maneira que possa ser utilizada por todos sem dificuldades, por exemplo no contexto I ao invés de feijão poderiam ser usadas pedras.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div id="principio-7"><!--Princípio 7-->
+                <hr>
+                <h2>Princípio 7: Dimensões e espaços para aproximação e uso</h2>
+                <div id="principio-7a">
+                    <p class="normativa">7a. Fornecer uma linha de visão direta a elementos importantes para qualquer usuário sentado ou em pé.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p7a1">Disponibilizar a TE na altura do alcance do olhar das pessoas que  irão utilizá-la. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p7a1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno cadeirante utilizando um tabuleiro com peças para estudar  operações matemáticas, localizado em uma sala de jogos. Um exemplo de barreira enfrentada é o tabuleiro ser fixo em uma mesa alta e o aluno não conseguir ter uma boa visualização, havendo dificuldade para identificar as peças ou mesmo as características do tabuleiro e realizar as operações.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE pode ser posicionada para ficar disposta na altura do olhar das pessoas.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional e seus componentes devem ficar dispostos na linha de visão direta das pessoas.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-7b">
+                    <p class="normativa">7b. Tornar ao alcance de todos componentes para usuário sentado, em pé ou deitado.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p7b1">Disponibilizar a ação necessária para utilizar o material da TE ao alcance manual do usuário, sem que ele precise se deslocar no espaço. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p7b1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere uma pessoa que apresente uma condição de deficiência física, com restrições de mobilidade de membros inferiores, e irá utilizar um jogo com o mapa do Brasil impresso em lona das dimensões de 150cmx150cm em interação com sua interface no tablet onde deverá localizar e apontar em conjunto com seus colegas em sala, todos os Estados Federativos. Um exemplo de barreira enfrentada é aluno não conseguir alcançar e visualizar todo o mapa sobre a mesa, além de se deslocar para atingir o tablet, simultaneamente junto aos colegas.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se as ações propostas para o uso combinado da TE podem ser usadas de modo que o estudante não precise se deslocar especialmente em direção a objetos, ou mudar de postura, e tenha condições de concluir a atividade com êxito. Recursos de tecnologia assistiva de mobilidade podem ser utilizados de forma associada para esse fim, como cadeiras de rodas ou andadores.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve propor ações de modo que a pessoa não precise se deslocar especialmente em direção a objetos, ou mudar de postura, e tenha condições de concluir a atividade com êxito.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-7c">
+                    <p class="normativa">7c. Acomodar variações de formatos e tamanhos de mão.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p7c1">Fornecer um meio de operação alternativo acessível sempre que partes operáveis da TE exijam agarrar, comprimir ou fletir o pulso para acionamento ou funcionamento das funcionalidades. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p7c1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno deficiente físico, que não possui o movimento dos braços, usando um jogo de tabuleiro para uma atividade de interação com os colegas, localizado em uma sala de aula. Um exemplo de barreira enfrentada é as peças do jogo serem muito pequenas e não ser possível movimentá-las com auxílio dos pés ou boca.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE permite mais de uma forma de movimentação, podendo ser movida com auxílio dos pés, mãos, boca, antebraços ou outras formas.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve permitir mais de uma forma de movimentação e de exigência de força exercida pelas articulações motoras para efetuar os mesmos movimentos ou ativar as funcionalidades.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div id="principio-7d">
+                    <p class="normativa">7d. Fornecer espaço adequado para o uso de dispositivos assistivos ou auxílio pessoal.</p>
+                    <ol type="1">
+                        <li>
+                            <p class="regra" data-toggle="collapse" data-target="#p7d1">Fornecer espaço adequado para cadeirantes. <span class="fa fa-chevron-down"></span></p>
+                            <ol type="a" class="collapse" id="p7d1">
+                                <li><strong>Por que?</strong>
+                                    <ol>
+                                        <li type="i">
+                                            <p>
+                                                <strong>Contexto de uso I:</strong> Considere um aluno cadeirante usando uma sala de estudos para fazer um trabalho em grupo. Um exemplo de barreira enfrentada é o fato de os bancos serem acoplados a mesa de estudos e não haver como o aluno encaixar sua cadeira de rodas para estudar.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Como?</strong> Verificar se a TE fornece espaço adequado para estudantes cadeirantes.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Resultados esperados:</strong> A Tecnologia Educacional deve possibilitar o uso por alunos cadeirantes ou permite que cadeiras sejam removidas para que a cadeira de rodas possa ser utilizada nos espaços comuns.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
