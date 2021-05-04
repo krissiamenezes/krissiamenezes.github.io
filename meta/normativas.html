@@ -72,13 +72,13 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Ver Todas</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item">Princípio 1: Uso Equitativo</a>
-                                <a class="dropdown-item" href="#">Princípio 2: Uso Flexível</a>
-                                <a class="dropdown-item" href="#">Princípio 3: Uso Simples e Intuitivo</a>
-                                <a class="dropdown-item" href="#">Princípio 4: Informação Perceptível</a>
-                                <a class="dropdown-item" href="#">Princípio 5: Tolerância ao Erro</a>
-                                <a class="dropdown-item" href="#">Princípio 6: Baixo Esforço Físico</a>
-                                <a class="dropdown-item" href="#">Princípio 7: Tamanho e Espaçoes pa Aproximação e Uso</a>
+                                <a class="dropdown-item categoria" id="usoequitativo">Princípio 1: Uso Equitativo</a>
+                                <a class="dropdown-item categoria" id="usoflexivel" href="#">Princípio 2: Uso Flexível</a>
+                                <a class="dropdown-item categoria" id="usosimples" href="#">Princípio 3: Uso Simples e Intuitivo</a>
+                                <a class="dropdown-item categoria" id="perceptivel" href="#">Princípio 4: Informação Perceptível</a>
+                                <a class="dropdown-item categoria" id="toleranciaaoerro" href="#">Princípio 5: Tolerância ao Erro</a>
+                                <a class="dropdown-item categoria" id="baixoesforco" href="#">Princípio 6: Baixo Esforço Físico</a>
+                                <a class="dropdown-item categoria" id="aproximacaoeuso" href="#">Princípio 7: Tamanho e Espaçoes para Aproximação e Uso</a>
                             </div>
                         </div>
                         <div class="btn-group">
@@ -88,8 +88,8 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Ver Todas</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Físico</a>
-                                <a class="dropdown-item" href="#">Digital</a>
+                                <a class="dropdown-item categoria" id="fisico" href="#">Físico</a>
+                                <a class="dropdown-item categoria" id="digital" href="#">Digital</a>
                             </div>
 
                         </div>
@@ -124,10 +124,41 @@
                     </div>
                 </div>
             </div>
-
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div id="accordion">
+                        <div class="card usoequitativo fisico digital invisible">
+                            <div class="card-header " id="headingOne">
+                                <h5 class="mb-0">
+                                    <a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        1a.1 Apresentar informações gráficas em formato alternativo de texto.
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Por que?</p>
+                                   <p>
+                                       Exemplo de uso I: Um aluno com baixa visão acessando um infográfico digital que apresenta diferentes causas relacionadas a poluição dos rios. Barreira: a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.
+                                   </p>
+                                    <p>
+                                        Como? Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.
+                                    </p>
+                                    <p>
+                                    Resultados Esperados:
+                                    </p>
+                                    <p>1- Existe descrição textual dos gráficos contidos na interface.</p>
+                                    <p>2- A descrição textual deve ser acessível por meio de leitores de telas.</p>
+                                    <p>3- A descrição textual deve seguir a mesma ordem lógica do conteúdo apresentado visualmente.</p>
+                                    <p>Classificações: Físico, Digital, Visual, Perceptível.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section><!-- End Our Portfolio Section -->
-
 
 </main><!-- End #main -->
 
@@ -156,7 +187,14 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script>
+    $(".categoria").click(function() {
+        var categoria =$(this).attr("id")
+        $(".card").removeClass("visible").addClass("invisible");
+        $('.' + categoria).removeClass("invisible").addClass("visible");
+    });
 
+</script>
 </body>
 
 </html>
