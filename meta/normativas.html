@@ -75,7 +75,7 @@
                                 <a class="dropdown-item categoria" id="usoequitativo">Princípio 1: Uso Equitativo</a>
                                 <a class="dropdown-item categoria" id="usoflexivel" href="#">Princípio 2: Uso Flexível</a>
                                 <a class="dropdown-item categoria" id="usosimples" href="#">Princípio 3: Uso Simples e Intuitivo</a>
-                                <a class="dropdown-item categoria" id="perceptivel" href="#">Princípio 4: Informação Perceptível</a>
+                                <a class="dropdown-item categoria" id="infoperceptivel" href="#">Princípio 4: Informação Perceptível</a>
                                 <a class="dropdown-item categoria" id="toleranciaaoerro" href="#">Princípio 5: Tolerância ao Erro</a>
                                 <a class="dropdown-item categoria" id="baixoesforco" href="#">Princípio 6: Baixo Esforço Físico</a>
                                 <a class="dropdown-item categoria" id="aproximacaoeuso" href="#">Princípio 7: Tamanho e Espaçoes para Aproximação e Uso</a>
@@ -100,10 +100,10 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Ver todas</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Visual</a>
-                                <a class="dropdown-item" href="#">Auditiva</a>
-                                <a class="dropdown-item" href="#">Motora</a>
-                                <a class="dropdown-item" href="#">Cognitiva</a>
+                                <a class="dropdown-item categoria" id="visual" href="#">Visual</a>
+                                <a class="dropdown-item categoria" id="auditiva" href="#">Auditiva</a>
+                                <a class="dropdown-item categoria" id="motora" href="#">Motora</a>
+                                <a class="dropdown-item categoria" id="cognitiva" href="#">Cognitiva</a>
                             </div>
 
                         </div>
@@ -114,10 +114,10 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Ver Todas</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Perceptível</a>
-                                <a class="dropdown-item" href="#">Operável</a>
-                                <a class="dropdown-item" href="#">Compreensível</a>
-                                <a class="dropdown-item" href="#">Robusto</a>
+                                <a class="dropdown-item categoria" id="perceptivel" href="#">Perceptível</a>
+                                <a class="dropdown-item categoria" id="operavel" href="#">Operável</a>
+                                <a class="dropdown-item categoria" id="compreensivel" href="#">Compreensível</a>
+                                <a class="dropdown-item categoria" id="robusto" href="#">Robusto</a>
                             </div>
 
                     </div>
@@ -127,7 +127,7 @@
             <div class="row mt-4">
                 <div class="col-lg-12">
                     <div id="accordion">
-                        <div class="card usoequitativo fisico digital invisible">
+                        <div class="card usoequitativo fisico digital perceptivel invisible">
                             <div class="card-header " id="headingOne">
                                 <h5 class="mb-0">
                                     <a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -137,20 +137,47 @@
                             </div>
                             <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>Por que?</p>
-                                   <p>
-                                       Exemplo de uso I: Um aluno com baixa visão acessando um infográfico digital que apresenta diferentes causas relacionadas a poluição dos rios. Barreira: a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.
-                                   </p>
-                                    <p>
-                                        Como? Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.
-                                    </p>
-                                    <p>
-                                    Resultados Esperados:
-                                    </p>
-                                    <p>1- Existe descrição textual dos gráficos contidos na interface.</p>
-                                    <p>2- A descrição textual deve ser acessível por meio de leitores de telas.</p>
-                                    <p>3- A descrição textual deve seguir a mesma ordem lógica do conteúdo apresentado visualmente.</p>
+                                    <p dir="ltr">Por que?&nbsp;</p>
+
+                                    <p dir="ltr" style="margin-left:40px">Exemplo de uso: Um aluno com baixa vis&atilde;o acessando um infogr&aacute;fico digital que apresenta diferentes causas relacionadas a polui&ccedil;&atilde;o dos rios. Barreira: a falta de informa&ccedil;&atilde;o textual alternativa que apresente em sequ&ecirc;ncia l&oacute;gica o conte&uacute;do representado visualmente.</p>
+
+                                    <p dir="ltr">Como? Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da pr&oacute;pria tecnologia educacional, verificar se &eacute; poss&iacute;vel acessar via &aacute;udio o conte&uacute;do equivalente ao visual, em ordem l&oacute;gica.</p>
+
+                                    <p dir="ltr">Resultados Esperados</p>
+
+                                    <ol dir="ltr">
+                                        <li>Existe descri&ccedil;&atilde;o textual dos gr&aacute;ficos contidos na interface.</li>
+                                        <li>A descri&ccedil;&atilde;o textual deve ser acess&iacute;vel por meio de leitores de telas.</li>
+                                        <li>A descri&ccedil;&atilde;o textual deve seguir a mesma ordem l&oacute;gica do conte&uacute;do apresentado visualmente.</li>
+                                    </ol>
                                     <p>Classificações: Físico, Digital, Visual, Perceptível.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card usoequitativo fisico digital perceptivel invisible">
+                            <div class="card-header " id="headingTwo">
+                                <h5 class="mb-0">
+                                    <a class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+                                        1a.2 Apresentar audiodescrição e/ou descrição textual para vídeos, animações e outros recursos multimídias.
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p dir="ltr">Por que?&nbsp;</p>
+
+                                    <p dir="ltr" style="margin-left: 40px;">Exemplo de uso: Um aluno cego na Educa&ccedil;&atilde;o Infantil em uma roda de conversa em sala de aula usando aplicativo no Tablet Educacional para o desenvolvimento de habilidade lingu&iacute;stica. Barreira: o acesso &agrave;s informa&ccedil;&otilde;es visuais veiculadas nos v&iacute;deos serem baseados, parcial ou totalmente, em recursos de anima&ccedil;&atilde;o, sem legenda ou descri&ccedil;&atilde;o.</p>
+
+                                    <p dir="ltr">Como? Verificar se os v&iacute;deos com as anima&ccedil;&otilde;es apresentam recurso de audiodescri&ccedil;&atilde;o adequado para o tipo de est&iacute;mulo</p>
+
+                                    <p dir="ltr">Resultados esperados:&nbsp;</p>
+
+                                    <ol dir="ltr">
+                                        <li>Existe audiodescri&ccedil;&atilde;o e/ou descri&ccedil;&atilde;o textual para todos os recursos multim&iacute;dias relevantes.</li>
+                                        <li>A audiodescri&ccedil;&atilde;o ou descri&ccedil;&atilde;o textual &eacute; equivalente ao conte&uacute;do visual.</li>
+                                        <p>Classificações: Físico, Digital, Visual, Perceptível.</p>
+
+                                    </ol>
                                 </div>
                             </div>
                         </div>
