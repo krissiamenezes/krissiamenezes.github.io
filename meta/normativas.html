@@ -59,11 +59,11 @@
 
             <div class="section-title">
                 <h2>Normativas</h2>
+                <p class="text-center font-italic">Como você deseja visualizar as normativas?</p>
             </div>
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="text-center">Como você deseja visualizar as normativas?</h3>
                     <div class="text-center">
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -127,7 +127,7 @@
             <div class="row mt-4">
                 <div class="col-lg-12">
                     <div id="accordion">
-                        <div class="card usoequitativo fisico digital perceptivel invisible">
+                        <div class="card usoequitativo fisico digital visual perceptivel ">
                             <div class="card-header " id="headingOne">
                                 <h5 class="mb-0">
                                     <a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -154,10 +154,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card usoequitativo fisico digital perceptivel invisible">
+                        <div class="card usoequitativo fisico digital visual perceptivel ">
                             <div class="card-header " id="headingTwo">
                                 <h5 class="mb-0">
-                                    <a class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+                                    <a class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         1a.2 Apresentar audiodescrição e/ou descrição textual para vídeos, animações e outros recursos multimídias.
                                     </a>
                                 </h5>
@@ -176,6 +176,35 @@
                                         <li>Existe audiodescri&ccedil;&atilde;o e/ou descri&ccedil;&atilde;o textual para todos os recursos multim&iacute;dias relevantes.</li>
                                         <li>A audiodescri&ccedil;&atilde;o ou descri&ccedil;&atilde;o textual &eacute; equivalente ao conte&uacute;do visual.</li>
                                         <p>Classificações: Físico, Digital, Visual, Perceptível.</p>
+
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card usoequitativo fisico digital visual perceptivel operavel ">
+                            <div class="card-header " id="headingTree">
+                                <h5 class="mb-0">
+                                    <a class="btn btn-link" data-toggle="collapse" data-target="#collapseTree" aria-expanded="false" aria-controls="collapseTree">
+                                        1a.3 Garantir a linearidade no fluxo da informação na alternativa sonora ou tátil, mantendo a mesma estrutura e conteúdo do que é percebido visualmente na interface.
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseTree" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p dir="ltr">Por que?&nbsp;</p>
+
+                                    <p dir="ltr" style="margin-left: 40px;">
+                                        Exemplo de Uso: Uma pessoa surdo cego usando computador para acessar material virtual da aula sobre figuras de linguagem. Barreira: quando o aluno, que utiliza leitor de telas e teclado para navegação no material, pressiona a tecla tab e é direcionado para o rodapé da página, e quando pressiona novamente é direcionado para o cabeçalho, não conseguindo ter acesso ao conteúdo principal.
+                                    </p>
+
+                                    <p dir="ltr">Como? Utilizando um leitor de telas, ou somente um teclado, navegar na página verificando se a navegação segue a ordem de apresentação dos conteúdos na interface e se todos os conteúdos são alcançados na navegação.
+                                    </p>
+                                    <p dir="ltr">Resultados esperados:&nbsp;</p>
+
+                                    <ol dir="ltr">
+                                        <li>Existe linearidade no fluxo da informação na alternativa sonora ou tátil;</li>
+                                        <li>A estrutura e conteúdo do que é percebido visualmente na interface se mantém.</li>
+                                        <p>Classificações: Físico, Digital, Visual, Perceptível, Operável.</p>
 
                                     </ol>
                                 </div>
@@ -215,10 +244,13 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 <script>
+    $(document).ready(function() {
+        $(".card").hide();
+    });
     $(".categoria").click(function() {
         var categoria =$(this).attr("id")
-        $(".card").removeClass("visible").addClass("invisible");
-        $('.' + categoria).removeClass("invisible").addClass("visible");
+        $(".card").hide();
+        $('.' + categoria).show();
     });
 
 </script>
