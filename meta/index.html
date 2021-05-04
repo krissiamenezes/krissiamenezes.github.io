@@ -55,7 +55,9 @@
     <div class="hero-container">
       <h1>MeTA</h1>
       <h2>Método para Desenvolvimento e Avaliação de Tecnologias Educacionais Acessíveis</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <p>O MeTA é um Método para Avaliação de Tecnologias Educacionais Acessíveis, inspirado na Avaliação Heurística de Nielsen,
+            composto de normativas e etapas, com o propósito de avaliar tecnologias educacionais sob a perspectiva do Design Universal. Com o MeTA é disponibilizado um conjunto de 70 normativas e templates para auxiliar processos de avaliação.</p>
+      <a href="#about" class="btn-get-started scrollto">Comece agora</a>
     </div>
   </section><!-- #hero -->
 
@@ -211,14 +213,14 @@
                       <div class="col-lg-12">
                           <ul id="portfolio-flters">
                               <li data-filter=".filter-du" class="filter-active">Princípios do Design Universal</li>
-                              <li data-filter=".filter-card">Tipo de TEcnologia educaional</li>
-                              <li data-filter=".filter-web">Outros</li>
+                              <li data-filter=".filter-tipo">Tipo de Tecnologia Educacional</li>
+                              <li data-filter=".filter-modalidade">Modalidade de Acesso</li>
+                              <li data-filter=".filter-wcag">Princípios do WCAG</li>
                           </ul>
                       </div>
                   </div>
 
                   <div class="row portfolio-container">
-
                       <div class="faq col-lg-12 col-md-12 filter-du">
                           <ul class="faq-list">
                               <li class="list-group-item collapsed">
@@ -226,21 +228,21 @@
                                   <div id="principio1" class="collapse" data-parent=".faq-list">
                                       <p class="normativa">1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</p>
                                       <ol type="1">
-                                          <li class="regra">
+                                          <li class="regra filter-modalidade">
                                               <a class="regra-desc collapsed" data-toggle="collapse" href="#p1a1">1. Apresentar Informações gráficas em formato alternativo de texto. <i class="icofont-simple-up"></i></a>
                                               <ol type="a" id="p1a1" class="collapse">
                                                   <motivo>Por que?</motivo>
-                                                       <p class="contextos">
-                                                           <contexto>Contexto de uso I:</contexto> Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.
-                                                       </p>
+                                                  <p class="contextos">
+                                                      <contexto>Contexto de uso I:</contexto> Considere um aluno com baixa visão em um laboratório de informática acessando um infográfico que apresenta diferentes causas relacionadas à poluição dos rios. Um exemplo de barreira enfrentada é a falta de informação textual alternativa que apresente em sequência lógica o conteúdo representado visualmente.
+                                                  </p>
 
-                                                      <p>
-                                                          <como>Como?</como> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.
-                                                      </p>
+                                                  <p>
+                                                      <como>Como?</como> Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.
+                                                  </p>
 
-                                                      <p>
-                                                          <resultados>Resultados esperados:</resultados> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).
-                                                      </p>
+                                                  <p>
+                                                      <resultados>Resultados esperados:</resultados> A Tecnologia Educacional deve oferecer alternativa de acesso aos gráficos contidos na interface, por meio de um conteúdo textual, o qual deve estar acessível aos leitores de tela e funcionalmente equivalente aos gráficos. No caso de materiais físicos, devem haver recursos que possibilitem a obtenção da informação por meio alternativo (e.g., audiobook de um livro físico).
+                                                  </p>
                                               </ol>
                                           </li>
                                           <li class="regra">
@@ -265,15 +267,7 @@
                               </li>
 
                           </ul>
-                          <ul class="faq-list">
-                              <li class="list-group-item">
-                                  <a data-toggle="collapse" class="collapsed" href="#principio2"><h3>Princípio 2: Uso flexível <i class="icofont-simple-up"></i></h3></a>
-                                  <div id="principio2" class="collapse" data-parent=".faq-list">
-                                      <p class="normativa"></p>
-                                  </div>
-                              </li>
 
-                          </ul>
                       </div>
 
                   </div>
@@ -290,10 +284,7 @@
         &copy; Copyright <strong><span>Amoeba</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-one-page-bootstrap-template-amoeba/ -->
+
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
