@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="br">
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -33,6 +32,8 @@
     <div class="container">
 
         <div class="logo float-left">
+            <a href="#portfolio">Ir ao Conteúdo Principal</a>
+
             <h1 class="text-light"><a href="index.html"><span>MeTA</span></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -40,9 +41,9 @@
 
         <nav class="nav-menu float-right d-none d-lg-block">
             <ul>
-                <li class="active"><a href="#header">MeTA</a></li>
-                <li><a href="#about">Como utilizar o MeTA?</a></li>
-                <li><a href="#portfolio">Normativas</a></li>
+                <li class="active"><a href="index.html">MeTA</a></li>
+                <li><a href="index.html#about">Como utilizar o MeTA?</a></li>
+                <li><a href="index.html#portfolio">Normativas</a></li>
                 <li><a href="#contact">Templates de Avaliação</a></li>
             </ul>
         </nav><!-- .nav-menu -->
@@ -59,7 +60,7 @@
 
             <div class="section-title">
                 <h2>Normativas</h2>
-                <p class="text-center font-italic">Como você deseja visualizar as normativas?</p>
+                <p class="text-center font-italic" style="font-size:1.5em;">Como você deseja visualizar as normativas?</p>
             </div>
 
             <div class="row">
@@ -72,7 +73,7 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Ver Todas</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item categoria" id="usoequitativo">Princípio 1: Uso Equitativo</a>
+                                <a class="dropdown-item categoria" id="usoequitativo" href="#">Princípio 1: Uso Equitativo</a>
                                 <a class="dropdown-item categoria" id="usoflexivel" href="#">Princípio 2: Uso Flexível</a>
                                 <a class="dropdown-item categoria" id="usosimples" href="#">Princípio 3: Uso Simples e Intuitivo</a>
                                 <a class="dropdown-item categoria" id="infoperceptivel" href="#">Princípio 4: Informação Perceptível</a>
@@ -125,92 +126,268 @@
                 </div>
             </div>
             <div class="row mt-4">
-                <div class="col-lg-12">
-                    <div id="accordion">
-                        <div class="card usoequitativo fisico digital visual perceptivel ">
-                            <div class="card-header " id="headingOne">
-                                <h5 class="mb-0">
-                                    <a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        1a.1 Apresentar informações gráficas em formato alternativo de texto.
-                                    </a>
-                                </h5>
+                <div class="faq col-lg-12 col-md-12">
+                    <ul class="faq-list">
+                        <li class="list-group-item card usoequitativo fisico digital visual perceptivel collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n1"><p>1a.1 Apresentar informações gráficas em formato alternativo de texto.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n1" class="collapse" data-parent=".faq-list">
+                                <p>Por que?&nbsp;</p>
+                                <p class="ml-4">Exemplo de uso: Um aluno com baixa visão acessando um infográfico digital que apresenta diferentes causas relacionadas a poluição dos rios. Barreira: a falta de informação textual alternativa que apresente em sequência ló;gica o conteúdo representado visualmente.</p>
+                                <p>Como?</p>
+                                    <p class="ml-4">Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da própria tecnologia educacional, verificar se é possível acessar via áudio o conteúdo equivalente ao visual, em ordem lógica.</p>
+                                <p>Resultados Esperados</p>
+                                <ol>
+                                    <li>Existe descrição textual dos gráficos contidos na interface.</li>
+                                    <li>A descrição textual deve ser acessível por meio de leitores de telas.</li>
+                                    <li>A descrção textual deve seguir a mesma ordem lógica do conteúdo apresentado visualmente.</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Físico, Digital, Visual, Perceptível.</p>
                             </div>
-                            <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="card-body">
-                                    <p dir="ltr">Por que?&nbsp;</p>
-
-                                    <p dir="ltr" style="margin-left:40px">Exemplo de uso: Um aluno com baixa vis&atilde;o acessando um infogr&aacute;fico digital que apresenta diferentes causas relacionadas a polui&ccedil;&atilde;o dos rios. Barreira: a falta de informa&ccedil;&atilde;o textual alternativa que apresente em sequ&ecirc;ncia l&oacute;gica o conte&uacute;do representado visualmente.</p>
-
-                                    <p dir="ltr">Como? Utilizando um leitor de telas (e.g., NVDA, VoiceOver) ou funcionalidade da pr&oacute;pria tecnologia educacional, verificar se &eacute; poss&iacute;vel acessar via &aacute;udio o conte&uacute;do equivalente ao visual, em ordem l&oacute;gica.</p>
-
-                                    <p dir="ltr">Resultados Esperados</p>
-
-                                    <ol dir="ltr">
-                                        <li>Existe descri&ccedil;&atilde;o textual dos gr&aacute;ficos contidos na interface.</li>
-                                        <li>A descri&ccedil;&atilde;o textual deve ser acess&iacute;vel por meio de leitores de telas.</li>
-                                        <li>A descri&ccedil;&atilde;o textual deve seguir a mesma ordem l&oacute;gica do conte&uacute;do apresentado visualmente.</li>
-                                    </ol>
-                                    <p>Classificações: Físico, Digital, Visual, Perceptível.</p>
-                                </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo fisico digital visual perceptivel collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n2"><p>1a.2 Apresentar audiodescrição e/ou descrição textual para vídeos, animações e outros recursos multimídias.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n2" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Um aluno cego na Educação Infantil em uma roda de conversa em sala de aula usando aplicativo no Tablet Educacional para o desenvolvimento de habilidade linguística. Barreira: o acesso às informações visuais veiculadas nos vídeos serem baseados, parcial ou totalmente, em recursos de animação, sem legenda ou descrição.</p>
+                                <p>Como? </p>
+                                    <p class="ml-4">Verificar se os vídeos com as animações apresentam recurso de audiodescriçã;o adequado para o tipo de estímulo</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Existe audiodescrição e/ou descrição textual para todos os recursos multimídias relevantes.</li>
+                                    <li>A audiodescrição ou descrição textual é equivalente ao conteúdo visual.</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Físico, Digital, Visual, Perceptível.</p>
                             </div>
-                        </div>
-                        <div class="card usoequitativo fisico digital visual perceptivel ">
-                            <div class="card-header " id="headingTwo">
-                                <h5 class="mb-0">
-                                    <a class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        1a.2 Apresentar audiodescrição e/ou descrição textual para vídeos, animações e outros recursos multimídias.
-                                    </a>
-                                </h5>
+                        </li>
+                        <li class="list-group-item card usoequitativo fisico digital visual perceptivel operavel collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n3"><p>1a.3 Garantir a linearidade no fluxo da informação na alternativa sonora ou tátil, mantendo a mesma estrutura e conteúdo do que é percebido visualmente na interface.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n3" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa surdo cego usando computador para acessar material virtual da aula sobre figuras de linguagem. Barreira: quando o aluno, que utiliza leitor de telas e teclado para navegação no material, pressiona a tecla tab e é direcionado para o rodapé da página, e quando pressiona novamente é direcionado para o cabeçalho, não conseguindo ter acesso ao conteúdo principal.
+                                <p>Como? </p>
+                                    <p class="ml-4">Utilizando um leitor de telas, ou somente um teclado, navegar na página verificando se a navegação segue a ordem de apresentação dos conteúdos na interface e se todos os conteúdos são alcançados na navegação.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Existe linearidade no fluxo da informação na alternativa sonora ou tátil;</li>
+                                    <li>A estrutura e conteúdo do que é percebido visualmente na interface se mantém.</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Físico, Digital, Visual, Perceptível, Operável.</p>
                             </div>
-                            <div id="collapseTwo" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="card-body">
-                                    <p dir="ltr">Por que?&nbsp;</p>
-
-                                    <p dir="ltr" style="margin-left: 40px;">Exemplo de uso: Um aluno cego na Educa&ccedil;&atilde;o Infantil em uma roda de conversa em sala de aula usando aplicativo no Tablet Educacional para o desenvolvimento de habilidade lingu&iacute;stica. Barreira: o acesso &agrave;s informa&ccedil;&otilde;es visuais veiculadas nos v&iacute;deos serem baseados, parcial ou totalmente, em recursos de anima&ccedil;&atilde;o, sem legenda ou descri&ccedil;&atilde;o.</p>
-
-                                    <p dir="ltr">Como? Verificar se os v&iacute;deos com as anima&ccedil;&otilde;es apresentam recurso de audiodescri&ccedil;&atilde;o adequado para o tipo de est&iacute;mulo</p>
-
-                                    <p dir="ltr">Resultados esperados:&nbsp;</p>
-
-                                    <ol dir="ltr">
-                                        <li>Existe audiodescri&ccedil;&atilde;o e/ou descri&ccedil;&atilde;o textual para todos os recursos multim&iacute;dias relevantes.</li>
-                                        <li>A audiodescri&ccedil;&atilde;o ou descri&ccedil;&atilde;o textual &eacute; equivalente ao conte&uacute;do visual.</li>
-                                        <p>Classificações: Físico, Digital, Visual, Perceptível.</p>
-
-                                    </ol>
-                                </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo fisico digital visual operavel collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n4"><p>1a.4 Garantir a linearidade no fluxo da informação na alternativa sonora ou tátil, mantendo a mesma estrutura e conteúdo do que é percebido visualmente na interface.
+                                <i class="icofont-simple-up"></i></p></a>
+                            <div id="n4" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa surdo cego usando computador para acessar material virtual da aula sobre figuras de linguagem. Barreira: quando o aluno, que utiliza leitor de telas e teclado para navegação no material, pressiona a tecla tab e é direcionado para o rodapé da página, e quando pressiona novamente é direcionado para o cabeçalho, não conseguindo ter acesso ao conteúdo principal.</p>
+                                <p>Como? </p>
+                                <p class="ml-4"> Utilizando um leitor de telas, ou somente um teclado, navegar na página verificando se a navegação segue a ordem de apresentação dos conteúdos na interface e se todos os conteúdos são alcançados na navegação.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>A Tecnologia Educacional apresenta alternativa sonora ou display tátil;</li>
+                                    <li>As alternativas sonora ou display tátil apresentam as informações na mesma estrutura da do que é percebido na interface em ordem lógica;</li>
+                                    <li>A apresentação alternativa segue a ordem de apresentação dos conteúdos na interface do superior ao inferior, da esquerda para direita.</li>
+                                </ol>
+                                <p class="mt-2">Classificações:Uso Equitativo, Físico, Digital, Visual, Operável.</p>
                             </div>
-                        </div>
-                        <div class="card usoequitativo fisico digital visual perceptivel operavel ">
-                            <div class="card-header " id="headingTree">
-                                <h5 class="mb-0">
-                                    <a class="btn btn-link" data-toggle="collapse" data-target="#collapseTree" aria-expanded="false" aria-controls="collapseTree">
-                                        1a.3 Garantir a linearidade no fluxo da informação na alternativa sonora ou tátil, mantendo a mesma estrutura e conteúdo do que é percebido visualmente na interface.
-                                    </a>
-                                </h5>
+                        </li>
+                        <li class="list-group-item card usoequitativo digital motora operavel collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n5"><p>1a.5 Tornar o acesso ao conteúdo e à funcionalidade operável via dispositivo de entrada.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n5" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa com baixa visão usando um computador para realizar uma pesquisa sobre o Ciclo da Borracha. Barreira: o aluno precisar modificar o contraste da página e não haver atalho para isto.</p>
+                                <p>Como? </p>
+                                <p class="ml-4">Verificar se a Tecnologia Educacional possui os atalhos de acessibilidade (Alto contraste, Página de acessibilidade, Mapa do site, ir ao conteúdo, ir ao menu principal, ir à caixa de pesquisa), e se a função esperada é realmente executada quando as teclas de atalho são utilizadas.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>A navegação por teclado físico é funcional;</li>
+                                    <li>A navegação por teclado é equivalente ao que é exposto e acessado por mouse na interface;</li>
+                                    <li>A navegação por teclado físico executa as mesmas funções que o mouse físico.</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Digital, Motora, Operável.</p>
                             </div>
-                            <div id="collapseTree" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="card-body">
-                                    <p dir="ltr">Por que?&nbsp;</p>
-
-                                    <p dir="ltr" style="margin-left: 40px;">
-                                        Exemplo de Uso: Uma pessoa surdo cego usando computador para acessar material virtual da aula sobre figuras de linguagem. Barreira: quando o aluno, que utiliza leitor de telas e teclado para navegação no material, pressiona a tecla tab e é direcionado para o rodapé da página, e quando pressiona novamente é direcionado para o cabeçalho, não conseguindo ter acesso ao conteúdo principal.
-                                    </p>
-
-                                    <p dir="ltr">Como? Utilizando um leitor de telas, ou somente um teclado, navegar na página verificando se a navegação segue a ordem de apresentação dos conteúdos na interface e se todos os conteúdos são alcançados na navegação.
-                                    </p>
-                                    <p dir="ltr">Resultados esperados:&nbsp;</p>
-
-                                    <ol dir="ltr">
-                                        <li>Existe linearidade no fluxo da informação na alternativa sonora ou tátil;</li>
-                                        <li>A estrutura e conteúdo do que é percebido visualmente na interface se mantém.</li>
-                                        <p>Classificações: Físico, Digital, Visual, Perceptível, Operável.</p>
-
-                                    </ol>
-                                </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo digital cognitiva visual compreensivel operavel collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n6"><p>1a.6 Ao apresentar links/redirecionamentos inserir descrição do conteúdo a ser direcionado.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n6" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa com baixa visão usando um computador com leitor de telas para ler um arquivo sobre as Revoltas do Período Colonial Brasileiro. Barreira: ao encontrar um link para ler mais sobre uma revolta, o link não apresentar descrição e a pessoa não saber sobre qual revolta ele está realmente acessando</p>
+                                <p>Como? </p>
+                                <p class="ml-4"> Verificar se os links apresentados na Tecnologia Educacional possuem descrição sobre para onde o usuário será direcionado.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Apresenta links com títulos referentes ao conteúdo que o usuário será direcionado;</li>
+                                    <li>Apresenta links com breves descrições sobre o conteúdo ao qual o usuário será direcionado.</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Digital, Cognitivo, Visual, Compreensível, Operável.</p>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo digital cognitiva compreensivel operavel perceptivel collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n7"><p>1a.7 Apresentar formato alternativo de áudio ou tátil para feedback visual das operações do usuário na interface.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n7" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa cega usando um computador para preencher o formulário de inscrição do time de futebol da escola. Barreira: ao enviar o formulário, ele não enviar por ter um erro de preenchimento e a TE não informar em qual campo do formulário ocorreu o erro, apenas marcar os campos em vermelho.</p>
+                                <p>Como? </p>
+                                <p class="ml-4">Verificar se a Tecnologia Educacional oferece feedback em formato alternativo sonoro ou tátil perceptível ao usuário.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Apresenta formato alternativo sonoro ou tátil de feedbacks visuais de operações da interface;</li>
+                                    <li>O feedback apresentado contém uma descrição textual do seu conteúdo ou sinais sonoros/táteis diferentes para cada tipo de retorno da operação do usuário.</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Digital, Cognitiva, Operável, Perceptível, Compreensível.</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo digital auditiva robusto operavel perceptivel compreensivel collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n8"><p>1a.8 Apresentar informações gerais da Tecnologia Educacional em mais de um formato, como por vídeo em Libras ou Braille.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n8" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma turma da educação infantil usando uma televisão para assistir a um filme sobre o tráfico de animais silvestres. Barreira: o filme possui legenda em português e um aluno surdo possui dificuldade na leitura do português.</p>
+                                <p>Como? </p>
+                                <p class="ml-4">Verificar se a Tecnologia Educacional  possui recurso para janela de Libras com tradução-interpretação humana gravada como alternativa aos textos escritos, ou se a TE possui modo alternativo de acesso, como em Braile.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>As informações gerais da Tecnologia Educacional são disponibilizadas em formato alternativo;</li>
+                                    <li>Oferece uma janela de Libras com tradução-interpretação humana gravada como alternativa aos textos escritos.</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Digital, Auditiva, Robusto, Operável, Perceptível, Compreensível.</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo digital auditiva visual robusto collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n9"><p>1a.9 Exibir indicação clara sobre a disponibilidade de informações em formato alternativo ao português oral ou escrito.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n9" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Um professor usando um computador para pesquisar vídeos sobre hábitos alimentares saudáveis. Barreira: ao olhar as capas e/ou descrições dos vídeos ele não encontrar um ícone que indique facilmente a disponibilidade do recurso em Libras.</p>
+                                <p>Como? </p>
+                                <p class="ml-4">Verificar se a Tecnologia Educacional apresenta um ícone que indique a disponibilidade do recurso de Libras.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Apresenta ícone que indica a disponibilidade do recurso de Libras;</li>
+                                    <li>Apresenta um ícone indicando a disponibilidade do recurso em Libras em todos os lugares onde ocorre.</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Digital, Auditiva, Visual, Robusto.</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo digital auditiva compreensivel robusto collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n10"><p>1a.10 Substituir o uso de sinais visuais por sinais sonoros claros.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n10" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Um estudante cego usando um Tablet Educacional para resolver uma atividade sobre Conjuntos Matemáticos. Barreira enfrentada: ao submeter o formulário com a atividade, o aplicativo somente apresenta um sombreamento verde nas questões corretas e vermelho nas questões incorretas, impossibilitando que o aluno saiba se e onde ocorreu um erro ou acerto.</p>
+                                <p>Como? </p>
+                                <p class="ml-4">Verificar se a Tecnologia Educacional emite sinais sonoros que possibilitam que o estudante saiba se suas respostas estão corretas ou incorretas.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Apresenta sinais sonoros como alternativa ao uso de sinais visuais;</li>
+                                    <li>Apresenta instruções relativas aos sinais sonoros apresentados;</li>
+                                    <li>As instruções dadas relativas aos sinais sonoros são apresentadas com o uso de Libras.</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Digital, Auditiva, Compreensível, Robusto.</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo digital auditiva cognitiva compreensivel robusto collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n11"><p>1a.11 Disponibilizar as informações veiculadas em Libras, com exposição em vídeo observando as normas NBR 15290 e NBR 15599 da ABNT (2005, 2008).<i class="icofont-simple-up"></i></p></a>
+                            <div id="n11" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa surda usando um vídeo para se informar sobre a proliferação do mosquito da dengue. Barreira: o vídeo não possuir exibição alternativa em Libras.</p>
+                                <p>Como? </p>
+                                <p class="ml-4">Verificar se a Tecnologia Educacional fornece exibição alternativa em vídeo na Língua Brasileira de Sinais.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Fornece exibição alternativa em vídeo na Língua Brasileira de Sinais;</li>
+                                    <li>As informações apresentadas em vídeos possuem conteúdo idêntico ou equivalente ao original;</li>
+                                    <li>As informação veiculadas em Libras observam as normas NBR 15290 e NBR 15599 da ABNT (2005, 2008).</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Digital, Auditiva, Cognitiva, Compreensível, Robusto.</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo digital auditiva cognitiva compreensivel robusto collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n12"><p>1a.12 Disponibilizar alternativas à operação por voz, de forma que não exista dependência da produção oral no padrão dos indivíduos ouvintes sem queixas de linguagem.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n12" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa surda pouco alfabetizado usando um tablet educacional para responder um questionário sobre sua árvore genealógica. Barreira: o questionário ser apresentado somente em português escrito, e não haver a opção de tradução do conteúdo ou resposta em Libras.</p>
+                                <p>Como? </p>
+                                <p class="ml-4">Verificar se a Tecnologia Educacional fornece formas alternativas de operação.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Disponibiliza alternativas à operação por voz;</li>
+                                    <li>Possibilita aa exibição de informações em Libras</li></ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Digital, Auditiva, Cognitiva, Robusto.</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo fisico digital motora operavel collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n13"><p>1a.13 Oferecer versão de acesso via tela touch como forma alternativa de acesso.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n13" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa usando um site educacional para resolver um exercício online durante uma aula de Língua Portuguesa. Barreira: os ítens do exercício ficam muito pequenos no tablet e exigem redimensionamento da página a cada interação, tornando a navegação extremamente cansativa.</p>
+                                <p>Como? </p>
+                                <p class="ml-4">Verificar se a Tecnologia Educacional apresenta as informações de forma sucinta e exige pouco esforço de interação.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Disponibiliza as informações de forma sucinta;</li>
+                                    <li>Exige pouco esforço do usuário na interação.</li></ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Físico, Digital, Motora, Operável.</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo fisico digital cognitiva compreensivel collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n14"><p>1a.14 Sugerir materiais e métodos alternativos para apoiar a consolidação da aprendizagem através de meios mais concretos.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n14" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa usando o livro didático para uma aula sobre o Sistema Solar. Barreira: as pessoas cegas não conseguirem ter noção do tamanho proporcional e distância entre os planetas e astros.</p>
+                                <p>Como? </p>
+                                <p class="ml-4">Verificar se a Tecnologia Educacional  oferece exemplos concretos (ex: pesos, formas, maquetes) nos quais o aluno possa perceber tamanhos, formas, texturas e pesos.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Apresenta exemplos em forma de experiências práticas a serem realizadas com objetos concretos;</li>
+                                    <li>Disponibiliza vídeos e sugestões de materiais diversos nos quais o aluno possa perceber diferentes tamanhos, formas, texturas e pesos;</li></ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Físico, Digital, Cognitiva, Compreensível.</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo fisico digital cognitiva robusto collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n15"><p>1a.15 Oferecer exercícios em formatos variados para a consolidação de conteúdos a curto e longo prazo.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n15" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Um docente usando um livro didático para ensinar as Leis de Mendel. Barreira: a única atividade de consolidação do conteúdo ser um exercício objetivo, de múltipla escolha, no qual os alunos precisam marcar a alternativa correta.</p>
+                                <p>Como? </p>
+                                <p class="ml-4">Verificar se a Tecnologia Educacional oferece formas variadas para consolidação dos conteúdos ministrados, a curto e longo prazo, sejam elas jogos de tabuleiro, jogos eletrônicos, experiências ou aulas passeio.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Oferece formas variadas para a consolidação dos conteúdos ministrados a curto prazo;</li>
+                                    <li>Oferece formas variadas para a consolidação dos conteúdos ministrados longo prazo;</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Físico, Digital, Cognitiva, Robusto.</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo fisico digital auditiva robusto collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n16"><p>1b.1 Fornecer as informações em Língua Brasileira de Sinais.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n16" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa com surdez profunda bilateral,  que tem a Libras como língua de acesso à informação,  usando um software para ensino de história. Barreira enfrentada: a falta de acesso aos conteúdos escritos em Língua Portuguesa e falados pelos professores nos vídeo que compõem a Tecnologia Educacional.</p>
+                                <p>Como? </p>
+                                <p class="ml-4"> Verificar se há janela de interpretação ou se há indicação de link de acesso para vídeo de interpretação dos conteúdos.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Oferece acesso pleno aos conteúdos veiculados com as informações em Língua Brasileira de Sinais</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Digital, Auditiva, Robusto.</p>
+                            </div>
+                        </li>
+                        <li class="list-group-item card usoequitativo fisico digital visual robusto collapsed">
+                            <a data-toggle="collapse" class="collapsed" href="#n17"><p>1c.1 Permitir exibir/ocultar informações confidenciais.<i class="icofont-simple-up"></i></p></a>
+                            <div id="n17" class="collapse" data-parent=".faq-list">
+                                <p>Por que?</p>
+                                <p class="ml-4">Exemplo de uso: Uma pessoa com baixa visão usando uma plataforma EAD com leitor de telas para ter acesso ao conteúdo da disciplina. Barreira: ao digitar a senha o leitor de telas lê os caracteres digitados.</p>
+                                <p>Como? </p>
+                                <p class="ml-4"> Verificar se há janela de interpretação ou se há indicação de link de acesso para vídeo de interpretação dos conteúdos.</p>
+                                <p>Resultados esperados:</p>
+                                <ol>
+                                    <li>Utilizando o leitor de telas, verificar se as informações confidenciais são lidas sem aviso prévio;</li>
+                                    <li>Utilizando o leitor de telas, verificar se a Tecnologia Educacional permite a configuração para que informações confidenciais sejam ocultadas;</li>
+                                    <li>Utilizando o leitor de telas, verificar se a Tecnologia Educacional permite a configuração para que informações confidenciais sejam exibidas;</li>
+                                </ol>
+                                <p class="mt-2">Classificações: Uso Equitativo, Digital, Visual, Robusto.</p>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
         </div>
