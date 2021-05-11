@@ -60,11 +60,15 @@
 
             <div class="section-title">
                 <h2>Normativas</h2>
-                <p class="text-center font-italic" style="font-size:1.5em;">Como você deseja visualizar as normativas?</p>
+<!--
+                <p class="font-italic" style="font-size:1.5em;">Como você deseja visualizar as normativas?</p>
+-->
             </div>
 
             <div class="row">
                 <div class="col-lg-12">
+                    <p class="alert-info">Você está visualizando a forma padrão de organização das normativas (Princípios do Design Universal), você pode filtrar ou alterar a forma de visualização nos botões abaixo.</p>
+
                     <div class="text-center">
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -87,7 +91,7 @@
                                 Tipo de Tecnologia Educacional
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Ver Todas</a>
+                                <a class="dropdown-item" href="#" onclick="verTodos(['fisico', 'digital'])">Ver Todas</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item categoria" id="fisico" href="#">Físico</a>
                                 <a class="dropdown-item categoria" id="digital" href="#">Digital</a>
@@ -127,8 +131,18 @@
             </div>
             <div class="row mt-4">
                 <div class="faq col-lg-12 col-md-12">
+
                     <ul class="faq-list">
+                        <!--Classificações-->
+                        <!---->
+                        <!--Princípios do WCAG-->
+
                         <!--1a-->
+                        <li class="classe usoequitativo"><p>Princípio 1: Uso equitativo</p></li>
+                        <li class="classe usoequitativo">1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</li>
+                        <li class="classe tipo fisico"><p>Físico</p></li>
+                        <li class="classe modalidade visual"><p>Visual</p></li>
+                        <li class="classe wcag perceptivel"><p>Perceptível</p></li>
                         <li class="list-group-item card usoequitativo fisico digital visual perceptivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n1"><p>1a.1 Apresentar informações gráficas em formato alternativo de texto.<i class="icofont-simple-up"></i></p></a>
                             <div id="n1" class="collapse" data-parent=".faq-list">
@@ -160,6 +174,7 @@
                                 <p class="mt-2">Classificações: Uso Equitativo, Físico, Digital, Visual, Perceptível.</p>
                             </div>
                         </li>
+                        <li class="classe wcag operavel"><p>Operável</p></li>
                         <li class="list-group-item card usoequitativo fisico digital visual perceptivel operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n3"><p>1a.3 Garantir a linearidade no fluxo da informação na alternativa sonora ou tátil, mantendo a mesma estrutura e conteúdo do que é percebido visualmente na interface.<i class="icofont-simple-up"></i></p></a>
                             <div id="n3" class="collapse" data-parent=".faq-list">
@@ -192,6 +207,9 @@
                                 <p class="mt-2">Classificações:Uso Equitativo, Físico, Digital, Visual, Operável.</p>
                             </div>
                         </li>
+                        <li class="classe modalidade motora"><p>Motora</p></li>
+                        <li class="classe tipo digital"><p>Digital</p></li>
+
                         <li class="list-group-item card usoequitativo digital motora operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n5"><p>1a.5 Tornar o acesso ao conteúdo e à funcionalidade operável via dispositivo de entrada.<i class="icofont-simple-up"></i></p></a>
                             <div id="n5" class="collapse" data-parent=".faq-list">
@@ -208,6 +226,9 @@
                                 <p class="mt-2">Classificações: Uso Equitativo, Digital, Motora, Operável.</p>
                             </div>
                         </li>
+                        <li class="classe modalidade cognitiva"><p>Cognitiva</p></li>
+                        <li class="classe wcag compreensivel"><p>Compreensível</p></li>
+
                         <li class="list-group-item card usoequitativo digital cognitiva visual compreensivel operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n6"><p>1a.6 Ao apresentar links/redirecionamentos inserir descrição do conteúdo a ser direcionado.<i class="icofont-simple-up"></i></p></a>
                             <div id="n6" class="collapse" data-parent=".faq-list">
@@ -238,6 +259,9 @@
                                 <p class="mt-2">Classificações: Uso Equitativo, Digital, Cognitiva, Operável, Perceptível, Compreensível.</p>
                             </div>
                         </li>
+                        <li class="classe wcag robusto"><p>Robusto</p></li>
+                        <li class="classe modalidade auditiva"><p>Auditiva</p></li>
+
                         <li class="list-group-item card usoequitativo digital auditiva robusto operavel perceptivel compreensivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n8"><p>1a.8 Apresentar informações gerais da Tecnologia Educacional em mais de um formato, como por vídeo em Libras ou Braille.<i class="icofont-simple-up"></i></p></a>
                             <div id="n8" class="collapse" data-parent=".faq-list">
@@ -358,6 +382,7 @@
                             </div>
                         </li>
                         <!--1b-->
+                        <li class="classe usoequitativo">1b. Evitar segregar ou estigmatizar qualquer usuário.</li>
                         <li class="list-group-item card usoequitativo fisico digital auditiva robusto collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n16"><p>1b.1 Fornecer as informações em Língua Brasileira de Sinais.<i class="icofont-simple-up"></i></p></a>
                             <div id="n16" class="collapse" data-parent=".faq-list">
@@ -373,6 +398,7 @@
                             </div>
                         </li>
                         <!--1c-->
+                        <li class="classe usoequitativo">1c. Privacidade, segurança, inocuidade devem ser igualmente disponíveis para todos os usuários.</li>
                         <li class="list-group-item card usoequitativo fisico digital visual robusto collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n17"><p>1c.1 Permitir exibir/ocultar informações confidenciais.<i class="icofont-simple-up"></i></p></a>
                             <div id="n17" class="collapse" data-parent=".faq-list">
@@ -405,6 +431,7 @@
                                 <p class="mt-2">Classificações: Uso Equitativo, Digital, Visual, Perceptível.</p>
                             </div>
                         </li>
+
                         <li class="list-group-item card usoequitativo digital visual auditiva cognitiva compreensivel perceptivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n19"><p>1c.3 Fornecer Termos de Uso claros e diretos.<i class="icofont-simple-up"></i></p></a>
                             <div id="n19" class="collapse" data-parent=".faq-list">
@@ -424,6 +451,7 @@
                             </div>
                         </li>
                         <!--1d-->
+                        <li class="classe usoequitativo">1d. Tornar o design atraente para todos os usuários.</li>
                         <li class="list-group-item card usoequitativo fisico digital visual robusto collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n20"><p>1d.1 Apresentar design atraente para todos.<i class="icofont-simple-up"></i></p></a>
                             <div id="n20" class="collapse" data-parent=".faq-list">
@@ -440,6 +468,8 @@
                             </div>
                         </li>
                         <!--2a-->
+                        <li class="classe usoflexivel"><p>Princípio 2: Uso flexível</p></li>
+                        <li class="classe usoflexivel">2a. Fornecer diferentes escolhas no método de uso.</li>
                         <li class="list-group-item card usoflexivel fisico digital visual operavel robusto collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n21"><p>2a.1 Fornecer acesso e operação por meio de comando de voz, aumento ou redução da fonte do texto apresentado na interface.<i class="icofont-simple-up"></i></p></a>
                             <div id="n21" class="collapse" data-parent=".faq-list">
@@ -687,6 +717,7 @@
                             </div>
                         </li>
                         <!--2b-->
+                        <li class="classe usoflexivel">2b. Acomodar acesso e uso por destros e canhotos.</li>
                         <li class="list-group-item card usoflexivel fisico digital motora operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n37"><p>2b.1 Possibilitar uso por pessoas destras e canhotas (permanentes ou temporárias).<i class="icofont-simple-up"></i></p></a>
                             <div id="n37" class="collapse" data-parent=".faq-list">
@@ -703,6 +734,7 @@
                             </div>
                         </li>
                         <!--2c-->
+                        <li class="classe usoflexivel">2c. Favorecer acurácia e precisão do usuário.</li>
                         <li class="list-group-item card usoflexivel digital motora operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n38"><p>2c.1 Possibilitar que a  repetição da ação de teclar seja acionada por pressão contínua e essa funcionalidade deve ser ajustável até pelo menos 0,5 segundos.<i class="icofont-simple-up"></i></p></a>
                             <div id="n38" class="collapse" data-parent=".faq-list">
@@ -719,6 +751,7 @@
                             </div>
                         </li>
                         <!--2d-->
+                        <li class="classe usoflexivel">2d. Fornecer adaptabilidade à velocidade do usuário.</li>
                         <li class="list-group-item card usoflexivel digital auditiva motora cognitiva operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n39"><p>2d.1 Possibilitar o controle da velocidade do que é apresentado em formato sonoro, por leitor de tela ou recurso multimídia, com possibilidade de acionar diversas funções como retroceder, avançar, pausar e retomar o conteúdo.<i class="icofont-simple-up"></i></p></a>
                             <div id="n39" class="collapse" data-parent=".faq-list">
@@ -784,6 +817,8 @@
                             </div>
                         </li>
                         <!--3a-->
+                        <li class="classe usosimples"><p>Princípio 3: Uso simples e intuitivo</p></li>
+                        <li class="classe usosimples">3a. Eliminar complexidade desnecessária.</li>
                         <li class="list-group-item card usosimples fisico digital cognitiva compreensivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n43"><p>3a.1 Usar português no material escrito para veicular as informações e o conteúdo da Tecnologia Educacional, observando a faixa etária alvo do produto.<i class="icofont-simple-up"></i></p></a>
                             <div id="n43" class="collapse" data-parent=".faq-list">
@@ -817,6 +852,7 @@
                             </div>
                         </li>
                         <!--3b-->
+                        <li class="classe usosimples">3b. Ser consistente com expectativas e intuições do usuário.</li>
                         <li class="list-group-item card usosimples fisico digital cognitiva compreensivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n45"><p>3b.1 Alcançar os objetivos a que se propõe para cada nível de escolaridade e conhecimentos específicos esperados.<i class="icofont-simple-up"></i></p></a>
                             <div id="n45" class="collapse" data-parent=".faq-list">
@@ -833,6 +869,7 @@
                             </div>
                         </li>
                         <!--3c-->
+                        <li class="classe usosimples">3c. Acomodar uma ampla gama de habilidades de letramento e linguagem.</li>
                         <li class="list-group-item card usosimples digital auditiva compreensivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n46"><p>3c.1 Promover sinalização em Libras nos vídeos de forma clara e condizente com a faixa etária alvo do produto.<i class="icofont-simple-up"></i></p></a>
                             <div id="n46" class="collapse" data-parent=".faq-list">
@@ -863,6 +900,7 @@
                             </div>
                         </li>
                         <!--3d-->
+                        <li class="classe usosimples">3d. Organizar informação de maneira consistente de acordo com sua importância.</li>
                         <li class="list-group-item card usosimples digital visual operavel perceptivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n48"><p>3d.1 Possibilitar que o primeiro atalho da Tecnologia Educacional leve à página de informações sobre acessibilidade.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -879,6 +917,7 @@
                             </div>
                         </li>
                         <!--3e-->
+                        <li class="classe usosimples">3e. Fornecer auxílio e retorno durante tarefa e após conclusão de tarefa.</li>
                         <li class="list-group-item card usosimples fisico digital cognitiva compreensivel perceptivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n49"><p>3e.1 Oferecer constante feedback sobre o aprendizado.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -913,6 +952,8 @@
                             </div>
                         </li>
                         <!--4a-->
+                        <li class="classe infoperceptivel"><p>Princípio 4: Informação perceptível</p></li>
+                        <li class="classe infoperceptivel">4a. Utilizar diferentes modalidades (visuais, verbais, táteis) para apresentação redundante de informação.</li>
                         <li class="list-group-item card infoperceptivel fisico digital visual perceptivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n51"><p>4a.1 Oferecer diferentes modos de apresentação das informações visuais, priorizando clareza e acessibilidade.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -946,6 +987,7 @@
                             </div>
                         </li>
                         <!--4b-->
+                        <li class="classe infoperceptivel">4b. Fornecer contraste adequado entre informação essencial e seus arredores.</li>
                         <li class="list-group-item card infoperceptivel fisico digital visual perceptivel operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n53"><p>4b.1 Destacar a informação mais importante.<i class="icofont-simple-up"></i></p></a>
                             <div id="n53" class="collapse" data-parent=".faq-list">
@@ -964,6 +1006,7 @@
                             </div>
                         </li>
                         <!--4c-->
+                        <li class="classe infoperceptivel">4c. Maximizar "legibilidade" de informação essencial.</li>
                         <li class="list-group-item card infoperceptivel fisico digital visual perceptivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n54"><p>4c.1 Usar tamanhos de fonte, cores, negrito, itálico ou níveis de cabeçalho para tornar a informação essencial mais legível e/ou identificável.<i class="icofont-simple-up"></i></p></a>
                             <div id="n54" class="collapse" data-parent=".faq-list">
@@ -982,6 +1025,7 @@
                             </div>
                         </li>
                         <!--4d-->
+                        <li class="classe infoperceptivel">4d. Diferenciar elementos de maneira que eles possam ser descritos (i.e., tornar fácil dar instruções ou direções)</li>
                         <li class="list-group-item card infoperceptivel fisico digital visual motora cognitiva operavel compreensivel robusto operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n55"><p>4d.1 Usar formas, direções, relevos ou outros elementos que possam ser descritos.<i class="icofont-simple-up"></i></p></a>
                             <div id="n55" class="collapse" data-parent=".faq-list">
@@ -1001,6 +1045,7 @@
                             </div>
                         </li>
                         <!--4e-->
+                        <li class="classe infoperceptivel">4e. Fornecer compatibilidade com uma variedade de técnicas ou dispositivos usadas por pessoas com limitações sensoriais.</li>
                         <li class="list-group-item card infoperceptivel fisico digital cognitiva perceptivel robusto operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n56"><p>4e.1 Possibilitar o uso de periféricos de tecnologia assistiva.<i class="icofont-simple-up"></i></p></a>
                             <div id="n56" class="collapse" data-parent=".faq-list">
@@ -1017,6 +1062,8 @@
                             </div>
                         </li>
                         <!--5a-->
+                        <li class="classe toleranciaaoerro"><p>Princípio 5: Tolerância a erros</p></li>
+                        <li class="classe toleranciaaoerro">5a. Organizar elementos para minimizar riscos e erros: elementos mais utilizados, mais acessíveis; elementos que trazem risco devem ser removidos, isolados ou guardados.</li>
                         <li class="list-group-item card toleranciaaoerro fisico digital motora visual operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n57"><p>5a.1 Possibilitar que informações sejam ocultadas.<i class="icofont-simple-up"></i></p></a>
                             <div id="n57" class="collapse" data-parent=".faq-list">
@@ -1033,6 +1080,7 @@
                             </div>
                         </li>
                         <!--5b-->
+                        <li class="classe toleranciaaoerro">5b. Fornecer avisos de riscos e erros.</li>
                         <li class="list-group-item card toleranciaaoerro fisico digital visual compreensivel perceptivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n58"><p>5b.1 Exibir avisos e alertas sonoros para sinalizar erros, acertos ou finalização de tarefas.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -1050,6 +1098,7 @@
                             </div>
                         </li>
                         <!--5c-->
+                        <li class="classe toleranciaaoerro">5c. Fornecer recursos seguros contra falhas.</li>
                         <li class="list-group-item card toleranciaaoerro fisico digital motora operavel cognitiva collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n59"><p>5c.1 Possibilitar que uma ação seja revertida.<i class="icofont-simple-up"></i></p></a>
                             <div id="n59" class="collapse" data-parent=".faq-list">
@@ -1066,6 +1115,7 @@
                             </div>
                         </li>
                         <!--5d-->
+                        <li class="classe toleranciaaoerro">5d. Desencorajar ações inconscientes em tarefas que exigem vigilância.</li>
                         <li class="list-group-item card toleranciaaoerro fisico digital compreensivel perceptivel cognitiva collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n60"><p>5d.1 Fornecer alertas ou barreiras antes de situações que não podem ser revertidas.<i class="icofont-simple-up"></i></p></a>
                             <div id="n60" class="collapse" data-parent=".faq-list">
@@ -1081,7 +1131,9 @@
                                 <p class="mt-2">Classificações: Tolerância ao Erro, Físico, Digital, Cognitiva, Compreensível, Perceptível.</p>
                             </div>
                         </li>
+                        <li class="classe baixoesforco"><p>Princípio 6: Baixo esforço físico</p></li>
                         <!--6a-->
+                        <li class="classe baixoesforco">6a. Permitir que usuário mantenha uma posição corporal neutra.</li>
                         <li class="list-group-item card baixoesforco fisico motora operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n61"><p>6a.1 Permitir que a pessoa permaneça sentada ou em pé de forma alinhada durante todo o tempo.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -1099,6 +1151,7 @@
                             </div>
                         </li>
                         <!--6b-->
+                        <li class="classe baixoesforco">6b. Usar forças de operação razoáveisa. Permitir que usuário mantenha uma posição corporal neutra.</li>
                         <li class="list-group-item card baixoesforco fisico digital motora operavel robusto collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n62"><p>6b.1 Possibilitar utilização com baixo esforço físico e sem a necessidade do uso das mãos.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -1116,6 +1169,7 @@
                             </div>
                         </li>
                         <!--6c-->
+                        <li class="classe baixoesforco">6c. Minimizar ações repetitivas.</li>
                         <li class="list-group-item card baixoesforco digital cognitiva operavel perceptivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n63"><p>6c.1 Permitir a criação de atalhos ou criar automaticamente atalhos para os links mais acessados.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -1134,6 +1188,7 @@
                             </div>
                         </li>
                         <!--6d-->
+                        <li class="classe baixoesforco">6d. Minimizar esforço físico continuado.</li>
                         <li class="list-group-item card baixoesforco fisico digital cognitiva compreensivel robusto collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n64"><p>6d.1 Exigir o mínimo de esforço perceptual.<i class="icofont-simple-up"></i></p></a>
                             <div id="n64" class="collapse" data-parent=".faq-list">
@@ -1183,6 +1238,8 @@
                             </div>
                         </li>
                         <!--7a-->
+                        <li class="classe aproximacaoeuso"><p>Princípio 7: Dimensões e espaços para aproximação e uso</p></li>
+                        <li class="classe aproximacaoeuso">7a. Fornecer uma linha de visão direta a elementos importantes para qualquer usuário sentado ou em pé.</li>
                         <li class="list-group-item card aproximacaoeuso fisico digital motora operavel compreensivel perceptivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n67"><p>7a.1 Disponibilizar a Tecnologia Educacional na altura do alcance do olhar das pessoas que  irão utilizá-la.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -1201,6 +1258,7 @@
                             </div>
                         </li>
                         <!--7b-->
+                        <li class="classe aproximacaoeuso">7b. Tornar ao alcance de todos componentes para usuário sentado, em pé ou deitado.</li>
                         <li class="list-group-item card aproximacaoeuso fisico digital cognitiva compreensivel perceptivel operavel robusto collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n68"><p>7b.1 Disponibilizar a Tecnologia Educacional ao alcance manual das pessoas que  irão utilizá-la, sem que elas precisem se deslocar no espaço.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -1219,6 +1277,7 @@
                             </div>
                         </li>
                         <!--7c-->
+                        <li class="classe aproximacaoeuso">7c. Acomodar variações de formatos e tamanhos de mão.</li>
                         <li class="list-group-item card aproximacaoeuso fisico digital motora operavel robusto collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n69"><p>7c.1 Fornecer meio de operação alternativo acessível sempre que partes operáveis da Tecnologia Educacional exijam agarrar, comprimir ou fletir o pulso para acionamento ou funcionamento das funcionalidades.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -1236,6 +1295,7 @@
                             </div>
                         </li>
                         <!--7d-->
+                        <li class="classe aproximacaoeuso">7d. Fornecer espaço adequado para o uso de dispositivos assistivos ou auxílio pessoal.</li>
                         <li class="list-group-item card aproximacaoeuso fisico motora operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n70"><p>7d.1 Fornecer espaço adequado para cadeirantes.
                                 <i class="icofont-simple-up"></i></p></a>
@@ -1287,14 +1347,30 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 <script>
-    /*$(document).ready(function() {
-        $(".card").hide();
-    });*/
+    $(document).ready(function() {
+        /*$(".card").hide();
+        $(".classe").hide();*/
+        $(".tipo").hide();
+        $(".modalidade").hide();
+        $(".wcag").hide();
+    });
     $(".categoria").click(function() {
         var categoria =$(this).attr("id")
         $(".card").hide();
+        $(".classe").hide();
         $('.' + categoria).show();
     });
+    function verTodos(args) {
+        $(".card").hide();
+        $(".classe").hide();
+        for (var i = 0; i < args.length; i++) {
+            var categoria =args[i];
+            console.log(args[i])
+            /*$(".card").hide();
+            $(".classe").hide();*/
+            $('.' + categoria).show();
+        }
+    }
 
 </script>
 </body>
