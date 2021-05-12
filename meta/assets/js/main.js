@@ -134,3 +134,42 @@
   });
 
 })(jQuery);
+/*Scripts de manipulação das normativas*/
+$(document).ready(function() {
+  $('#ocultar').hide();
+  $(".tipo").hide();
+  $(".modalidade").hide();
+  $(".wcag").hide();
+});
+$(".categoria").click(function() {
+  var categoria =$(this).attr("id")
+  $(".card").hide();
+  $(".classe").hide();
+  $('.' + categoria).show();
+});
+function verTodos(args) {
+  $(".card").hide();
+  $(".classe").hide();
+  for (var i = 0; i < args.length; i++) {
+    var categoria =args[i];
+    console.log(args[i])
+    $('.' + categoria).show();
+  }
+}
+
+$(".exibe").click(function() {
+  var id = $(this).attr("id");
+  if (id=="ocultar"){
+    $('#ocultar').hide();
+    $('#mostrar').show();
+    $('.collapse').hide();
+  }
+  if (id=="mostrar"){
+    $('#mostrar').hide();
+    $('#ocultar').show();
+    $('.collapse').show();
+  }
+});
+$("#imprimirnormativas").click(function () {
+  window.print();
+})

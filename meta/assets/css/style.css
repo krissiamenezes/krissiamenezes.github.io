@@ -977,3 +977,24 @@ resultados{
 .classe p{
   font-size: 1.2em;
 }
+@media print
+{
+  .no-print, .no-print *
+  {
+    display: none !important;
+    height: 0;
+  }
+  body { background: #fff; }
+  a {
+    text-decoration: none !important;
+    color: #0d47a1;;
+  }
+  .mobile-nav-toggle{
+    display: none !important;
+
+  }
+  .section-title h2 {
+    font-size: 25px;
+    color: #2d2d2d;
+  }
+}

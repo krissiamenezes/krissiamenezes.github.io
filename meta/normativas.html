@@ -28,7 +28,7 @@
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top">
+<header id="header" class="fixed-top no-print">
     <div class="container">
 
         <div class="logo float-left">
@@ -59,13 +59,13 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Normativas</h2>
+                <h2>Normativas para Desenvolvimento e Avaliação de Tecnologias Educacionais Acessíveis</h2>
 <!--
                 <p class="font-italic" style="font-size:1.5em;">Como você deseja visualizar as normativas?</p>
 -->
             </div>
 
-            <div class="row">
+            <div class="row no-print">
                 <div class="col-lg-12">
                     <p class="alert-info">Você está visualizando a forma padrão de organização das normativas (Princípios do Design Universal), você pode filtrar ou alterar a forma de visualização nos botões abaixo.</p>
 
@@ -75,7 +75,7 @@
                                 Princípios do Design Universal
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Ver Todas</a>
+                                <a class="dropdown-item" href="">Ver Todas</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item categoria" id="usoequitativo" href="#">Princípio 1: Uso Equitativo</a>
                                 <a class="dropdown-item categoria" id="usoflexivel" href="#">Princípio 2: Uso Flexível</a>
@@ -103,7 +103,7 @@
                                 Modalidade de Acesso
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Ver todas</a>
+                                <a class="dropdown-item" href="#" onclick="verTodos(['visual', 'auditiva','motora','cognitiva'])">Ver todas</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item categoria" id="visual" href="#">Visual</a>
                                 <a class="dropdown-item categoria" id="auditiva" href="#">Auditiva</a>
@@ -117,7 +117,7 @@
                                 Princípios do WCAG
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Ver Todas</a>
+                                <a class="dropdown-item" href="#" onclick="verTodos(['perceptivel', 'operavel','compreensivel','robusto'])">Ver Todas</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item categoria" id="perceptivel" href="#">Perceptível</a>
                                 <a class="dropdown-item categoria" id="operavel" href="#">Operável</a>
@@ -130,19 +130,34 @@
                 </div>
             </div>
             <div class="row mt-4">
+                <div class="faq col-lg-12 col-md-12 text-right no-print">
+                    <button type="button" id="mostrar" class="exibe btn btn-outline-dark">Expandir Todas <i class="icofont-plus"></i></button>
+                    <button type="button" id="ocultar" class="exibe btn btn-outline-dark">Minimizar Todas <i class="icofont-minus"></i></button>
+                    <button type="button" id="imprimirnormativas" class="btn btn-outline-dark">Imprimir Lista de Normativas <i class="icofont-printer"></i></button>
+                </div>
                 <div class="faq col-lg-12 col-md-12">
 
                     <ul class="faq-list">
                         <!--Classificações-->
-                        <!---->
+                        <!--Tipo de Tecnologia Educacional-->
+                        <li class="classe tipo fisico"><p>Físico</p></li>
+                        <li class="classe tipo digital"><p>Digital</p></li>
+
+                        <!--Modalidade de Acesso-->
+                        <li class="classe modalidade visual"><p>Visual</p></li>
+                        <li class="classe modalidade auditiva"><p>Auditiva</p></li>
+                        <li class="classe modalidade motora"><p>Motora</p></li>
+                        <li class="classe modalidade cognitiva"><p>Cognitiva</p></li>
+
                         <!--Princípios do WCAG-->
+                        <li class="classe wcag perceptivel"><p>Perceptível</p></li>
+                        <li class="classe wcag operavel"><p>Operável</p></li>
+                        <li class="classe wcag compreensivel"><p>Compreensível</p></li>
+                        <li class="classe wcag robusto"><p>Robusto</p></li>
 
                         <!--1a-->
                         <li class="classe usoequitativo"><p>Princípio 1: Uso equitativo</p></li>
                         <li class="classe usoequitativo">1a. Fornecer os mesmos meios para todos os usuários: idêntico quando possível, equivalente quando não for.</li>
-                        <li class="classe tipo fisico"><p>Físico</p></li>
-                        <li class="classe modalidade visual"><p>Visual</p></li>
-                        <li class="classe wcag perceptivel"><p>Perceptível</p></li>
                         <li class="list-group-item card usoequitativo fisico digital visual perceptivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n1"><p>1a.1 Apresentar informações gráficas em formato alternativo de texto.<i class="icofont-simple-up"></i></p></a>
                             <div id="n1" class="collapse" data-parent=".faq-list">
@@ -174,7 +189,6 @@
                                 <p class="mt-2">Classificações: Uso Equitativo, Físico, Digital, Visual, Perceptível.</p>
                             </div>
                         </li>
-                        <li class="classe wcag operavel"><p>Operável</p></li>
                         <li class="list-group-item card usoequitativo fisico digital visual perceptivel operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n3"><p>1a.3 Garantir a linearidade no fluxo da informação na alternativa sonora ou tátil, mantendo a mesma estrutura e conteúdo do que é percebido visualmente na interface.<i class="icofont-simple-up"></i></p></a>
                             <div id="n3" class="collapse" data-parent=".faq-list">
@@ -207,8 +221,6 @@
                                 <p class="mt-2">Classificações:Uso Equitativo, Físico, Digital, Visual, Operável.</p>
                             </div>
                         </li>
-                        <li class="classe modalidade motora"><p>Motora</p></li>
-                        <li class="classe tipo digital"><p>Digital</p></li>
 
                         <li class="list-group-item card usoequitativo digital motora operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n5"><p>1a.5 Tornar o acesso ao conteúdo e à funcionalidade operável via dispositivo de entrada.<i class="icofont-simple-up"></i></p></a>
@@ -226,8 +238,6 @@
                                 <p class="mt-2">Classificações: Uso Equitativo, Digital, Motora, Operável.</p>
                             </div>
                         </li>
-                        <li class="classe modalidade cognitiva"><p>Cognitiva</p></li>
-                        <li class="classe wcag compreensivel"><p>Compreensível</p></li>
 
                         <li class="list-group-item card usoequitativo digital cognitiva visual compreensivel operavel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n6"><p>1a.6 Ao apresentar links/redirecionamentos inserir descrição do conteúdo a ser direcionado.<i class="icofont-simple-up"></i></p></a>
@@ -259,8 +269,6 @@
                                 <p class="mt-2">Classificações: Uso Equitativo, Digital, Cognitiva, Operável, Perceptível, Compreensível.</p>
                             </div>
                         </li>
-                        <li class="classe wcag robusto"><p>Robusto</p></li>
-                        <li class="classe modalidade auditiva"><p>Auditiva</p></li>
 
                         <li class="list-group-item card usoequitativo digital auditiva robusto operavel perceptivel compreensivel collapsed">
                             <a data-toggle="collapse" class="collapsed" href="#n8"><p>1a.8 Apresentar informações gerais da Tecnologia Educacional em mais de um formato, como por vídeo em Libras ou Braille.<i class="icofont-simple-up"></i></p></a>
@@ -1322,14 +1330,13 @@
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-<footer id="footer">
+<footer id="footer no-print" >
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>Amoeba</span></strong>. All Rights Reserved
+            &copy; Desenvolvido por <strong><span>Krissia Menezes</span></strong>.
         </div>
         <div class="credits">
 
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
     </div>
 </footer><!-- End #footer -->
@@ -1347,31 +1354,11 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 <script>
-    $(document).ready(function() {
-        /*$(".card").hide();
-        $(".classe").hide();*/
-        $(".tipo").hide();
-        $(".modalidade").hide();
-        $(".wcag").hide();
-    });
-    $(".categoria").click(function() {
-        var categoria =$(this).attr("id")
-        $(".card").hide();
-        $(".classe").hide();
-        $('.' + categoria).show();
-    });
-    function verTodos(args) {
-        $(".card").hide();
-        $(".classe").hide();
-        for (var i = 0; i < args.length; i++) {
-            var categoria =args[i];
-            console.log(args[i])
-            /*$(".card").hide();
-            $(".classe").hide();*/
-            $('.' + categoria).show();
-        }
-    }
 
+/*
+    $("#imprimirnormativas").click(function(){
+        $("#portfolio").printArea({ mode: 'popup', popClose: true });
+    });*/
 </script>
 </body>
 
