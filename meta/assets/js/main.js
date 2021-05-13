@@ -152,8 +152,9 @@ function verTodos(args) {
   $(".classe").hide();
   for (var i = 0; i < args.length; i++) {
     var categoria =args[i];
-    console.log(args[i])
     $('.' + categoria).show();
+    $(".classe").hide();
+
   }
 }
 
@@ -170,6 +171,12 @@ $(".exibe").click(function() {
     $('.collapse').show();
   }
 });
-$("#imprimirnormativas").click(function () {
+/*$("#imprimirnormativas").click(function () {
   window.print();
+})*/
+
+$("#imprimirnormativas").click(function () {
+  $('#about').hide();
+    //Hide all other elements other than printarea.
+    window.print();
 })
