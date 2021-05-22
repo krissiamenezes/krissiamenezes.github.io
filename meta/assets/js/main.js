@@ -176,7 +176,9 @@ $(".exibe").click(function() {
 })*/
 
 $("#imprimirnormativas").click(function () {
-  $('#about').hide();
+  $(".oculta-lista").addClass('no-print');
   //Hide all other elements other than printarea.
   window.print();
+  $(".oculta-lista").removeClass('no-print');
+
 })

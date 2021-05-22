@@ -31,21 +31,23 @@
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top no-print">
     <div class="container">
-        <div class="logo float-left">
+        <div class="float-left">
+            <a href="#portfolio">Ir ao Conteúdo Principal</a>
+            <div class="logo">
             <h1 class="text-light"><a href="index.html"><span>MeTA</span></a></h1>
+            </div>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
         <nav class="nav-menu float-right d-none d-lg-block">
             <ul>
-                <li class="active"><a href="#header">MeTA</a></li>
                 <li><a href="#about">Como utilizar o MeTA?</a></li>
                 <li><a href="#portfolio">Normativas</a></li>
                 <li class="drop-down"><a href="">Templates de Avaliação</a>
                     <ul>
                         <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/14smK3GZWWk9ZGDC4onBRGxKJFoxPbVo3F5bWLiISLPg/edit?usp=sharing">Template de Avaliação Individual</a></li>
                         <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/196kdpsmzHBkuOEbNIt_kI_-VJS07Prn-fMCXCApAEy0/edit?usp=sharing">Template de Avaliação Consolidada</a></li>
-                        <li><a target="_blank" href="#">Template para Matriz de avaliações</a></li>
+                        <li><a target="_blank" href="#">Template para Matriz de Avaliações</a></li>
                     </ul>
                 </li>
             </ul>
@@ -63,21 +65,21 @@
       <a href="#about" class="btn-get-started scrollto">Saiba mais</a>
     </div>
   </section>&lt;!&ndash; #hero &ndash;&gt;-->
-<section id="hero" class="d-flex align-items-center">
+<section id="hero" class="oculta-lista d-flex align-items-center">
 
     <div class="container">
-        <div class="row">
+        <div class="row oculta-lista">
             <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 ">
                 <h1>MeTA</h1>
                 <h2>Método para Avaliação de Tecnologias Educacionais Acessíveis</h2>
                 <p>O MeTA é um Método para Avaliação de Tecnologias Educacionais Acessíveis, inspirado na Avaliação Heurística de Nielsen,
                     composto de normativas e etapas, com o propósito de avaliar tecnologias educacionais sob a perspectiva do Design Universal. Com o MeTA é disponibilizado um conjunto de 70 normativas e templates para auxiliar processos de avaliação.</p>
                 <div class="d-flex justify-content-center">
-                    <a href="#about" class="btn-get-started scrollto">Saiba mais</a>
+                    <a href="#about" class="btn-get-started scrollto no-print">Saiba mais</a>
                 </div>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
-                <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+                <img src="assets/img/hero-img.png" class="no-print img-fluid animated" alt="">
             </div>
         </div>
     </div>
@@ -87,7 +89,7 @@
 
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
-        <div class="container">
+        <div class="container oculta-lista">
 
             <div class="section-title">
                 <h2>Como utilizar o MeTA?</h2>
@@ -235,11 +237,60 @@
                 -->
             </div>
 
-            <div class="row no-print">
+            <div class="row ">
                 <div class="col-lg-12">
-                    <p class="alert-info">Você está visualizando a forma padrão de organização das normativas (Princípios do Design Universal), você pode filtrar ou alterar a forma de visualização nos botões abaixo.</p>
+                    <div class="oculta-lista" id="texto-explica">
+                    <p>
+                        O MeTA disponibiliza um conjunto de 70 normativas que refinam as diretrizes de cada princípio do Design Universal,
+                        oferecendo explicações e exemplos para apoiar o avaliador durante a atividade de avaliação de uma Tecnologia Educacional.
+                    </p>
+                    <p>
+                        As normativas e sua estrutura padrão foram propostas por um grupo de especialistas em acessibilidade e educação (Figura 8) no
+                        Encontro Técnico de Elaboração das Normativas para Desenvolvimento e Avaliação de Tecnologias Digitais Acessíveis, que ocorreu em Maceió (AL),
+                        nos dias 13 e 14 de dezembro de 2018 a partir da demanda apresentada pelo MEC no Edital 25/2018 (BRASIL, 2018).
+                    </p>
+                    <p>
+                        Utilizando a estrutura padrão definida pelo grupo de especialistas, a autora desta pesquisa desenvolveu o conteúdo para cada uma das 70 normativas,
+                        tendo como base os Princípios do Design Universal (Connell et al., 1997), Modelo de Acessibilidade em Governo Eletrônico (EMAG) (BRASIL, 2014),
+                        as Diretrizes de Acessibilidade para Conteúdo Web (WCAG 2.0) (W3C BRASIL, 2014), Heurísticas de Nielsen (NIELSEN, 1994), Critérios Ergonômicos
+                        (Bastien & Scapin, 1993), Design for All - The Encyclopedia of Human-Computer Interaction (STEPHANIDIS, 2012) e As Leis da Simplicidade (MAEDA, 2017).
+                    </p>
+                    <p>
+                        A forma padra de organização das Normativas é de acordo com os Princípios do Design Universal.
+                        Dentro de cada Princípio do Design Universal existem as Diretrizes e, para cada Diretriz, existem as Normativas.
+                        Cada Normativa apresenta um <b>“Por que?”</b>, com um ou mais <b>Exemplos de uso</b> em que são exemplificadas situações nas quais ocorrem barreiras
+                        no uso de uma Tecnologia Educacional. Também é apresentado um <b>“Como?”</b>, que é uma indicação de como o avaliador deverá encontrar esta barreira.
+                        Por fim, são apresentados os <b>“Resultados esperados:”</b>, que é o comportamento que se espera da Tecnologia Educacional para que não exista a barreira
+                        apresentada no “Exemplo de uso:”. O esquema geral de organização das normativas pode ser observado na Figura abaixo.
 
-                    <div class="text-center">
+                    </p>
+                    <p>
+                        As normativas ainda podem ser visualizadas e filtradas de acordo com as categorias listadas abaixo:
+                    </p>
+                    <p><b>Tipo de Tecnologia Educacional</b></p>
+                    <ol>
+                        <li>Físico: Analisa as funcionalidades de Tecnologias Educacionais que não possuem partes digitais. Ex: Jogo de Tabuleiro, Livro didático.</li>
+                        <li>Digital: Analisa as funcionalidades de Tecnologias Educacionais que não possuem partes físicas. Ex: Site, aplicativo, vídeo aula.</li>
+                    </ol>
+                    <p>Modalidade de Acesso</p>
+                    <ol>
+                        <li>Visual: Analisa as funcionalidades da tecnologia educacional que satisfazem as necessidades de pessoas com visão limitada ou sem visão para perceber,
+                            compreender e operar a referida tecnologia.</li>
+                        <li>Auditiva: Diante da restrição do uso da modalidade auditiva, as possibilidades de acesso à informação baseiam-se no uso da Libras como língua de acesso
+                            ou no uso do Português como língua de acesso, na modalidade escrita.</li>
+                        <li>Motora: Analisa as funcionalidades da tecnologia educacional que satisfazem as necessidades de pessoas com restrição motora para operar a referida tecnologia. </li>
+                        <li>Cognitiva: Analisa as funcionalidades da tecnologia educacional que satisfazem as necessidades de pessoas com formas alternativas de perceber, compreender e operar a referida tecnologia.</li>
+                    </ol>
+                    <p>Princípios do WCAG</p>
+                    <ol>
+                        <li>Perceptível: As informações e os componentes da Tecnologia Educacional devem estar disponíveis de maneiras que as pessoas possam percebê-las. </li>
+                        <li>Operável: Os componentes da Tecnologia Educacional e a navegação devem ser operáveis.</li>
+                        <li>Compreensível: A informação e a operação da Tecnologia Educacional têm de ser compreensíveis.</li>
+                        <li>Robusto: O conteúdo da Tecnologia Educacional deve ser robusto o suficiente para poder ser interpretado de forma concisa por diversos agentes do usuário, incluindo recursos de tecnologia assistiva.</li>
+                    </ol>
+                    <p class="alert-info">Você está visualizando a forma padrão de organização das normativas (Princípios do Design Universal), você pode filtrar ou alterar a forma de visualização nos botões abaixo.</p>
+                    </div>
+                    <div class="text-center no-print">
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Princípios do Design Universal
