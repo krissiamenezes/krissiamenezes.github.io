@@ -990,7 +990,19 @@ section {
     font-size: 25px;
     color: #2d2d2d;
   }
-
+  #hero h1{
+    color: #000000;
+  }
+  #hero h2{
+    text-align: center !important;
+    color: #000000 !important;
+  }
+  #hero p{
+    color: #000000 !important;
+  }
+  section {
+    padding: 10px 0 !important;
+  }
 }
 
 
