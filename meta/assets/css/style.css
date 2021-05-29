@@ -320,6 +320,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   background-size: cover;
   position: relative;
   margin-bottom: -80px;
+  margin-top: 10px;
 }
 
 #hero:before {
@@ -347,7 +348,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 75px;
+  font-size: 65px!important;
   font-weight: 400;
   line-height: 56px;
   color: #fff;
@@ -368,9 +369,15 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   margin-bottom: 40px;
   font-size: 30px;
   font-weight: 300;
+  text-align: center!important;
 }
 
+#hero .btn-saiba {
+  justify-content: center!important;
+
+}
 #hero .btn-get-started {
+
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -384,9 +391,11 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #hero .btn-get-started:hover {
+  /*
   background: #fff;
-  color: #70b9b0;
-  border: 1px solid #70b9b0;
+  */
+  color: #26ade4;
+  border: 1px solid #26ade4;
 }
 
 @media (min-width: 1024px) {
