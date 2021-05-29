@@ -24,15 +24,55 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/acessibilidade.css" rel="stylesheet">
+
 </head>
 
 <body>
-<div id="print-me"></div>
+
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top no-print">
-    <div class="container">
+    <div id="acessibilidade" class="acessibilidade">
+        <ul class="a-links">
+            <li>
+                <a accesskey="1" href="#about" id="aConteudo" title="Ir para o conte&uacute;do principal (Alt+1)">Conte&uacute;do</a>
+            </li>
+            <li>
+                <a accesskey="2" href="#menu" id="aMenu" title="Ir para o menu de navega&ccedil;&atilde;o (Alt+2)">Menu</a>
+            </li>
+
+            <li>
+                <a accesskey="3" href="#footer" id="aRodape" title="Ir para o rodap&eacute; (Alt+3)">Rodap&eacute;</a>
+            </li>
+            <li>
+
+                <!--  <a accesskey="3" href="javascript:void(0)" id="aBusca"title="Ir para a busca (Alt+3)">Busca</a>
+  &ndash;&gt;-->
+            </li>
+
+            <!--<li>
+                <a accesskey="5" href="/acessibilidade" id="aAcessibilidade" title="Ir para a p&aacute;gina de acessibilidade (Alt+5)">Acessibilidade</a>
+            </li>-->
+        </ul>
+        <div class="a-buttons">
+            <button accesskey="6" class="btn btn-link" id="aContraste" title="Alto contraste (Alt+6)">
+                <i class="icofont-adjust"></i>
+            </button>
+            <button accesskey="7" class="btn btn-link" id="aFonteMaior" title="Aumentar texto (Alt+7)">
+                <i class="icofont-font"></i>+
+            </button>
+            <button accesskey="8" class="btn btn-link" id="aFonteMenor" title="Diminuir texto (Alt+8)">
+                <i class="icofont-font"></i>-
+            </button>
+        </div>
+
+    </div>
+    <div class="container" id="menu">
+
         <div class="float-left">
+<!--
             <a href="#portfolio">Ir ao Conteúdo Principal</a>
+-->
             <div class="logo">
             <h1 class="text-light"><a href="index.html"><span>MeTA</span></a></h1>
             </div>
@@ -79,13 +119,13 @@
                 </div>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
-                <img src="assets/img/hero-img.png" class="no-print img-fluid animated" alt="">
+                <img src="assets/img/hero-img.png" class="no-print img-fluid animated" alt="Imagem decorativa">
             </div>
         </div>
     </div>
 
 </section>
-<main id="main">
+<main id="main" >
 
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
@@ -1576,7 +1616,7 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
-
+<script src="assets/js/acessibilidade.js"></script>
 </body>
 
 </html>

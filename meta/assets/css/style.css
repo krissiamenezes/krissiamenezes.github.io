@@ -50,23 +50,25 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 80px;
+  height: 105px;
   transition: all 0.5s;
   z-index: 997;
-  padding: 20px 0;
+  /*padding: 20px 0;*/
   background: #234064cc;
 }
 
 #header.header-scrolled {
   background: #173457d4;
-  height: 60px;
+  height: 105px;
+  /*
   padding: 10px 0;
+  */
 }
 
 #header .logo h1 {
   font-size: 30px;
+  padding-top:11px;
   margin: 0;
-  padding: 0;
   line-height: 1;
   font-weight: 700;
   letter-spacing: 1px;
@@ -102,6 +104,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-top:3px;
 }
 
 .nav-menu > ul > li {
@@ -401,6 +404,18 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+
+  .acessibilidade {
+    display: none !important;
+  }
+  #header.header-scrolled {
+    background: #173457d4;
+    height: 60px;
+  }
+  #header{
+    background: #173457d4;
+    height: 60px;
   }
 }
 
