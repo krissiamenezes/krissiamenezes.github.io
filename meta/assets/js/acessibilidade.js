@@ -6,12 +6,12 @@ jQuery(document).ready(function($) {
     var
         contraste = false;
         // containers
-        bg_escuro = 'header, #hero, .portfolio, .faq, .faq-list li, .alert-info, #footer, .acessibilidade, td, #page-wrap, .footer_credit, .views-field-title, .item-list ul, .ui-widget-content, .page-galerias .views-row-odd, .a-libras';
+        bg_escuro = '.dropdown-menu, header, #hero, .portfolio, .faq, .faq-list li, .alert-info, #footer, .acessibilidade, td, #page-wrap, .footer_credit, .views-field-title, .item-list ul, .ui-widget-content, .page-galerias .views-row-odd, .a-libras';
         // textos
         cor_clara = 'label, p, h1, h2, h3, h4, h5, h6, #sub-srv, li';
         links = 'a';
         // formulários e campos
-        color_bg_border = 'input, textarea, button';
+        color_bg_border = 'input, textarea, button, .dropdown-menu';
         // filtro p&b para imagens
         gray_filter = 'img, figure, aside, iframe';
         // svgs

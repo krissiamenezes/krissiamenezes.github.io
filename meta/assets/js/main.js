@@ -136,7 +136,9 @@
 })(jQuery);
 /*Scripts de manipulação das normativas*/
 $(document).ready(function() {
+/*
   $('#ocultar').hide();
+*/
   $(".tipo").hide();
   $(".modalidade").hide();
   $(".wcag").hide();
@@ -150,25 +152,33 @@ $(".categoria").click(function() {
 function verTodos(args) {
   $(".card").hide();
   $(".classe").hide();
-  for (var i = 0; i < args.length; i++) {
-    var categoria =args[i];
-    $('.' + categoria).show();
-    $(".classe").hide();
-
+  /*Ver todos dos 7 principios do DU*/
+  if (args.length==7){
+    for (var i = 0; i < args.length; i++) {
+      var categoria =args[i];
+      $('.' + categoria).show();
+    }
+  }/*Outros casos*/
+  else{
+    for (var i = 0; i < args.length; i++) {
+      var categoria =args[i];
+      $('.' + categoria).show();
+      $(".classe").hide();
+    }
   }
 }
 
 $(".exibe").click(function() {
   var id = $(this).attr("id");
   if (id=="ocultar"){
-    $('#ocultar').hide();
-    $('#mostrar').show();
-    $('.collapse').hide();
+    $('a[data-toggle="collapse"]').addClass('collapsed');
+    $('.multi-collapse').removeClass('show');
+
   }
   if (id=="mostrar"){
-    $('#mostrar').hide();
-    $('#ocultar').show();
-    $('.collapse').show();
+    $('a[data-toggle="collapse"]').removeClass('collapsed');
+    $('.multi-collapse').addClass('show');
+
   }
 });
 /*$("#imprimirnormativas").click(function () {
