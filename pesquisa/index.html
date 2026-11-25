@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Recomendações Sociotécnicas para Compartilhamento de REDIs — MEC RED</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-page: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --border-color: #cbd5e1;
+      --focus-ring: #0284c7;
+      --base-font-size: 16px;
+      --line-height-factor: 1.6;
+
+      /* Dimensões */
+      --dim-plat-bg: #e0f2fe;
+      --dim-plat-text: #0369a1;
+      --dim-plat-border: #0284c7;
+
+      --dim-rec-bg: #dcfce7;
+      --dim-rec-text: #15803d;
+      --dim-rec-border: #16a34a;
+
+      --dim-part-bg: #fef3c7;
+      --dim-part-text: #b45309;
+      --dim-part-border: #d97706;
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #0f172a;
+      --bg-surface: #1e293b;
+      --bg-subtle: #334155;
+      --text-primary: #f8fafc;
+      --text-secondary: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border-color: #475569;
+      --focus-ring: #38bdf8;
+
+      --dim-plat-bg: #0c4a6e;
+      --dim-plat-text: #bae6fd;
+      --dim-plat-border: #38bdf8;
+
+      --dim-rec-bg: #14532d;
+      --dim-rec-text: #bbf7d0;
+      --dim-rec-border: #4ade80;
+
+      --dim-part-bg: #78350f;
+      --dim-part-text: #fde68a;
+      --dim-part-border: #fbbf24;
+    }
+
+    [data-theme="contrast"] {
+      --bg-page: #000000;
+      --bg-surface: #000000;
+      --bg-subtle: #111111;
+      --text-primary: #ffffff;
+      --text-secondary: #ffff00;
+      --text-muted: #00ffff;
+      --border-color: #ffffff;
+      --focus-ring: #ffff00;
+
+      --dim-plat-bg: #000000;
+      --dim-plat-text: #00ffff;
+      --dim-plat-border: #00ffff;
+
+      --dim-rec-bg: #000000;
+      --dim-rec-text: #00ff00;
+      --dim-rec-border: #00ff00;
+
+      --dim-part-bg: #000000;
+      --dim-part-text: #ffff00;
+      --dim-part-border: #ffff00;
+    }
+
+    html {
+      font-size: var(--base-font-size);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      line-height: var(--line-height-factor);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .surface-card {
+      background-color: var(--bg-surface);
+      border: 1.5px solid var(--border-color);
+    }
+
+    .surface-subtle {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+    }
+
+    .text-sec {
+      color: var(--text-secondary);
+    }
+
+    .text-mut {
+      color: var(--text-muted);
+    }
+
+    /* Foco visível de alta legibilidade */
+    *:focus-visible {
+      outline: 3px solid var(--focus-ring);
+      outline-offset: 2px;
+    }
+
+    /* Badges das dimensões */
+    .badge-plat {
+      background-color: var(--dim-plat-bg);
+      color: var(--dim-plat-text);
+      border: 1.5px solid var(--dim-plat-border);
+    }
+
+    .badge-rec {
+      background-color: var(--dim-rec-bg);
+      color: var(--dim-rec-text);
+      border: 1.5px solid var(--dim-rec-border);
+    }
+
+    .badge-part {
+      background-color: var(--dim-part-bg);
+      color: var(--dim-part-text);
+      border: 1.5px solid var(--dim-part-border);
+    }
+
+    .border-left-plat {
+      border-left: 6px solid var(--dim-plat-border);
+    }
+
+    .border-left-rec {
+      border-left: 6px solid var(--dim-rec-border);
+    }
+
+    .border-left-part {
+      border-left: 6px solid var(--dim-part-border);
+    }
+
+    /* Estilos otimizados para impressão */
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
+      }
+      .surface-card {
+        border: 1px solid #999 !important;
+        break-inside: avoid;
+        margin-bottom: 12pt;
+        box-shadow: none !important;
+      }
+      .rec-details {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Barra Superior de Acessibilidade (REC-P04, REC-P06, REC-P07, REC-P08) -->
+  <nav aria-label="Barra de Acessibilidade e Atalhos" class="no-print surface-subtle border-b sticky top-0 z-40 px-4 py-2 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <!-- Atalhos Diretos -->
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="font-semibold text-mut mr-1">Atalhos:</span>
+        <a href="#conteudo-principal" class="px-2.5 py-1.5 rounded surface-card hover:opacity-80 font-medium">1. Conteúdo</a>
+        <a href="#painel-filtros" class="px-2.5 py-1.5 rounded surface-card hover:opacity-80 font-medium">2. Filtros</a>
+        <a href="#area-resultados" class="px-2.5 py-1.5 rounded surface-card hover:opacity-80 font-medium">3. Recomendações</a>
+      </div>
+
+      <!-- Controles Visuais e Cognitivos -->
+      <div class="flex flex-wrap items-center gap-2 sm:gap-4">
+        <!-- Tema / Contraste -->
+        <div class="flex items-center gap-1" role="group" aria-label="Modo de contraste">
+          <span class="text-mut hidden md:inline mr-1">Tema:</span>
+          <button type="button" onclick="setTheme('light')" id="btn-theme-light" aria-pressed="true" class="px-2.5 py-1.5 rounded surface-card font-medium cursor-pointer">Claro</button>
+          <button type="button" onclick="setTheme('dark')" id="btn-theme-dark" aria-pressed="false" class="px-2.5 py-1.5 rounded surface-card font-medium cursor-pointer">Escuro</button>
+          <button type="button" onclick="setTheme('contrast')" id="btn-theme-contrast" aria-pressed="false" class="px-2.5 py-1.5 rounded surface-card font-medium cursor-pointer">Alto Contraste</button>
+        </div>
+
+        <!-- Tamanho de Fonte -->
+        <div class="flex items-center gap-1" role="group" aria-label="Tamanho da fonte">
+          <span class="text-mut hidden md:inline mr-1">Fonte:</span>
+          <button type="button" onclick="changeFontSize(-1)" aria-label="Diminuir fonte" class="px-2.5 py-1.5 rounded surface-card font-bold cursor-pointer">A-</button>
+          <button type="button" onclick="resetFontSize()" aria-label="Tamanho padrão da fonte" class="px-2.5 py-1.5 rounded surface-card font-medium cursor-pointer">A</button>
+          <button type="button" onclick="changeFontSize(1)" aria-label="Aumentar fonte" class="px-2.5 py-1.5 rounded surface-card font-bold cursor-pointer">A+</button>
+        </div>
+
+        <!-- Espaçamento entre linhas -->
+        <button type="button" onclick="toggleLineSpacing()" id="btn-spacing" aria-pressed="false" class="px-2.5 py-1.5 rounded surface-card font-medium cursor-pointer" title="Alternar espaçamento entre linhas">
+          Espaçamento: Normal
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho Institucional -->
+  <header id="conteudo-principal" class="max-w-7xl w-full mx-auto px-4 pt-8 pb-6">
+    <div class="surface-card rounded-2xl p-6 sm:p-8 shadow-sm">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full surface-subtle text-xs font-semibold uppercase tracking-wider mb-3">
+            <span>PPGINF / UFPR</span>
+            <span>•</span>
+            <span>Plataforma MEC RED</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
+            Catálogo de Recomendações Sociotécnicas para Compartilhamento de REDIs
+          </h1>
+          <p class="text-sec text-sm sm:text-base">
+            Referencial fundamentado na Semiótica Organizacional e no Design Socialmente Consciente (Krissia Menezes, 2026), organizado transversalmente nas <strong>3 Dimensões</strong> (Plataforma, Recursos e Partes Interessadas) e nos <strong>3 Níveis da Cebola Semiótica</strong> (Técnico, Formal e Informal).
+          </p>
+        </div>
+
+        <!-- Indicadores de Contagem e Progresso -->
+        <div class="grid grid-cols-2 gap-3 sm:min-w-[280px]">
+          <div class="surface-subtle rounded-xl p-4 text-center">
+            <div id="stat-visible" class="text-2xl sm:text-3xl font-bold" aria-live="polite">40 / 40</div>
+            <div class="text-xs text-mut mt-1 font-medium">Recomendações exibidas</div>
+          </div>
+          <div class="surface-subtle rounded-xl p-4 text-center">
+            <div id="stat-checked" class="text-2xl sm:text-3xl font-bold" aria-live="polite">0 / 102</div>
+            <div class="text-xs text-mut mt-1 font-medium">Itens verificados</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legenda Visual Redundante (Cores + Formas Geométricas) -->
+      <div class="mt-6 pt-5 border-t border-slate-200 dark:border-slate-700 flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="font-semibold text-mut">Dimensões:</span>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md badge-plat font-semibold">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Plataforma (REC-P)
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md badge-rec font-semibold">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Recursos (REC-R)
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md badge-part font-semibold">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Partes Interessadas (REC-I)
+          </span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="font-semibold text-mut">Cebola Semiótica:</span>
+          <span class="inline-flex items-center gap-1.5 font-medium" title="Núcleo: Artefatos e Infraestrutura">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="7"/></svg>
+            Técnico
+          </span>
+          <span class="inline-flex items-center gap-1.5 font-medium" title="Camada Intermediária: Regras e Governança">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+            Formal
+          </span>
+          <span class="inline-flex items-center gap-1.5 font-medium" title="Camada Externa: Cultura e Práticas">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5" stroke-dasharray="none"/></svg>
+            Informal
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Painel de Busca, Filtros e Ações -->
+  <section id="painel-filtros" aria-label="Filtros e controles de visualização" class="no-print max-w-7xl w-full mx-auto px-4 pb-6">
+    <div class="surface-card rounded-2xl p-5 sm:p-6 shadow-sm space-y-5">
+      <!-- Linha 1: Busca + Ações -->
+      <div class="flex flex-col md:flex-row gap-3">
+        <div class="relative flex-1">
+          <label for="search-input" class="sr-only">Buscar recomendações por palavra-chave ou código</label>
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Buscar por código (ex: REC-P01), palavra-chave (ex: Libras, offline, Moodle)..."
+            class="w-full pl-10 pr-24 py-2.5 rounded-xl surface-subtle text-sm sm:text-base"
+            oninput="applyFilters()"
+          />
+          <svg class="w-5 h-5 text-mut absolute left-3 top-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <button
+            type="button"
+            id="btn-clear-search"
+            onclick="clearSearch()"
+            class="hidden absolute right-2 top-1.5 px-2.5 py-1 rounded-lg surface-card text-xs font-semibold hover:opacity-80 cursor-pointer"
+          >
+            Limpar
+          </button>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            id="btn-toggle-view"
+            onclick="toggleViewMode()"
+            aria-pressed="false"
+            class="px-3.5 py-2.5 rounded-xl surface-subtle font-semibold text-xs sm:text-sm inline-flex items-center gap-2 hover:opacity-85 cursor-pointer"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span id="view-mode-label">Ver Matriz Transversal</span>
+          </button>
+
+          <button
+            type="button"
+            onclick="exportCSV()"
+            class="px-3.5 py-2.5 rounded-xl surface-subtle font-semibold text-xs sm:text-sm inline-flex items-center gap-2 hover:opacity-85 cursor-pointer"
+            title="Exportar recomendações filtradas e status do checklist em CSV"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Exportar CSV
+          </button>
+
+          <button
+            type="button"
+            onclick="window.print()"
+            class="px-3.5 py-2.5 rounded-xl surface-subtle font-semibold text-xs sm:text-sm inline-flex items-center gap-2 hover:opacity-85 cursor-pointer"
+            title="Imprimir ou salvar relatório em PDF"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Imprimir / PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- Linha 2: Selects Combináveis (AND) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div>
+          <label for="filter-dimensao" class="block text-xs font-semibold text-mut mb-1">Dimensão da Proposta</label>
+          <select id="filter-dimensao" onchange="applyFilters()" class="w-full p-2.5 rounded-xl surface-subtle text-sm font-medium">
+            <option value="Todas">Todas as Dimensões (40)</option>
+            <option value="Plataforma">Plataforma (23)</option>
+            <option value="Recursos">Recursos (11)</option>
+            <option value="Partes Interessadas">Partes Interessadas (6)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="filter-nivel" class="block text-xs font-semibold text-mut mb-1">Nível da Cebola Semiótica</label>
+          <select id="filter-nivel" onchange="applyFilters()" class="w-full p-2.5 rounded-xl surface-subtle text-sm font-medium">
+            <option value="Todos">Todos os Níveis (40)</option>
+            <option value="Técnico">Técnico — Artefatos (18)</option>
+            <option value="Formal">Formal — Regras e Governança (12)</option>
+            <option value="Informal">Informal — Cultura e Práticas (10)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="filter-perfil" class="block text-xs font-semibold text-mut mb-1">Perfil de Atuação</label>
+          <select id="filter-perfil" onchange="applyFilters()" class="w-full p-2.5 rounded-xl surface-subtle text-sm font-medium">
+            <option value="Todos">Todos os Perfis</option>
+            <option value="Equipe Técnica">Equipe Técnica / Desenvolvimento</option>
+            <option value="Professores/Autores">Professores / Autores de REDIs</option>
+            <option value="Gestores">Gestores / Redes de Ensino</option>
+          </select>
+        </div>
+
+        <div class="flex items-end gap-2">
+          <button
+            type="button"
+            onclick="expandCollapseAll(true)"
+            class="flex-1 py-2.5 px-3 rounded-xl surface-subtle text-xs font-semibold hover:opacity-80 cursor-pointer"
+          >
+            Expandir Tudo
+          </button>
+          <button
+            type="button"
+            onclick="expandCollapseAll(false)"
+            class="flex-1 py-2.5 px-3 rounded-xl surface-subtle text-xs font-semibold hover:opacity-80 cursor-pointer"
+          >
+            Recolher Tudo
+          </button>
+          <button
+            type="button"
+            onclick="resetAllFilters()"
+            class="py-2.5 px-3 rounded-xl surface-subtle text-xs font-semibold hover:opacity-80 cursor-pointer"
+            title="Limpar todos os filtros"
+          >
+            Resetar Filtros
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra de Progresso do Checklist -->
+      <div class="pt-2 border-t border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div class="flex-1">
+          <div class="flex justify-between text-xs font-semibold mb-1">
+            <span>Progresso da Verificação (Checklist Salvo Localmente)</span>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div class="w-full h-2.5 rounded-full surface-subtle overflow-hidden" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar-container">
+            <div id="progress-bar-fill" class="h-full bg-sky-600 transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
+        <button
+          type="button"
+          onclick="confirmResetChecklist()"
+          class="text-xs font-semibold text-mut underline hover:opacity-80 self-start sm:self-end cursor-pointer"
+        >
+          Limpar marcações do checklist
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Caixa de Mensagem / Confirmação Acessível (substitui alert/confirm) -->
+  <div id="modal-backdrop" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="surface-card rounded-2xl max-w-md w-full p-6 shadow-xl">
+      <h2 id="modal-title" class="text-lg font-bold mb-2">Confirmar ação</h2>
+      <p id="modal-desc" class="text-sm text-sec mb-6">Deseja realmente limpar todas as marcações do checklist de verificação?</p>
+      <div class="flex justify-end gap-3">
+        <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl surface-subtle text-sm font-semibold cursor-pointer">Cancelar</button>
+        <button type="button" id="modal-confirm-btn" class="px-4 py-2 rounded-xl bg-red-600 text-white text-sm font-semibold hover:bg-red-700 cursor-pointer">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Área Principal de Resultados -->
+  <main id="area-resultados" class="max-w-7xl w-full mx-auto px-4 pb-12 flex-1">
+    <!-- Status de Leitor de Tela -->
+    <div id="sr-status" class="sr-only" aria-live="polite"></div>
+
+    <!-- Visualização 1: Lista de Cartões -->
+    <div id="cards-container" class="space-y-4"></div>
+
+    <!-- Visualização 2: Matriz Transversal (Cebola Semiótica x Dimensões) -->
+    <div id="matrix-container" class="hidden overflow-x-auto">
+      <div class="surface-card rounded-2xl p-4 sm:p-6">
+        <h2 class="text-lg font-bold mb-2">Matriz Transversal: Cebola Semiótica × Dimensões da Proposta</h2>
+        <p class="text-xs sm:text-sm text-sec mb-4">Clique em qualquer código (ex.: <strong>REC-P01</strong>) para abrir diretamente a recomendação correspondente.</p>
+        <table class="w-full border-collapse text-left text-xs sm:text-sm">
+          <thead>
+            <tr class="surface-subtle">
+              <th class="p-3 border border-slate-300 dark:border-slate-600 w-1/6">Nível Semiótico</th>
+              <th class="p-3 border border-slate-300 dark:border-slate-600 w-[28%]">Plataforma (23)</th>
+              <th class="p-3 border border-slate-300 dark:border-slate-600 w-[28%]">Recursos (11)</th>
+              <th class="p-3 border border-slate-300 dark:border-slate-600 w-[27%]">Partes Interessadas (6)</th>
+            </tr>
+          </thead>
+          <tbody id="matrix-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Estado Vazio -->
+    <div id="empty-state" class="hidden surface-card rounded-2xl p-10 text-center">
+      <p class="text-lg font-bold mb-2">Nenhuma recomendação encontrada</p>
+      <p class="text-sm text-sec mb-4">Nenhum item corresponde à combinação atual de filtros e busca.</p>
+      <button type="button" onclick="resetAllFilters()" class="px-4 py-2 rounded-xl surface-subtle font-semibold text-sm cursor-pointer">
+        Limpar filtros e exibir todas as 40 recomendações
+      </button>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="no-print surface-subtle border-t py-6 px-4 text-center text-xs text-mut">
+    <div class="max-w-7xl mx-auto">
+      <p class="font-semibold">Catálogo Interativo de Recomendações Sociotécnicas para Compartilhamento de REDIs</p>
+      <p class="mt-1">Baseado na pesquisa de doutorado de Krissia Mikaelly Lopes Menezes (PPGINF / UFPR — Orientação: Prof. Dr. Roberto Pereira).</p>
+    </div>
+  </footer>
+
+  <script>
+    // =========================================================================
+    // BASE DE DADOS COMPLETA: 40 RECOMENDAÇÕES SOCIOTÉCNICAS (CAPÍTULO 4)
+    // =========================================================================
+    const RECOMMENDATIONS = [
+      // PLATAFORMA — NÍVEL TÉCNICO (REC-P01 a REC-P12)
+      {
+        id: "REC-P01",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Disponibilizar modo offline com sincronização automática para possibilitar o acesso e o uso da plataforma em regiões com conectividade intermitente ou ausente",
+        origem: "Ciclos 2 e 4; HU03",
+        justificativa: "A infraestrutura tecnológica no Brasil ainda é muito desigual, deixando escolas, comunidades rurais, ribeirinhas e quilombolas sem conexão estável, o que inviabiliza a navegação e pode provocar o abandono da plataforma. O suporte a operações offline com sincronização automática quando houver rede disponível possibilita a universalidade do acesso e o uso da plataforma.",
+        checklist: [
+          "Possibilita armazenar localmente recursos e coleções para consulta sem internet.",
+          "Sincroniza automaticamente alterações, envios e registros assim que uma conexão estiver disponível.",
+          "Informa o estado de sincronização ao usuário."
+        ]
+      },
+      {
+        id: "REC-P02",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Otimizar o desempenho para reduzir o consumo de dados e processamento exigido nas operações para atender dispositivos com baixos recursos tecnológicos e redes de baixa largura de banda",
+        origem: "Ciclo 4; HU01, HU02",
+        justificativa: "Muitas escolas públicas brasileiras possuem computadores com capacidade de processamento limitada e conexões de internet lentas ou compartilhadas. Páginas pesadas e buscas demoradas consomem o pacote de dados e provocam travamentos ou o abandono do uso.",
+        checklist: [
+          "Otimiza consultas e carregamento dos resultados de busca com paginação.",
+          "Comprime mídias e miniaturas (thumbnails) sem perda de legibilidade.",
+          "Mantém tempo de resposta fluido em conexões limitadas e dispositivos com baixos recursos tecnológicos."
+        ]
+      },
+      {
+        id: "REC-P03",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Garantir a responsividade da plataforma para que todas as funcionalidades possam ser acessadas com conforto visual e tátil em diversos tamanhos de telas",
+        origem: "MeTA Princípios 1 e 2; Ciclos 2 e 4; HU01",
+        justificativa: "O acesso à internet no Brasil ocorre principalmente por dispositivos móveis, como smartphones e tablets. Quando uma interface não se adéqua a telas menores, elementos sobrepostos, textos cortados e botões difíceis de acionar prejudicam pessoas com dificuldades motoras ou de visão e inviabilizam o uso cotidiano.",
+        checklist: [
+          "Adapta elementos visuais, menus e formulários a diferentes resoluções de tela sem sobreposição de componentes ou necessidade de rolagem lateral.",
+          "Dimensiona botões e áreas sensíveis ao toque com tamanho e espaçamento adequados para evitar cliques acidentais."
+        ]
+      },
+      {
+        id: "REC-P04",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Possibilitar navegação via teclado e compatibilidade com tecnologias assistivas para assegurar o uso autônomo da plataforma sem dependência de mouse",
+        origem: "MeTA Princípios 1, 3 e 4; Ciclos 1, 2 e 4; HU01, HU07",
+        justificativa: "Pessoas com deficiência visual ou com limitações motoras frequentemente utilizam o computador exclusivamente pelo teclado, com auxílio de leitores de tela ou periféricos de tecnologia assistiva. Quando a interface possui ordem de tabulação e foco confusos ou elementos sem semântica adequada, esses usuários ficam impedidos de acessar funcionalidades básicas.",
+        checklist: [
+          "Possibilita alcançar e acionar todas as funcionalidades via teclado em ordem lógica e linear.",
+          "Direciona o primeiro atalho (Tab) à página de acessibilidade ou ao conteúdo principal.",
+          "Mantém indicador de foco visual nítido em todos os elementos interativos.",
+          "Garante compatibilidade semântica com leitores de tela, simuladores de teclado e outros periféricos de tecnologia assistiva."
+        ]
+      },
+      {
+        id: "REC-P05",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Flexibilizar os mecanismos de entrada e acionamento para acomodar diferentes perfis motores e de comunicação sem exigir voz, gestos complexos ou uso das duas mãos",
+        origem: "MeTA Princípios 1, 2, 6 e 7; Ciclo 3",
+        justificativa: "Nem todos os usuários conseguem utilizar as duas mãos simultaneamente, realizar gestos precisos na tela ou acionar comandos por voz, seja por limitações motoras, tremores ou dificuldades na fala, seja por estarem em ambientes ruidosos ou silenciosos.",
+        checklist: [
+          "Elimina comandos que dependam exclusivamente de voz, gestos complexos ou pressionamento simultâneo de múltiplas teclas.",
+          "Suporta operação monomanual e o uso confortável por destros e canhotos.",
+          "Possibilita ajustar a sensibilidade e a taxa de repetição das teclas ou toques."
+        ]
+      },
+      {
+        id: "REC-P06",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Disponibilizar atalhos de acessibilidade diretos e personalizáveis para facilitar o acesso às áreas principais da plataforma e reduzir o esforço físico repetitivo",
+        origem: "MeTA Princípios 3 e 6; Ciclos 2 e 4; HU07, HU08",
+        justificativa: "Navegar por menus, cabeçalhos e filtros repetitivos a cada mudança de página exige um esforço físico e cognitivo desnecessário, especialmente para pessoas com fadiga motora, restrições de mobilidade ou que utilizam leitores de tela e teclados.",
+        checklist: [
+          "Disponibiliza barra de acessibilidade com atalhos diretos para o conteúdo principal, menu, busca e mapa do site.",
+          "Possibilita configurar atalhos personalizados para funções recorrentes na plataforma.",
+          "Possibilita retomar atividades e pesquisas a partir do ponto em que foram interrompidas."
+        ]
+      },
+      {
+        id: "REC-P07",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Possibilitar que o contraste, brilho e ampliação da tela sejam personalizados para atender pessoas com baixa visão, fotossensibilidade ou daltonismo",
+        origem: "MeTA Princípio 2; Ciclos 1, 2 e 4",
+        justificativa: "Pessoas com baixa visão, sensibilidade à luz, enxaquecas ou daltonismo enfrentam desconforto visual e dificuldade de leitura quando a interface apresenta cores rígidas, brilho excessivo ou textos que não podem ser ampliados.",
+        checklist: [
+          "Possibilita alternar entre modos claro, escuro e alto contraste.",
+          "Possibilita ajustar o brilho da interface.",
+          "Suporta ampliação (zoom) da tela sem quebra de layout, sobreposição de elementos ou corte de texto.",
+          "Disponibiliza informações codificadas por cor com ícones, padrões ou rótulos textuais."
+        ]
+      },
+      {
+        id: "REC-P08",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Disponibilizar configurações de ajustes de fonte e controle de estímulos cognitivos para reduzir a sobrecarga visual e mental durante a leitura e navegação na plataforma",
+        origem: "MeTA Princípios 2 e 5; Ciclos 2 e 4; HU05, HU06",
+        justificativa: "Textos muito pequenos, linhas apertadas e interfaces com muitas animações ou elementos visuais concorrentes dificultam a concentração e provocam fadiga mental, afetando especialmente pessoas com dislexia, TDAH, autismo, baixa visão ou dificuldades de leitura.",
+        checklist: [
+          "Possibilita ajustar o tamanho da fonte.",
+          "Possibilita ajustar o espaçamento entre linhas sem prejudicar a estrutura ou a fluidez da leitura.",
+          "Possibilita ativar ou desativar animações e movimentos automáticos na tela.",
+          "Possibilita ocultar elementos secundários ou distratores para manter o foco na tarefa principal."
+        ]
+      },
+      {
+        id: "REC-P09",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Disponibilizar mecanismos de prevenção, aviso e reversão de erros para aumentar a segurança e o controle do usuário sobre suas ações na plataforma",
+        origem: "MeTA Princípios 1 e 5; Ciclos 1, 2 e 4",
+        justificativa: "Erros de digitação, cliques acidentais ou falhas no preenchimento de formulários acontecem com frequência. Quando a plataforma não avisa claramente o que aconteceu, não oferece sugestões de correção ou impede que uma ação seja revertida, o usuário sente insegurança ou fica bloqueado na tarefa.",
+        checklist: [
+          "Exibe mensagens de confirmação antes da execução de ações críticas ou irreversíveis.",
+          "Possibilita desfazer ações recentes ou retornar facilmente ao estado anterior após falhas (como buscas sem resultados).",
+          "Fornece feedback visual, textual e sonoro claro para indicar erros, alertas e conclusões de tarefas.",
+          "Oferece correção ortográfica e predição de termos no campo de busca."
+        ]
+      },
+      {
+        id: "REC-P10",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Possibilitar a visualização direta dos recursos na própria plataforma, sem exigir o download prévio ou a instalação de softwares externos",
+        origem: "Ciclo 2",
+        justificativa: "Muitas pessoas acessam a plataforma utilizando dispositivos móveis com pouca memória disponível, computadores compartilhados com restrições de instalação ou conexões móveis com pacotes de dados limitados.",
+        checklist: [
+          "Exibe documentos (como PDF e apresentações), imagens, áudios e vídeos diretamente na página do recurso sem obrigar o download.",
+          "Possibilita navegar pelas páginas, slides ou seções do material na própria interface."
+        ]
+      },
+      {
+        id: "REC-P11",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Disponibilizar controles de mídia e gestão de tempo para assegurar que os usuários tenham autonomia sobre o ritmo de consumo de conteúdos audiovisuais e sobre o tempo exigido na realização de tarefas e interações",
+        origem: "MeTA Princípio 2; Ciclo 2",
+        justificativa: "Cada pessoa possui um ritmo próprio para assistir a vídeos, ouvir áudios, ler textos ou preencher formulários, especialmente quem utiliza leitores de tela, possui limitações motoras, dificuldades de atenção ou precisa de mais tempo para processar informações.",
+        checklist: [
+          "Oferece controles acessíveis para pausar, retomar, avançar, retroceder e ajustar a velocidade de reprodução de áudios, vídeos e leitores de tela.",
+          "Evita a reprodução automática de conteúdos sonoros ou audiovisuais sem o consentimento prévio do usuário.",
+          "Possibilita pausas livres durante o uso, bem como ajustar, estender ou desativar limites de tempo nas tarefas."
+        ]
+      },
+      {
+        id: "REC-P12",
+        dimensao: "Plataforma",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica"],
+        titulo: "Suportar upload de múltiplos arquivos no cadastro e na visualização para possibilitar que um único registro reúna diferentes formatos e versões acessíveis sem fragmentar o recurso",
+        origem: "Ciclo 4; HU04",
+        justificativa: "Um recurso educacional digital inclusivo precisa articular diferentes arquivos (editáveis, PDF, vídeo em Libras, áudio, modelos 3D e guias de impressão). Restringir o cadastro a um único arquivo fragmenta o recurso na biblioteca.",
+        checklist: [
+          "Possibilita anexar múltiplos arquivos complementares em um mesmo cadastro (como documento editável, PDF, vídeo em Libras, áudio, modelo 3D e guia de impressão).",
+          "Possibilita alternar entre os diferentes modos de apresentação e realizar o download individual ou conjunto dos arquivos vinculados ao recurso."
+        ]
+      },
+
+      // PLATAFORMA — NÍVEL FORMAL (REC-P13 a REC-P18)
+      {
+        id: "REC-P13",
+        dimensao: "Plataforma",
+        nivel: "Formal",
+        perfis: ["Equipe Técnica", "Gestores"],
+        titulo: "Automatizar e padronizar o preenchimento de metadados para qualificar a descrição e a indexação dos recursos, explicitando suas características desde o cadastro",
+        origem: "Ciclos 2 e 4",
+        justificativa: "Quando um recurso é cadastrado sem informações sobre suas características ou apresenta links inativos, os usuários precisam baixar diversos arquivos até descobrir se o recurso atende às suas necessidades.",
+        checklist: [
+          "Incorpora descritores e metadados padronizados de acessibilidade (presença de Libras, audiodescrição, legendas, texto alternativo e formato editável) no formulário de cadastro do recurso.",
+          "Automatiza, sempre que possível, a detecção e o preenchimento de metadados a partir dos arquivos enviados ou importados.",
+          "Exige ou orienta o preenchimento dos metadados essenciais durante importações de repositórios externos.",
+          "Sinaliza recursos com links quebrados aos autores e os oculta dos resultados da busca até que o acesso seja restabelecido."
+        ]
+      },
+      {
+        id: "REC-P14",
+        dimensao: "Plataforma",
+        nivel: "Formal",
+        perfis: ["Equipe Técnica", "Gestores"],
+        titulo: "Adotar fluxo de submissão e homologação com orientações para apoiar os usuários durante a publicação de recursos sem criar barreiras burocráticas que desestimulem o uso da plataforma",
+        origem: "Ciclos 2, 3 e 4",
+        justificativa: "Quando a plataforma não orienta o preenchimento do formulário de cadastro de recursos ou impõe exigências rígidas sem suporte, os autores enfrentam dificuldades que resultam em cadastros incompletos ou na desistência.",
+        checklist: [
+          "Oferece formulário de envio em etapas guiadas acompanhado de dicas sobre critérios de acessibilidade e catalogação.",
+          "Realiza verificação de requisitos inclusivos antes da publicação final do recurso na biblioteca.",
+          "Notifica os autores sempre que o preenchimento de novos campos ou ajustes de acessibilidade forem necessários nos recursos já publicados."
+        ]
+      },
+      {
+        id: "REC-P15",
+        dimensao: "Plataforma",
+        nivel: "Formal",
+        perfis: ["Equipe Técnica"],
+        titulo: "Disponibilizar filtros de acessibilidade e busca flexível para que os usuários possam refinar e personalizar a busca por recursos conforme suas demandas",
+        origem: "Ciclos 2 e 4",
+        justificativa: "Encontrar materiais adequados a estudantes com deficiência ou necessidades específicas torna-se demorado e frustrante quando a busca considera apenas palavras-chave ou perde os filtros selecionados ao navegar entre páginas.",
+        checklist: [
+          "Disponibiliza filtros por critérios de acessibilidade e formatos abertos.",
+          "Implementa a combinação de filtros por meio de conectivos lógicos (AND/OR).",
+          "Oferece opção para limpar a palavra-chave e refazer a busca.",
+          "Mantém os parâmetros e filtros selecionados ativos ao navegar pelas páginas de resultados."
+        ]
+      },
+      {
+        id: "REC-P16",
+        dimensao: "Plataforma",
+        nivel: "Formal",
+        perfis: ["Equipe Técnica", "Gestores"],
+        titulo: "Possibilitar a interoperabilidade com AVAs para integrar a plataforma aos sistemas utilizados no cotidiano das escolas e redes de ensino",
+        origem: "Ciclos 2 e 4",
+        justificativa: "Escolas, universidades e redes de ensino organizam suas atividades pedagógicas em ambientes virtuais próprios. Baixar e reenviar manualmente gera retrabalho e risco de perda de versões atualizadas ou metadados de acessibilidade.",
+        checklist: [
+          "Disponibiliza mecanismos de integração e incorporação direta de recursos em AVAs (como o Moodle) e canais de comunicação docente.",
+          "Possibilita que o usuário visualize e interaja com o material dentro de seu ambiente de estudo sem precisar abandoná-lo ou realizar novo acesso na plataforma."
+        ]
+      },
+      {
+        id: "REC-P17",
+        dimensao: "Plataforma",
+        nivel: "Formal",
+        perfis: ["Equipe Técnica", "Gestores"],
+        titulo: "Disponibilizar Termos de Uso em linguagem simples e acessível para assegurar que as regras, condições de uso e direitos autorais da plataforma sejam compreendidos sem barreiras jurídicas ou linguísticas",
+        origem: "MeTA Princípio 1; Ciclo 1",
+        justificativa: "Documentos legais redigidos em linguagem jurídica e complexa dificultam a compreensão sobre licenças de uso, responsabilidades e direitos autorais, afetando pessoas com diferentes níveis de escolaridade e pessoas surdas que têm a Libras como primeira língua.",
+        checklist: [
+          "Apresenta os Termos de Uso de forma objetiva, em linguagem simples e de fácil localização na interface.",
+          "Disponibiliza uma versão resumida com as informações prioritárias e link direto para o documento completo.",
+          "Oferece a versão resumida traduzida em Libras."
+        ]
+      },
+      {
+        id: "REC-P18",
+        dimensao: "Plataforma",
+        nivel: "Formal",
+        perfis: ["Equipe Técnica", "Gestores"],
+        titulo: "Garantir transparência, privacidade e autonomia no armazenamento de dados para que os usuários tenham controle sobre a coleta, o uso e o compartilhamento de suas informações pessoais",
+        origem: "MeTA Princípio 1; Ciclo 4; HU13",
+        justificativa: "Quando o sistema não esclarece quais informações são coletadas ou expõe dados confidenciais na tela, compromete a segurança dos usuários, especialmente em computadores compartilhados ou durante o uso de leitores de tela em voz alta.",
+        checklist: [
+          "Informa de forma clara quais dados pessoais são armazenados, editados ou compartilhados e a finalidade de seu uso.",
+          "Possibilita configurar a exibição ou ocultação de dados confidenciais durante a leitura ou navegação em tela.",
+          "Garante autonomia para os usuários gerenciarem suas informações e excluírem suas contas de forma definitiva."
+        ]
+      },
+
+      // PLATAFORMA — NÍVEL INFORMAL (REC-P19 a REC-P23)
+      {
+        id: "REC-P19",
+        dimensao: "Plataforma",
+        nivel: "Informal",
+        perfis: ["Equipe Técnica", "Professores/Autores"],
+        titulo: "Disponibilizar espaços de interação social e homologação colaborativa para promover vínculos de troca entre as partes interessadas e fortalecer o compartilhamento e reuso de recursos",
+        origem: "Ciclos 2 e 4; HU11",
+        justificativa: "O reuso e a adaptação de recursos educacionais digitais ganham qualidade quando os usuários conseguem dialogar sobre suas experiências de uso em diferentes contextos inclusivos.",
+        checklist: [
+          "Disponibiliza fóruns de discussão, comentários, avaliações e espaços de troca síncrona ou assíncrona vinculados aos recursos e coleções.",
+          "Exibe sugestões de recursos semanticamente relacionados na página de visualização.",
+          "Possibilita seguir perfis e recomendar recursos para outros usuários."
+        ]
+      },
+      {
+        id: "REC-P20",
+        dimensao: "Plataforma",
+        nivel: "Informal",
+        perfis: ["Equipe Técnica"],
+        titulo: "Disponibilizar ajuda e tutoriais em múltiplos formatos com orientações sobre o uso da plataforma de maneira acessível e de fácil localização",
+        origem: "MeTA Princípios 1 e 2; Ciclos 1, 3 e 4; HU10",
+        justificativa: "Dúvidas sobre como buscar, cadastrar ou adaptar recursos surgem com frequência. Quando a ajuda está oculta ou restrita a manuais textuais extensos, o usuário enfrenta barreiras para compreender os fluxos da biblioteca.",
+        checklist: [
+          "Disponibiliza tutoriais passo a passo e orientações sobre o funcionamento da plataforma em local visível e de fácil acesso na interface.",
+          "Apresenta instruções e procedimentos sobre quando e como solicitar suporte em texto de linguagem simples, áudio e vídeo com janela de Libras."
+        ]
+      },
+      {
+        id: "REC-P21",
+        dimensao: "Plataforma",
+        nivel: "Informal",
+        perfis: ["Equipe Técnica"],
+        titulo: "Sinalizar a disponibilidade de formatos alternativos para tornar visível, antes mesmo do acesso ao recurso, a existência de versões acessíveis e de arquivos em formatos editáveis para personalização de acordo com a realidade do usuário",
+        origem: "MeTA Princípios 1 e 2; Ciclos 1, 2 e 4; HU12",
+        justificativa: "Quando a interface não evidencia quais recursos possuem versões acessíveis ou arquivos passíveis de edição, os usuários precisam abrir cada registro individualmente para descobrir se ele atende às suas necessidades.",
+        checklist: [
+          "Exibe ícones ou selos padronizados, visíveis e acompanhados de descrição textual indicando a disponibilidade de Libras, legendas, audiodescrição ou Braille em todos os locais onde o recurso é listado.",
+          "Sinaliza explicitamente quando o recurso está disponível em formatos abertos ou editáveis (como .docx, .pptx, .odt ou .odp) para adaptações locais."
+        ]
+      },
+      {
+        id: "REC-P22",
+        dimensao: "Plataforma",
+        nivel: "Informal",
+        perfis: ["Equipe Técnica"],
+        titulo: "Exibir avisos de redirecionamento em links para assegurar previsibilidade na navegação ao informar antecipadamente o destino e eventuais saídas do ambiente da plataforma",
+        origem: "MeTA Princípio 1; Ciclo 2",
+        justificativa: "Quando um link apresenta rótulos genéricos ou redireciona o usuário para páginas externas sem aviso prévio, ocorre perda de contexto e desorientação, afetando especialmente usuários de leitores de tela e pessoas com dificuldades cognitivas.",
+        checklist: [
+          "Atribui rótulos descritivos e contextualizados aos links, evitando textos genéricos como 'clique aqui' ou 'saiba mais'.",
+          "Exibe avisos visuais e textuais explícitos sempre que um link direcionar o usuário para portais, repositórios ou sistemas externos."
+        ]
+      },
+      {
+        id: "REC-P23",
+        dimensao: "Plataforma",
+        nivel: "Informal",
+        perfis: ["Equipe Técnica", "Professores/Autores"],
+        titulo: "Disponibilizar canais acessíveis para coleta contínua de feedback e reporte de barreiras pelos usuários para subsidiar o aprimoramento constante da plataforma e dos recursos",
+        origem: "Ciclos 3 e 4",
+        justificativa: "Mesmo após testes de homologação com a equipe técnica, barreiras de acessibilidade ou problemas de adequação pedagógica podem surgir durante o uso cotidiano em diferentes dispositivos e contextos escolares.",
+        checklist: [
+          "Disponibiliza opção acessível e de fácil localização nas páginas da plataforma e nos registros de recursos para que os usuários reportem barreiras de acessibilidade, falhas técnicas ou sugestões de melhoria.",
+          "Possibilita o envio de feedback em múltiplos formatos (texto simples, áudio ou vídeo) para respeitar diferentes perfis de comunicação.",
+          "Encaminha automaticamente os relatos à equipe responsável e informa o estado de atendimento ao usuário."
+        ]
+      },
+
+      // RECURSOS — NÍVEL TÉCNICO (REC-R01 a REC-R04)
+      {
+        id: "REC-R01",
+        dimensao: "Recursos",
+        nivel: "Técnico",
+        perfis: ["Professores/Autores"],
+        titulo: "Disponibilizar conteúdo textual e sonoro equivalente em recursos visuais para garantir que informações gráficas sejam compreensíveis por pessoas cegas, com baixa visão ou em conexões que não carregam imagens",
+        origem: "MeTA Princípios 1 e 4; Ciclos 1 a 4; HU09",
+        justificativa: "Quando imagens, gráficos e esquemas não possuem descrição textual adequada, leitores de tela ignoram a informação, impedindo que estudantes cegos ou com baixa visão acessem o conteúdo em igualdade de condições e prejudicando também usuários em conexões lentas.",
+        checklist: [
+          "Inclui texto alternativo conciso e contextualizado em imagens, fotografias e ícones informativos.",
+          "Fornece descrição textual detalhada para elementos visuais complexos, como gráficos, tabelas, mapas e diagramas.",
+          "Oferece suporte à leitura por voz humana gravada ou por meio de conversão texto-voz integrada."
+        ]
+      },
+      {
+        id: "REC-R02",
+        dimensao: "Recursos",
+        nivel: "Técnico",
+        perfis: ["Professores/Autores"],
+        titulo: "Disponibilizar audiodescrição, legendas e tradução em Libras para assegurar o acesso linguístico e sensorial pleno a recursos audiovisuais e animados",
+        origem: "MeTA Princípios 1, 2 e 3; Ciclos 1 a 4; HU09",
+        justificativa: "Vídeos e animações concentram informações visuais e sonoras simultâneas que excluem pessoas cegas, com baixa visão ou surdas quando não contam com audiodescrição, legendas sincronizadas e janela de Libras.",
+        checklist: [
+          "Fornece audiodescrição clara e sincronizada para vídeos, animações e recursos audiovisuais relevantes.",
+          "Apresenta legendas sincronizadas, legíveis e fidedignas ao conteúdo falado e sonoro, em conformidade com a norma ABNT NBR 15290.",
+          "Disponibiliza janela de Libras com enquadramento nítido, contraste adequado e linguagem condizente com a faixa etária do público-alvo, em conformidade com a norma ABNT NBR 15599."
+        ]
+      },
+      {
+        id: "REC-R03",
+        dimensao: "Recursos",
+        nivel: "Técnico",
+        perfis: ["Professores/Autores"],
+        titulo: "Disponibilizar feedbacks redundantes e diferenciação visual e tátil para evitar barreiras perceptuais em recursos interativos, jogos educacionais e atividades práticas",
+        origem: "MeTA Princípios 1 e 4; Ciclo 3",
+        justificativa: "Recursos interativos, simuladores e jogos que comunicam alertas, acertos ou erros por meio de um único canal sensorial (como apenas cor ou som) excluem pessoas com deficiência visual ou auditiva e usuários que imprimem materiais em preto e branco.",
+        checklist: [
+          "Combina sinais visuais, sonoros e táteis para indicar acertos, erros, alertas e mudanças de estado na interação.",
+          "Diferencia elementos visuais ou táteis por meio de formas, ícones, padrões, direções, texturas e relevos, sem depender exclusivamente de cor ou som."
+        ]
+      },
+      {
+        id: "REC-R04",
+        dimensao: "Recursos",
+        nivel: "Técnico",
+        perfis: ["Professores/Autores"],
+        titulo: "Otimizar o tamanho dos arquivos e prever alternativas de baixo consumo ou desplugadas para viabilizar o acesso em dispositivos modestos, redes instáveis ou contextos sem conectividade",
+        origem: "Ciclos 2, 3 e 4; HU01, HU02, HU03",
+        justificativa: "Arquivos excessivamente pesados ou dependentes de processamento em tempo real impõem barreiras socioeconômicas e territoriais em escolas rurais, ribeirinhas ou periféricas com pouca memória, pacotes de dados limitados ou sem internet.",
+        checklist: [
+          "Comprime imagens, áudios e vídeos do recurso para reduzir o consumo de banda e armazenamento sem comprometer a nitidez ou a legibilidade.",
+          "Disponibiliza versão otimizada para impressão em preto e branco e orientações para aplicação desplugada em sala de aula quando o acesso digital for inviável."
+        ]
+      },
+
+      // RECURSOS — NÍVEL FORMAL (REC-R05 a REC-R09)
+      {
+        id: "REC-R05",
+        dimensao: "Recursos",
+        nivel: "Formal",
+        perfis: ["Professores/Autores"],
+        titulo: "Disponibilizar o recurso em formatos abertos e editáveis para possibilitar que outros usuários baixem, modifiquem e contextualizem os recursos de acordo com as suas realidades",
+        origem: "MeTA Princípio 2; Ciclos 1 a 4",
+        justificativa: "A publicação apenas em formatos fechados ou bloqueados cria barreiras técnicas que impedem a modificação efetiva e a adaptação pedagógica do recurso à realidade de cada turma.",
+        checklist: [
+          "Disponibiliza o recurso em formatos abertos e editáveis (como ODT, HTML, EPUB ou SVG) que possibilitam alterações sem depender de ferramentas proprietárias.",
+          "Informa de maneira explícita uma licença aberta de uso que autorize a adaptação, o reuso e o compartilhamento das versões modificadas.",
+          "Acompanha o arquivo editável de orientações de acessibilidade para auxiliar outros usuários a preservarem os requisitos inclusivos durante as adaptações."
+        ]
+      },
+      {
+        id: "REC-R06",
+        dimensao: "Recursos",
+        nivel: "Formal",
+        perfis: ["Professores/Autores"],
+        titulo: "Oferecer itinerários flexíveis, níveis de dificuldade e autoavaliação para acomodar diferentes ritmos, estilos e perfis de aprendizagem na estrutura pedagógica do recurso",
+        origem: "MeTA Princípios 1, 2 e 3; Ciclo 3; HU12",
+        justificativa: "Recursos estruturados em sequências rígidas, com um único nível de complexidade e sem possibilidades de retorno, geram desmotivação e sobrecarga cognitiva em pessoas com diferentes conhecimentos prévios ou ritmos de aprendizagem.",
+        checklist: [
+          "Possibilita escolher níveis de dificuldade e navegar por percursos não lineares de acordo com o ritmo e os objetivos do usuário.",
+          "Possibilita o livre retorno a seções ou etapas anteriores do recurso para consulta e revisão.",
+          "Oferece formatos variados de exercícios, indicadores visuais ou textuais de progresso e atividades de autoavaliação."
+        ]
+      },
+      {
+        id: "REC-R07",
+        dimensao: "Recursos",
+        nivel: "Formal",
+        perfis: ["Professores/Autores"],
+        titulo: "Estruturar o conteúdo em blocos modulares com hierarquia clara para facilitar a leitura rápida, a navegação e o reuso parcial do recurso educacional",
+        origem: "MeTA Princípios 3 e 4; Ciclo 3",
+        justificativa: "Blocos contínuos de texto extenso sem divisões semânticas dificultam a localização de informações, prejudicam pessoas com dislexia, TDAH ou baixa visão e impedem usuários de leitores de tela de navegar pelos cabeçalhos.",
+        checklist: [
+          "Organiza o recurso em blocos curtos com títulos descritivos e níveis semânticos de cabeçalho.",
+          "Destaca informações e conceitos essenciais de forma consistente para orientar a leitura rápida.",
+          "Utiliza alinhamento à esquerda nos blocos textuais, evitando texto justificado."
+        ]
+      },
+      {
+        id: "REC-R08",
+        dimensao: "Recursos",
+        nivel: "Formal",
+        perfis: ["Professores/Autores"],
+        titulo: "Adequar a linguagem ao letramento e incluir glossários para superar barreiras linguísticas e cognitivas na compreensão de conceitos técnicos ou abstratos",
+        origem: "MeTA Princípios 3 e 4; Ciclo 3",
+        justificativa: "Recursos educacionais digitais frequentemente empregam vocabulário excessivamente técnico, siglas não explicadas ou construções frasais complexas que geram barreiras de compreensão para estudantes em processo de alfabetização, pessoas com deficiência intelectual ou transtornos de aprendizagem e pessoas surdas que têm a Libras como primeira língua.",
+        checklist: [
+          "Utiliza linguagem clara e direta, compatível com a faixa etária e o nível de letramento do público-alvo.",
+          "Ativa conhecimentos prévios e concretiza conceitos com o uso de exemplos, analogias, mapas conceituais e recursos icônicos intuitivos.",
+          "Inclui glossários em texto simples, áudio com pronúncia e sinalização em Libras para siglas, termos técnicos e sinais específicos."
+        ]
+      },
+      {
+        id: "REC-R09",
+        dimensao: "Recursos",
+        nivel: "Formal",
+        perfis: ["Professores/Autores"],
+        titulo: "Incorporar suporte multilíngue e alternativas entre modalidades linguísticas para atender à diversidade linguística e cultural dos estudantes",
+        origem: "MeTA Princípios 1 e 2; Ciclo 3",
+        justificativa: "O Brasil abriga ampla diversidade linguística (comunidades indígenas, regiões de fronteira, migrantes e pessoas surdas usuárias de Libras). Disponibilizar o recurso em um único idioma ou restrito à modalidade oral impõe barreiras comunicacionais.",
+        checklist: [
+          "Possibilita selecionar ou alternar entre diferentes idiomas disponíveis no recurso (como português, Libras, línguas indígenas ou línguas estrangeiras).",
+          "Disponibiliza versão em português escrito como alternativa aos conteúdos apresentados na modalidade oral e sinaliza claramente os formatos linguísticos oferecidos."
+        ]
+      },
+
+      // RECURSOS — NÍVEL INFORMAL (REC-R10 e REC-R11)
+      {
+        id: "REC-R10",
+        dimensao: "Recursos",
+        nivel: "Informal",
+        perfis: ["Professores/Autores"],
+        titulo: "Valorizar saberes locais e diversidade sociocultural para fomentar a criação e a adaptação de REDIs situados nas realidades territoriais, culturais e linguísticas das comunidades escolares",
+        origem: "Ciclos 3 e 4; HU15",
+        justificativa: "Recursos concebidos exclusivamente a partir de referências urbanas e hegemônicas tendem a invisibilizar identidades e conhecimentos tradicionais de comunidades indígenas, quilombolas, ribeirinhas, rurais ou periféricas.",
+        checklist: [
+          "Incorpora elementos do patrimônio natural e cultural, símbolos, saberes tácitos e linguagens próprias de comunidades locais, como populações ribeirinhas, indígenas, quilombolas e rurais.",
+          "Possibilita e incentiva o registro de versões derivadas e contextualizadas a partir das realidades territoriais e culturais de diferentes comunidades escolares."
+        ]
+      },
+      {
+        id: "REC-R11",
+        dimensao: "Recursos",
+        nivel: "Informal",
+        perfis: ["Professores/Autores"],
+        titulo: "Disponibilizar orientações pedagógicas de uso inclusivo e sugestões de adaptação contextual do recurso",
+        origem: "Ciclos 3 e 4; HU12, HU15",
+        justificativa: "Mesmo quando um recurso possui formato aberto e conformidade técnica de acessibilidade, docentes sem formação especializada podem enfrentar dificuldades para planejar estratégias de mediação pedagógica em turmas heterogêneas.",
+        checklist: [
+          "Apresenta orientações com objetivos de aprendizagem, faixa etária sugerida, conhecimentos prévios e estratégias de mediação para turmas diversas.",
+          "Sugere possibilidades de adaptação didática e contextualização sociocultural para diferentes realidades escolares."
+        ]
+      },
+
+      // PARTES INTERESSADAS — NÍVEL TÉCNICO (REC-I01 e REC-I02)
+      {
+        id: "REC-I01",
+        dimensao: "Partes Interessadas",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica", "Gestores"],
+        titulo: "Capacitar continuamente a equipe técnica em design inclusivo para desenvolver competências em inclusão entre todos os profissionais envolvidos no projeto",
+        origem: "Ciclos 3 e 4",
+        justificativa: "Quando a acessibilidade é tratada apenas como etapa pontual ao final do desenvolvimento, falhas estruturais tornam-se recorrentes e onerosas de corrigir. Programas permanentes de capacitação fortalecem a cultura organizacional de inclusão.",
+        checklist: [
+          "Incorpora fundamentos de acessibilidade digital, uso de tecnologias assistivas e princípios de design inclusivo nos planos de formação da equipe.",
+          "Envolve de maneira integrada desenvolvedores, designers, analistas de qualidade e equipes responsáveis pela plataforma."
+        ]
+      },
+      {
+        id: "REC-I02",
+        dimensao: "Partes Interessadas",
+        nivel: "Técnico",
+        perfis: ["Equipe Técnica", "Gestores"],
+        titulo: "Institucionalizar protocolos contínuos de qualidade e homologação para tratar a acessibilidade e a qualidade como requisitos estruturantes desde a concepção, evitando ajustes tardios",
+        origem: "Ciclos 3 e 4",
+        justificativa: "Verificar acessibilidade apenas em produção exige retrabalho complexo. Instituir testes periódicos de homologação e critérios de aceitação inclusivos desde o planejamento preserva a qualidade do sistema.",
+        checklist: [
+          "Mantém ambiente dedicado de homologação e executa protocolos enxutos de teste de usabilidade e acessibilidade antes de cada atualização em produção.",
+          "Incorpora critérios de acessibilidade na definição das tarefas e prioriza a correção de barreiras inclusivas no fluxo de desenvolvimento."
+        ]
+      },
+
+      // PARTES INTERESSADAS — NÍVEL FORMAL (REC-I03)
+      {
+        id: "REC-I03",
+        dimensao: "Partes Interessadas",
+        nivel: "Formal",
+        perfis: ["Gestores", "Professores/Autores"],
+        titulo: "Institucionalizar parcerias entre IES e escolas da Educação Básica para aproximar a produção acadêmica das demandas cotidianas das redes públicas de ensino",
+        origem: "Ciclos 3 e 4",
+        justificativa: "O distanciamento entre a pesquisa acadêmica e o cotidiano escolar resulta em soluções que não dialogam com as condições reais das escolas públicas. Vínculos permanentes promovem troca recíproca de saberes e apoio formativo contínuo.",
+        checklist: [
+          "Estabelece programas contínuos de extensão universitária, estágios supervisionados e formação continuada em colaboração entre Instituições de Ensino Superior e escolas públicas.",
+          "Fomenta projetos de pesquisa participativa e colaborativa voltados a apoiar docentes e estudantes na seleção, criação, adaptação e avaliação de REDIs."
+        ]
+      },
+
+      // PARTES INTERESSADAS — NÍVEL INFORMAL (REC-I04 a REC-I06)
+      {
+        id: "REC-I04",
+        dimensao: "Partes Interessadas",
+        nivel: "Informal",
+        perfis: ["Equipe Técnica", "Professores/Autores", "Gestores"],
+        titulo: "Conduzir pesquisas socioculturais e co-design com comunidades escolares para promover o protagonismo de docentes, estudantes e representantes locais nas decisões de projeto",
+        origem: "Ciclos 3 e 4; HU15",
+        justificativa: "Projetos concebidos sem a participação direta das comunidades escolares costumam reproduzir visões externas e ignorar especificidades culturais, linguísticas e de acessibilidade dos territórios.",
+        checklist: [
+          "Realiza estudos socioculturais para compreender o contexto, os valores e as demandas reais das partes interessadas antes de definir os desafios de design.",
+          "Conduz ciclos iterativos de co-design com protótipos recursivos liderados ou co-liderados por representantes das partes interessadas."
+        ]
+      },
+      {
+        id: "REC-I05",
+        dimensao: "Partes Interessadas",
+        nivel: "Informal",
+        perfis: ["Equipe Técnica", "Professores/Autores", "Gestores"],
+        titulo: "Realizar validações em equipe e fortalecer o awareness para avaliar soluções em cenários reais de uso e alinhar a compreensão contextual entre todos os envolvidos no projeto",
+        origem: "Ciclos 2, 3 e 4",
+        justificativa: "Quando desenvolvedores, gestores e educadores atuam de forma isolada, cada grupo interpreta os requisitos de acessibilidade sob uma perspectiva fragmentada, gerando desalinhamento.",
+        checklist: [
+          "Avalia protótipos, funcionalidades e recursos em condições reais de uso até atingir consenso e aceitação entre as partes interessadas.",
+          "Promove sessões conjuntas de avaliação e reflexão entre equipes técnicas, gestores e educadores para fortalecer a percepção contextual compartilhada (awareness)."
+        ]
+      },
+      {
+        id: "REC-I06",
+        dimensao: "Partes Interessadas",
+        nivel: "Informal",
+        perfis: ["Equipe Técnica", "Professores/Autores", "Gestores"],
+        titulo: "Realizar avaliações com usuários finais em diferentes contextos de uso para verificar a efetividade inclusiva da plataforma e dos recursos ao longo de sua evolução",
+        origem: "Ciclos 3 e 4",
+        justificativa: "Avaliações conduzidas exclusivamente por especialistas deixam de captar barreiras reais vivenciadas por estudantes e educadores com diferentes perfis sensoriais, cognitivos, motores e socioeconômicos.",
+        checklist: [
+          "Realiza avaliações periódicas com a participação direta de estudantes e educadores de diferentes perfis e contextos escolares a cada ciclo relevante de atualização.",
+          "Incorpora os resultados e relatos coletados nas avaliações com usuários como insumos prioritários para o refinamento contínuo dos recursos e funcionalidades da plataforma."
+        ]
+      }
+    ];
+
+    // =========================================================================
+    // ESTADO DA APLICAÇÃO E PERSISTÊNCIA
+    // =========================================================================
+    const STORAGE_KEY = "mecred_redis_checklist_v1";
+    let checkedItems = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    let expandedCards = new Set();
+    let isMatrixView = false;
+    let currentFontSize = 16;
+    let isWideSpacing = false;
+
+    const totalChecklistItems = RECOMMENDATIONS.reduce((acc, r) => acc + r.checklist.length, 0);
+
+    // =========================================================================
+    // CONTROLES DE ACESSIBILIDADE
+    // =========================================================================
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      ["light", "dark", "contrast"].forEach(t => {
+        const btn = document.getElementById(`btn-theme-${t}`);
+        if (btn) btn.setAttribute("aria-pressed", t === theme ? "true" : "false");
+      });
+    }
+
+    function changeFontSize(delta) {
+      currentFontSize = Math.min(22, Math.max(13, currentFontSize + delta));
+      document.documentElement.style.setProperty("--base-font-size", `${currentFontSize}px`);
+    }
+
+    function resetFontSize() {
+      currentFontSize = 16;
+      document.documentElement.style.setProperty("--base-font-size", "16px");
+    }
+
+    function toggleLineSpacing() {
+      isWideSpacing = !isWideSpacing;
+      document.documentElement.style.setProperty("--line-height-factor", isWideSpacing ? "1.95" : "1.6");
+      const btn = document.getElementById("btn-spacing");
+      btn.setAttribute("aria-pressed", isWideSpacing ? "true" : "false");
+      btn.textContent = isWideSpacing ? "Espaçamento: Ampliado" : "Espaçamento: Normal";
+    }
+
+    // =========================================================================
+    // ÍCONES E ESTILOS REDUNDANTES
+    // =========================================================================
+    function getDimensionStyle(dim) {
+      if (dim === "Plataforma") {
+        return {
+          badge: "badge-plat",
+          borderLeft: "border-left-plat",
+          icon: `<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`
+        };
+      }
+      if (dim === "Recursos") {
+        return {
+          badge: "badge-rec",
+          borderLeft: "border-left-rec",
+          icon: `<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`
+        };
+      }
+      return {
+        badge: "badge-part",
+        borderLeft: "border-left-part",
+        icon: `<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>`
+      };
+    }
+
+    function getLevelIcon(nivel) {
+      if (nivel === "Técnico") {
+        return `<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="7"/></svg>`;
+      }
+      if (nivel === "Formal") {
+        return `<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>`;
+      }
+      return `<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5" stroke-dasharray="none"/></svg>`;
+    }
+
+    // =========================================================================
+    // FILTRAGEM E RENDERIZAÇÃO
+    // =========================================================================
+    function getFilteredRecommendations() {
+      const query = document.getElementById("search-input").value.trim().toLowerCase();
+      const dim = document.getElementById("filter-dimensao").value;
+      const nivel = document.getElementById("filter-nivel").value;
+      const perfil = document.getElementById("filter-perfil").value;
+
+      document.getElementById("btn-clear-search").classList.toggle("hidden", query.length === 0);
+
+      return RECOMMENDATIONS.filter(rec => {
+        if (dim !== "Todas" && rec.dimensao !== dim) return false;
+        if (nivel !== "Todos" && rec.nivel !== nivel) return false;
+        if (perfil !== "Todos" && !rec.perfis.includes(perfil)) return false;
+
+        if (query) {
+          const haystack = [
+            rec.id,
+            rec.titulo,
+            rec.justificativa,
+            rec.origem,
+            rec.dimensao,
+            rec.nivel,
+            ...rec.perfis,
+            ...rec.checklist
+          ].join(" ").toLowerCase();
+          return haystack.includes(query);
+        }
+        return true;
+      });
+    }
+
+    function applyFilters() {
+      const filtered = getFilteredRecommendations();
+      updateStats(filtered.length);
+
+      const cardsContainer = document.getElementById("cards-container");
+      const matrixContainer = document.getElementById("matrix-container");
+      const emptyState = document.getElementById("empty-state");
+
+      if (filtered.length === 0) {
+        cardsContainer.innerHTML = "";
+        emptyState.classList.remove("hidden");
+        matrixContainer.classList.add("hidden");
+        return;
+      }
+
+      emptyState.classList.add("hidden");
+      if (isMatrixView) {
+        cardsContainer.classList.add("hidden");
+        matrixContainer.classList.remove("hidden");
+        renderMatrix(filtered);
+      } else {
+        matrixContainer.classList.add("hidden");
+        cardsContainer.classList.remove("hidden");
+        renderCards(filtered);
+      }
+    }
+
+    function renderCards(list) {
+      const container = document.getElementById("cards-container");
+      container.innerHTML = list.map(rec => {
+        const style = getDimensionStyle(rec.dimensao);
+        const isExpanded = expandedCards.has(rec.id);
+        const checkedCount = rec.checklist.filter((_, idx) => checkedItems[`${rec.id}-${idx}`]).length;
+        const allDone = checkedCount === rec.checklist.length;
+
+        return `
+          <article id="card-${rec.id}" class="surface-card ${style.borderLeft} rounded-2xl p-5 sm:p-6 shadow-sm transition-all">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+              <div class="space-y-2.5 flex-1">
+                <!-- Metadados Visuais -->
+                <div class="flex flex-wrap items-center gap-2 text-xs">
+                  <span class="font-mono font-bold px-2.5 py-1 rounded-md surface-subtle">${rec.id}</span>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md ${style.badge} font-semibold">
+                    ${style.icon}
+                    ${rec.dimensao}
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md surface-subtle font-semibold">
+                    ${getLevelIcon(rec.nivel)}
+                    Nível ${rec.nivel}
+                  </span>
+                  <span class="px-2.5 py-1 rounded-md surface-subtle text-mut font-medium">
+                    Origem: ${rec.origem}
+                  </span>
+                </div>
+
+                <!-- Título da Recomendação -->
+                <h2 class="text-base sm:text-lg font-bold leading-snug">
+                  ${rec.titulo}
+                </h2>
+
+                <!-- Perfis -->
+                <div class="flex flex-wrap items-center gap-1.5 text-xs text-mut">
+                  <span class="font-semibold">Perfis:</span>
+                  ${rec.perfis.map(p => `<span class="px-2 py-0.5 rounded surface-subtle">${p}</span>`).join("")}
+                </div>
+              </div>
+
+              <!-- Controles do Cartão -->
+              <div class="no-print flex sm:flex-col items-center sm:items-end justify-between gap-2 shrink-0">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded-full ${allDone ? 'badge-rec' : 'surface-subtle'}">
+                  Checklist: ${checkedCount}/${rec.checklist.length}
+                </span>
+                <button
+                  type="button"
+                  onclick="toggleCard('${rec.id}')"
+                  aria-expanded="${isExpanded}"
+                  aria-controls="details-${rec.id}"
+                  class="px-3.5 py-2 rounded-xl surface-subtle font-semibold text-xs sm:text-sm inline-flex items-center gap-1.5 hover:opacity-80 cursor-pointer"
+                >
+                  <span>${isExpanded ? "Ocultar detalhes" : "Ver justificativa e checklist"}</span>
+                  <svg class="w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Conteúdo Expansível -->
+            <div id="details-${rec.id}" class="rec-details ${isExpanded ? '' : 'hidden'} mt-5 pt-5 border-t border-slate-200 dark:border-slate-700 space-y-4">
+              <div class="surface-subtle rounded-xl p-4">
+                <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wide text-mut mb-1.5">
+                  Por que é importante seguir esta recomendação?
+                </h3>
+                <p class="text-sm sm:text-base text-sec">
+                  ${rec.justificativa}
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wide text-mut mb-2.5">
+                  Itens de verificação (marque conforme implementação/avaliação):
+                </h3>
+                <ul class="space-y-2.5">
+                  ${rec.checklist.map((item, idx) => {
+                    const key = `${rec.id}-${idx}`;
+                    const isChecked = !!checkedItems[key];
+                    return `
+                      <li class="flex items-start gap-3 p-2.5 rounded-xl surface-subtle">
+                        <input
+                          type="checkbox"
+                          id="chk-${key}"
+                          ${isChecked ? "checked" : ""}
+                          onchange="toggleChecklistItem('${key}')"
+                          class="mt-1 w-4 h-4 rounded cursor-pointer shrink-0"
+                        />
+                        <label for="chk-${key}" class="text-sm sm:text-base cursor-pointer flex-1 ${isChecked ? 'line-through opacity-75' : ''}">
+                          ${item}
+                        </label>
+                      </li>
+                    `;
+                  }).join("")}
+                </ul>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function renderMatrix(filteredList) {
+      const filteredIds = new Set(filteredList.map(r => r.id));
+      const levels = [
+        { name: "Técnico", desc: "Artefatos e Infraestrutura" },
+        { name: "Formal", desc: "Regras e Governança" },
+        { name: "Informal", desc: "Cultura e Práticas" }
+      ];
+      const dims = ["Plataforma", "Recursos", "Partes Interessadas"];
+
+      const tbody = document.getElementById("matrix-tbody");
+      tbody.innerHTML = levels.map(lvl => {
+        const cells = dims.map(dim => {
+          const items = RECOMMENDATIONS.filter(r => r.nivel === lvl.name && r.dimensao === dim);
+          const badges = items.map(r => {
+            const active = filteredIds.has(r.id);
+            const style = getDimensionStyle(dim);
+            return `
+              <button
+                type="button"
+                onclick="jumpToCard('${r.id}')"
+                title="${r.id}: ${r.titulo}"
+                class="m-1 px-2.5 py-1.5 rounded-lg text-xs font-mono font-bold inline-flex flex-col items-start text-left cursor-pointer transition-opacity ${active ? style.badge : 'surface-subtle opacity-35'}"
+              >
+                <span>${r.id}</span>
+                <span class="font-sans font-normal text-[11px] line-clamp-1 max-w-[180px]">${r.titulo}</span>
+              </button>
+            `;
+          }).join("");
+
+          return `<td class="p-2.5 border border-slate-300 dark:border-slate-600 align-top">${badges}</td>`;
+        }).join("");
+
+        return `
+          <tr>
+            <th scope="row" class="p-3 border border-slate-300 dark:border-slate-600 align-top surface-subtle">
+              <div class="inline-flex items-center gap-1.5 font-bold">
+                ${getLevelIcon(lvl.name)}
+                <span>${lvl.name}</span>
+              </div>
+              <div class="text-xs font-normal text-mut mt-1">(${lvl.desc})</div>
+            </th>
+            ${cells}
+          </tr>
+        `;
+      }).join("");
+    }
+
+    // =========================================================================
+    // INTERAÇÕES DE CARTÃO, CHECKLIST E NAVEGAÇÃO
+    // =========================================================================
+    function toggleCard(id) {
+      if (expandedCards.has(id)) {
+        expandedCards.delete(id);
+      } else {
+        expandedCards.add(id);
+      }
+      applyFilters();
+    }
+
+    function expandCollapseAll(expand) {
+      const filtered = getFilteredRecommendations();
+      if (expand) {
+        filtered.forEach(r => expandedCards.add(r.id));
+      } else {
+        expandedCards.clear();
+      }
+      applyFilters();
+    }
+
+    function toggleChecklistItem(key) {
+      if (checkedItems[key]) {
+        delete checkedItems[key];
+      } else {
+        checkedItems[key] = true;
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(checkedItems));
+      applyFilters();
+    }
+
+    function toggleViewMode() {
+      isMatrixView = !isMatrixView;
+      const btn = document.getElementById("btn-toggle-view");
+      const label = document.getElementById("view-mode-label");
+      btn.setAttribute("aria-pressed", isMatrixView ? "true" : "false");
+      label.textContent = isMatrixView ? "Ver Lista em Cartões" : "Ver Matriz Transversal";
+      applyFilters();
+    }
+
+    function jumpToCard(id) {
+      isMatrixView = false;
+      document.getElementById("btn-toggle-view").setAttribute("aria-pressed", "false");
+      document.getElementById("view-mode-label").textContent = "Ver Matriz Transversal";
+      expandedCards.add(id);
+      applyFilters();
+      setTimeout(() => {
+        const el = document.getElementById(`card-${id}`);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+          el.focus({ preventScroll: true });
+        }
+      }, 60);
+    }
+
+    function clearSearch() {
+      document.getElementById("search-input").value = "";
+      applyFilters();
+      document.getElementById("search-input").focus();
+    }
+
+    function resetAllFilters() {
+      document.getElementById("search-input").value = "";
+      document.getElementById("filter-dimensao").value = "Todas";
+      document.getElementById("filter-nivel").value = "Todos";
+      document.getElementById("filter-perfil").value = "Todos";
+      applyFilters();
+    }
+
+    function updateStats(visibleCount) {
+      document.getElementById("stat-visible").textContent = `${visibleCount} / ${RECOMMENDATIONS.length}`;
+      const checkedCount = Object.keys(checkedItems).length;
+      document.getElementById("stat-checked").textContent = `${checkedCount} / ${totalChecklistItems}`;
+
+      const pct = Math.round((checkedCount / totalChecklistItems) * 100);
+      document.getElementById("progress-percent").textContent = `${pct}%`;
+      document.getElementById("progress-bar-fill").style.width = `${pct}%`;
+      document.getElementById("progress-bar-container").setAttribute("aria-valuenow", pct);
+      document.getElementById("sr-status").textContent = `Exibindo ${visibleCount} de ${RECOMMENDATIONS.length} recomendações.`;
+    }
+
+    // =========================================================================
+    // MODAL DE CONFIRMAÇÃO ACESSÍVEL (SEM confirm() / alert())
+    // =========================================================================
+    function confirmResetChecklist() {
+      const backdrop = document.getElementById("modal-backdrop");
+      backdrop.classList.remove("hidden");
+      const confirmBtn = document.getElementById("modal-confirm-btn");
+      confirmBtn.onclick = () => {
+        checkedItems = {};
+        localStorage.removeItem(STORAGE_KEY);
+        closeModal();
+        applyFilters();
+      };
+      confirmBtn.focus();
+    }
+
+    function closeModal() {
+      document.getElementById("modal-backdrop").classList.add("hidden");
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    // =========================================================================
+    // EXPORTAÇÃO EM CSV
+    // =========================================================================
+    function exportCSV() {
+      const filtered = getFilteredRecommendations();
+      const rows = [
+        ["Código", "Dimensão", "Nível Semiótico", "Perfis", "Origem", "Recomendação", "Itens Verificados", "Total de Itens", "Status"]
+      ];
+
+      filtered.forEach(rec => {
+        const done = rec.checklist.filter((_, idx) => checkedItems[`${rec.id}-${idx}`]).length;
+        const status = done === rec.checklist.length ? "Concluído" : (done > 0 ? "Em andamento" : "Pendente");
+        rows.push([
+          rec.id,
+          rec.dimensao,
+          rec.nivel,
+          rec.perfis.join(" / "),
+          rec.origem,
+          `"${rec.titulo.replace(/"/g, '""')}"`,
+          done,
+          rec.checklist.length,
+          status
+        ]);
+      });
+
+      const csvContent = "\uFEFF" + rows.map(e => e.join(";")).join("\n");
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", "catalogo_recomendacoes_redis_mecred.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+    // Inicialização
+    window.addEventListener("DOMContentLoaded", () => {
+      applyFilters();
+    });
+  </script>
+</body>
+</html>
